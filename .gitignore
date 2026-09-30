@@ -1,5 +1,6 @@
-# Factored hackathon data - never commit
-data/
+# Factored hackathon data - never commit. Anchored to the repo root so the
+# backend/app/data package stays trackable.
+/data/
 
 # Environment variables / secrets
 .env
@@ -22,7 +23,7 @@ venv/
 *.duckdb
 
 # AWS credentials if ever created locally in project
-.aws/
+/.aws/
 
 # Node
 node_modules/
