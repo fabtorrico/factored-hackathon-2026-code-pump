@@ -56,6 +56,16 @@ class BankingService:
     def create_session(self, customer_id: str) -> Session:
         return self._sessions.issue(customer_id)
 
+    @property
+    def sessions(self) -> SessionStore:
+        """The trusted session registry every tool authenticates against.
+
+        Exposed so an orchestration layer can resolve the authenticated customer from the same
+        instance the banking tools use, instead of keeping a second identity source.
+        """
+
+        return self._sessions
+
     def recent_audit_events(self, limit: int) -> list[AuditEvent]:
         return self._audit.recent(limit)
 

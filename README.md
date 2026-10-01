@@ -7,7 +7,7 @@ deterministic policy decisions, and human escalation when required.
 
 - **Backend:** Python 3.11+, FastAPI, pytest, ruff
 - **Frontend:** React, TypeScript, Vite
-- **Persistence (later phases):** SQLite for operational state, DuckDB for analytical data
+- **Persistence:** DuckDB for the curated analytical data, SQLite for operational workflow state
 
 ## Prerequisites
 
@@ -98,6 +98,7 @@ query language: every filter maps to one equality or range clause, so a caller c
 | `GET /api/transactions/{transaction_id}` | One transaction |
 | `GET /api/transactions/{transaction_id}/ownership` | Whether the session owns the transaction |
 | `GET /api/audit/events` | Recent tool outcomes for the local demo |
+| `POST /api/incidents` | Run one structured incident through the policy workflow |
 
 Every protected endpoint requires an `X-Session-Id` header. The session's customer is the only
 identity the backend trusts; a `customer_id` in the query is checked, never trusted. Cross-customer
@@ -110,7 +111,63 @@ resource and latency, and store only a short fingerprint of the session id, neve
 credential itself or any customer contact data. The demo session store and audit sink are in-memory
 and are not a production authentication or logging design.
 
+## Policy engine
+
+Synthetic Banking Policy v1 is an ordered, deterministic decision table. There is no model, no
+randomness and no natural-language input: `evaluate_policy(context) -> PolicyDecision` returns one of
+`RESOLVE`, `CLARIFY`, `ESCALATE` or `ABSTAIN` with a stable reason code, the rule that decided it and
+the policy version. Rules are evaluated in order and the first match wins: `A` invalid or unauthorized
+session, `B` out of scope, `C` tool failure, `D` no or multiple candidates, `E` required evidence
+missing, `F` declined, `G` pending, `H` reversed, `I` approved with an unresolved issue, `J` approved
+with no supported incident, `K` unknown status. Unknown statuses escalate rather than fall through to
+a safe-looking default.
+
+The policy is a hackathon demonstration model. It is not a real bank, organizer, settlement or
+regulatory policy, and `SupportRoute.PAYMENTS_OPERATIONS` is a synthetic demo route rather than an
+organizer-provided structure.
+
+## Incident workflow
+
+`POST /api/incidents` runs one structured incident through the workflow. The request carries no prose,
+no policy outcome, no transaction status and no customer identity:
+
+```json
+{
+  "transaction_id": "TXN-003",
+  "filters": { "transaction_type": "Payment", "date_from": "2026-06-17" },
+  "in_scope": true,
+  "approved_with_unresolved_issue": false
+}
+```
+
+Exactly one of `transaction_id` or `filters` is required, unknown fields are rejected, and the
+authenticated customer comes from the `X-Session-Id` header. The sequence is fixed: validate the
+session, identify one or more candidates through the banking tools, map the observed facts into the
+policy context, let the policy engine decide, then perform only the permitted action and verify it.
+
+The workflow never reads the curated database itself, never re-derives authorization or ownership, and
+never invents a cause. A status can only appear in the policy context because the Banking Core returned
+a record owned by the session, and a failed read can only produce a tool failure. Any unrecognized
+future status escalates.
+
+| Outcome | Result |
+| --- | --- |
+| `RESOLVE` | Verified facts only. No customer-facing prose is generated. |
+| `CLARIFY` | Zero or several owned candidates are returned for the customer to choose from; nothing is selected automatically. |
+| `ESCALATE` | A support case is written, read back, and only then reported as escalated, with a structured handoff of verified facts and the unresolved questions. |
+| `ABSTAIN` | Invalid or expired session, out-of-scope incident, or no supported action. No case is created. |
+
+Escalation follows act then verify: the support case is persisted and read back before the workflow
+claims success. If the write cannot be read back, the incident is recorded as failed and no escalation
+is reported. A support case can never exist without its incident.
+
+Operational state lives in `data/operational/app.db` (gitignored, created on first use,
+initialization idempotent): incidents, support cases and workflow events. Banking facts are never
+copied into it, and events carry identifiers and stable codes only — no prompts, records or customer
+data. Banking endpoints keep their own 401/403/404 behavior; the workflow observes a foreign or absent
+transaction identically and cannot be used to probe for another customer's records.
+
 ## Status
 
-Phase 2 — banking core with sessions, authorization, curated reads, and audit. No policy engine,
-AI integration, or incident resolution workflow yet.
+Phase 3B — deterministic policy engine plus incident workflow, support-case escalation and operational
+persistence. Still no AI integration and no frontend work.

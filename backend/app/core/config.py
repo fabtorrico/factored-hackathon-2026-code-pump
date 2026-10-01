@@ -36,6 +36,16 @@ class Settings(BaseSettings):
             return self.database_path
         return self.data_root / "processed" / "banking.duckdb"
 
+    @property
+    def operational_database_path(self) -> Path:
+        """Local SQLite file for application-generated operational state.
+
+        It holds incidents, support cases and workflow events, never banking facts. It lives
+        under the gitignored data root so operational rows are never committed.
+        """
+
+        return self.data_root / "operational" / "app.db"
+
 
 @lru_cache
 def get_settings() -> Settings:

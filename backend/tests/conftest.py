@@ -7,13 +7,15 @@ from typing import Any
 import pytest
 from fastapi.testclient import TestClient
 
-from app.api.dependencies import get_banking_service
+from app.api.dependencies import get_banking_service, get_incident_workflow
 from app.banking.audit import InMemoryAuditSink
 from app.banking.repository import CuratedBankingRepository
 from app.banking.service import BankingService
 from app.banking.sessions import SessionStore
 from app.data.pipeline import run_pipeline
 from app.main import create_app
+from app.workflow.orchestrator import IncidentWorkflow
+from app.workflow.storage import OperationalStore
 
 # The organizers ship every one of these columns. The fixtures reproduce the full source
 # headers - PII included - so the curated DuckDB tables are proven to drop them.
@@ -401,7 +403,95 @@ def other_session(service) -> str:
     return service.create_session(OTHER).session_id
 
 
-def _client_for(service: BankingService) -> Iterator[TestClient]:
+# --- Incident workflow (Phase 3B) ----------------------------------------------------
+
+
+@pytest.fixture
+def incident_rows(banking_rows: dict[str, list[list[str]]]) -> dict[str, list[list[str]]]:
+    """The banking rows plus the states the workflow has to handle.
+
+    Kept separate from `banking_rows` so the Phase 2 expectations about the curated tables stay
+    exactly as they were.
+    """
+    rows = {key: list(value) for key, value in banking_rows.items()}
+    rows["transactions"] += [
+        transaction_row(
+            transaction_id="TXN-007",
+            customer_id=OWNER,
+            product_id="PROD-001",
+            transaction_type="Payment",
+            transaction_status="Reversed",
+            transaction_date="2026-06-16 15:45:00",
+            process_date="2026-06-17",
+            amount="40.00",
+            amount_usd="40.00",
+            channel="App",
+            response_code="",
+        ),
+        # A second owned Payment on the same day: the customer reference alone stays ambiguous.
+        transaction_row(
+            transaction_id="TXN-008",
+            customer_id=OWNER,
+            product_id="PROD-001",
+            transaction_type="Payment",
+            transaction_status="Pending",
+            transaction_date="2026-06-17 18:00:00",
+            amount="40.00",
+            amount_usd="40.00",
+            channel="Web",
+            response_code="",
+        ),
+    ]
+    return rows
+
+
+@pytest.fixture
+def incident_database(data_root, incident_rows) -> Path:
+    return run_pipeline(data_root(**incident_rows)).database_path
+
+
+@pytest.fixture
+def incident_service(incident_database, sessions, audit_sink, clock) -> BankingService:
+    return BankingService(
+        repository=CuratedBankingRepository(incident_database),
+        sessions=sessions,
+        audit=audit_sink,
+        clock=clock,
+    )
+
+
+@pytest.fixture
+def operational_store(tmp_path) -> OperationalStore:
+    store = OperationalStore(tmp_path / "operational" / "app.db")
+    store.initialize()
+    return store
+
+
+@pytest.fixture
+def workflow(incident_service: BankingService, operational_store: OperationalStore, clock):
+    return IncidentWorkflow(service=incident_service, store=operational_store, clock=clock)
+
+
+@pytest.fixture
+def incident_session(incident_service: BankingService) -> str:
+    return incident_service.create_session(OWNER).session_id
+
+
+@pytest.fixture
+def other_incident_session(incident_service: BankingService) -> str:
+    return incident_service.create_session(OTHER).session_id
+
+
+def _client_for(service: BankingService, workflow: IncidentWorkflow) -> Iterator[TestClient]:
+    app = create_app()
+    app.dependency_overrides[get_banking_service] = lambda: service
+    app.dependency_overrides[get_incident_workflow] = lambda: workflow
+    with TestClient(app) as client:
+        yield client
+
+
+@pytest.fixture
+def api_client(service) -> Iterator[TestClient]:
     app = create_app()
     app.dependency_overrides[get_banking_service] = lambda: service
     with TestClient(app) as client:
@@ -409,10 +499,13 @@ def _client_for(service: BankingService) -> Iterator[TestClient]:
 
 
 @pytest.fixture
-def api_client(service) -> Iterator[TestClient]:
-    yield from _client_for(service)
+def api_client_without_data(service_without_data) -> Iterator[TestClient]:
+    app = create_app()
+    app.dependency_overrides[get_banking_service] = lambda: service_without_data
+    with TestClient(app) as client:
+        yield client
 
 
 @pytest.fixture
-def api_client_without_data(service_without_data) -> Iterator[TestClient]:
-    yield from _client_for(service_without_data)
+def workflow_client(incident_service, workflow) -> Iterator[TestClient]:
+    yield from _client_for(incident_service, workflow)
