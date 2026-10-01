@@ -1,9 +1,19 @@
 import csv
-from collections.abc import Callable, Sequence
+from collections.abc import Callable, Iterator, Sequence
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
 import pytest
+from fastapi.testclient import TestClient
+
+from app.api.dependencies import get_banking_service
+from app.banking.audit import InMemoryAuditSink
+from app.banking.repository import CuratedBankingRepository
+from app.banking.service import BankingService
+from app.banking.sessions import SessionStore
+from app.data.pipeline import run_pipeline
+from app.main import create_app
 
 # The organizers ship every one of these columns. The fixtures reproduce the full source
 # headers - PII included - so the curated DuckDB tables are proven to drop them.
@@ -209,7 +219,7 @@ def data_root(tmp_path: Path) -> DataRootFactory:
 
 
 @pytest.fixture
-def valid_rows() -> dict[str, list[str]]:
+def valid_rows() -> dict[str, list[list[str]]]:
     return {
         "customers": [
             customer_row(),
@@ -221,3 +231,188 @@ def valid_rows() -> dict[str, list[str]]:
         ],
         "transactions": [transaction_row()],
     }
+
+
+OWNER = "CUST-001"
+OTHER = "CUST-002"
+ABSENT_CUSTOMER = "CUST-404"
+SESSION_TTL = timedelta(minutes=30)
+
+
+@pytest.fixture
+def banking_rows() -> dict[str, list[list[str]]]:
+    """Two synthetic customers with overlapping types, statuses, dates and amounts.
+
+    Every organizer field is still present in the fixtures (see the *_SOURCE_HEADER tables) so the
+    banking reads are exercised against sources that carry PII and prove it never surfaces.
+    """
+    return {
+        "customers": [
+            customer_row(customer_id=OWNER, segment="Retail", detected_accent="colombian"),
+            customer_row(
+                customer_id=OTHER,
+                segment="Premium",
+                detected_accent="argentine",
+                email="second.owner@example.com",
+            ),
+        ],
+        "products": [
+            product_row(product_id="PROD-001", customer_id=OWNER, product_type="Checking"),
+            product_row(product_id="PROD-002", customer_id=OWNER, product_type="Savings"),
+            product_row(product_id="PROD-003", customer_id=OTHER, product_type="CreditCard"),
+        ],
+        "transactions": [
+            transaction_row(
+                transaction_id="TXN-001",
+                customer_id=OWNER,
+                product_id="PROD-001",
+                transaction_type="Transfer",
+                transaction_status="Approved",
+                transaction_date="2026-06-15 10:00:00",
+                amount="150.00",
+                amount_usd="150.00",
+                channel="App",
+                response_code="00",
+            ),
+            transaction_row(
+                transaction_id="TXN-002",
+                customer_id=OWNER,
+                product_id="PROD-001",
+                transaction_type="Payment",
+                transaction_status="Declined",
+                transaction_date="2026-06-16 11:30:00",
+                amount="40.00",
+                amount_usd="40.00",
+                channel="App",
+                response_code="51",
+            ),
+            # No response_code and no amount_usd: both gaps are real in the curated data and must
+            # read back as absent facts rather than invented ones.
+            transaction_row(
+                transaction_id="TXN-003",
+                customer_id=OWNER,
+                product_id="PROD-002",
+                transaction_type="Transfer",
+                transaction_status="Pending",
+                transaction_date="2026-06-17 09:15:00",
+                amount="900.00",
+                amount_usd="",
+                channel="Web",
+                response_code="",
+            ),
+            transaction_row(
+                transaction_id="TXN-004",
+                customer_id=OTHER,
+                product_id="PROD-003",
+                transaction_type="Payment",
+                transaction_status="Declined",
+                transaction_date="2026-06-16 08:00:00",
+                amount="40.00",
+                amount_usd="40.00",
+                channel="App",
+                response_code="51",
+            ),
+            transaction_row(
+                transaction_id="TXN-005",
+                customer_id=OTHER,
+                product_id="PROD-003",
+                transaction_type="Transfer",
+                transaction_status="Approved",
+                transaction_date="2026-06-17 12:00:00",
+                amount="150.00",
+                amount_usd="150.00",
+                channel="App",
+                response_code="00",
+            ),
+            transaction_row(
+                transaction_id="TXN-006",
+                customer_id=OTHER,
+                product_id="PROD-003",
+                transaction_type="Transfer",
+                transaction_status="Approved",
+                transaction_date="2026-06-15 10:00:00",
+                amount="200.00",
+                amount_usd="200.00",
+                channel="Web",
+                response_code="00",
+            ),
+        ],
+    }
+
+
+@pytest.fixture
+def curated_database(data_root, banking_rows) -> Path:
+    return run_pipeline(data_root(**banking_rows)).database_path
+
+
+class FakeClock:
+    def __init__(self, now: datetime) -> None:
+        self.now = now
+
+    def __call__(self) -> datetime:
+        return self.now
+
+    def advance(self, delta: timedelta) -> None:
+        self.now += delta
+
+
+@pytest.fixture
+def clock() -> FakeClock:
+    return FakeClock(datetime(2026, 6, 18, 12, 0, tzinfo=UTC))
+
+
+@pytest.fixture
+def repository(curated_database) -> CuratedBankingRepository:
+    return CuratedBankingRepository(curated_database)
+
+
+@pytest.fixture
+def audit_sink() -> InMemoryAuditSink:
+    return InMemoryAuditSink()
+
+
+@pytest.fixture
+def sessions(clock) -> SessionStore:
+    return SessionStore(ttl=SESSION_TTL, clock=clock)
+
+
+@pytest.fixture
+def service(repository, sessions, audit_sink, clock) -> BankingService:
+    return BankingService(repository=repository, sessions=sessions, audit=audit_sink, clock=clock)
+
+
+@pytest.fixture
+def service_without_data(tmp_path, sessions, audit_sink, clock) -> BankingService:
+    return BankingService(
+        repository=CuratedBankingRepository(tmp_path / "absent" / "banking.duckdb"),
+        sessions=sessions,
+        audit=audit_sink,
+        clock=clock,
+    )
+
+
+@pytest.fixture
+def customer_session(service) -> str:
+    return service.create_session(OWNER).session_id
+
+
+@pytest.fixture
+def other_session(service) -> str:
+    return service.create_session(OTHER).session_id
+
+
+def _client_for(service: BankingService) -> Iterator[TestClient]:
+    app = create_app()
+    app.dependency_overrides[get_banking_service] = lambda: service
+    with TestClient(app) as client:
+        yield client
+
+
+@pytest.fixture
+def api_client(service) -> Iterator[TestClient]:
+    yield from _client_for(service)
+
+
+@pytest.fixture
+def api_client_without_data(service_without_data) -> Iterator[TestClient]:
+    yield from _client_for(service_without_data)

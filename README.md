@@ -84,6 +84,33 @@ schema before projection, and quality checks run against the full source data.
 `products.current_balance` is read-only context. A transaction fails on its recorded
 `transaction_status` / `response_code`, never on a balance that looks low.
 
+## Banking core
+
+The backend exposes a small set of typed banking tools over the curated DuckDB database. There is no
+query language: every filter maps to one equality or range clause, so a caller cannot widen a read.
+
+| Endpoint | Purpose |
+| --- | --- |
+| `POST /api/sessions` | Open a trusted demo session for a customer |
+| `GET /api/customers/{customer_id}/context` | Customer, products, and transaction counters |
+| `GET /api/transactions` | The authenticated customer's transactions |
+| `GET /api/transactions/candidates` | Deterministic narrowing on a small closed filter set |
+| `GET /api/transactions/{transaction_id}` | One transaction |
+| `GET /api/transactions/{transaction_id}/ownership` | Whether the session owns the transaction |
+| `GET /api/audit/events` | Recent tool outcomes for the local demo |
+
+Every protected endpoint requires an `X-Session-Id` header. The session's customer is the only
+identity the backend trusts; a `customer_id` in the query is checked, never trusted. Cross-customer
+reads return `403`. A transaction the session does not own returns `404`, identical to a transaction
+that does not exist, so the endpoint cannot be used to probe for other customers' records. Malformed
+or unsupported filters return `400` instead of being silently ignored.
+
+The curated database is opened read-only. Audit events record the tool, outcome, reason, caller,
+resource and latency, and store only a short fingerprint of the session id, never the bearer
+credential itself or any customer contact data. The demo session store and audit sink are in-memory
+and are not a production authentication or logging design.
+
 ## Status
 
-Phase 1A — local data foundation. No banking logic, policy engine, or AI integration yet.
+Phase 2 — banking core with sessions, authorization, curated reads, and audit. No policy engine,
+AI integration, or incident resolution workflow yet.
