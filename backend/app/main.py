@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 
+from app.api.agent import router as agent_router
 from app.api.demo import router as demo_router
 from app.api.errors import banking_error_handler
 from app.api.incidents import router as incidents_router
@@ -17,6 +18,7 @@ def create_app() -> FastAPI:
     app.include_router(router)
     app.include_router(incidents_router)
     app.include_router(demo_router)
+    app.include_router(agent_router)
 
     @app.get("/health")
     async def health() -> dict[str, str]:

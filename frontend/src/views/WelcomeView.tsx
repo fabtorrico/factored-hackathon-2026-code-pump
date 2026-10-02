@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useSession } from "../state/SessionProvider";
 import { ErrorNotice, Loading } from "../components/primitives";
@@ -82,6 +82,12 @@ export function WelcomeView() {
         <p className="muted">
           This is a prototype reading a de-identified copy of a banking dataset. No real account is
           involved and no personal data is shown.
+        </p>
+        <p className="muted">
+          <Link className="link" to="/agent">
+            Open the human agent workspace
+          </Link>{" "}
+          — a read-only demo of the queue a specialist would see.
         </p>
       </footer>
     </main>

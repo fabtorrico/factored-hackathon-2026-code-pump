@@ -7,7 +7,12 @@ from typing import Any
 import pytest
 from fastapi.testclient import TestClient
 
-from app.api.dependencies import get_banking_service, get_incident_workflow
+from app.agent import AgentSessionStore, AgentWorkspace
+from app.api.dependencies import (
+    get_agent_workspace,
+    get_banking_service,
+    get_incident_workflow,
+)
 from app.banking.audit import InMemoryAuditSink
 from app.banking.repository import CuratedBankingRepository
 from app.banking.service import BankingService
@@ -509,3 +514,23 @@ def api_client_without_data(service_without_data) -> Iterator[TestClient]:
 @pytest.fixture
 def workflow_client(incident_service, workflow) -> Iterator[TestClient]:
     yield from _client_for(incident_service, workflow)
+
+
+# --- Agent workspace (Phase 5B) -------------------------------------------------------
+
+
+@pytest.fixture
+def agent_workspace(operational_store, clock) -> AgentWorkspace:
+    # The same operational store the workflow fixture writes to, so an escalation in a test is
+    # immediately visible to the agent workspace.
+    return AgentWorkspace(store=operational_store, sessions=AgentSessionStore(clock=clock))
+
+
+@pytest.fixture
+def agent_client(incident_service, workflow, agent_workspace) -> Iterator[TestClient]:
+    app = create_app()
+    app.dependency_overrides[get_banking_service] = lambda: incident_service
+    app.dependency_overrides[get_incident_workflow] = lambda: workflow
+    app.dependency_overrides[get_agent_workspace] = lambda: agent_workspace
+    with TestClient(app) as client:
+        yield client

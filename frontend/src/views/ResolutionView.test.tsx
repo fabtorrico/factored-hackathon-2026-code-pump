@@ -56,10 +56,23 @@ const PENDING: WorkflowResult = {
   handoff: {
     case_id: "CASE-1",
     incident_id: "INC-1",
+    customer_request: {
+      identification_mode: "exact_transaction",
+      transaction_reference: "TRX-1",
+      filters: null,
+      in_scope: true,
+      approved_with_unresolved_issue: false,
+    },
     verified_facts: [],
     actions_taken: [],
     supporting_evidence: [],
     unresolved_questions: ["final_settlement_state_unavailable"],
+    policy_decision: {
+      outcome: "ESCALATE",
+      reason_code: "pending_status",
+      policy_rule: "G_PENDING",
+      policy_version: "1.0.0",
+    },
     recommended_route: "PAYMENTS_OPERATIONS",
   },
   failure: null,

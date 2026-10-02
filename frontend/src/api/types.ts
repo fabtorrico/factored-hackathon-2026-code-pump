@@ -14,6 +14,7 @@ export type Reason =
   | "customer_not_found"
   | "transaction_not_found"
   | "incident_not_found"
+  | "case_not_found"
   | "invalid_request"
   | "data_unavailable"
   | "tool_failure";
@@ -120,17 +121,28 @@ export interface SupportCase {
 
 export interface HandoffFact {
   fact: string;
-  value: string;
+  value: string | null;
   source: string;
+}
+
+/** The structured restatement of what the customer reported. */
+export interface HandoffRequest {
+  identification_mode: "exact_transaction" | "candidate_search";
+  transaction_reference: string | null;
+  filters: Record<string, string | number | null> | null;
+  in_scope: boolean;
+  approved_with_unresolved_issue: boolean;
 }
 
 export interface Handoff {
   case_id: string;
   incident_id: string;
+  customer_request: HandoffRequest;
   verified_facts: HandoffFact[];
   actions_taken: string[];
   supporting_evidence: { kind: string; value: string }[];
   unresolved_questions: string[];
+  policy_decision: PolicyDecision;
   recommended_route: string;
 }
 
@@ -193,3 +205,48 @@ export interface TransactionFilters {
 export type IncidentInput =
   | { transaction_id: string; in_scope?: boolean; approved_with_unresolved_issue?: boolean }
   | { filters: TransactionFilters; in_scope?: boolean; approved_with_unresolved_issue?: boolean };
+
+// --- Human Agent Workspace (Phase 5B) ---------------------------------------------------
+
+/** A demo-only, read-only agent session. Never a customer session. */
+export interface AgentSession {
+  agent_session_id: string;
+  display_name: string;
+  issued_at: string;
+  expires_at: string;
+}
+
+/** The movement as the persisted handoff recorded it, not a fresh banking lookup. */
+export interface AgentMovementSummary {
+  transaction_reference: string | null;
+  transaction_type: string | null;
+  transaction_status: string | null;
+  amount: string | null;
+  currency: string | null;
+}
+
+export interface AgentCaseSummary {
+  case_id: string;
+  incident_id: string;
+  status: "open";
+  workflow_status: WorkflowStatus | null;
+  outcome: PolicyOutcome | null;
+  reason_code: string | null;
+  policy_rule: string | null;
+  policy_version: string | null;
+  recommended_route: string;
+  created_at: string;
+  has_handoff: boolean;
+  movement: AgentMovementSummary;
+  unresolved_count: number;
+}
+
+export interface AgentCaseList {
+  cases: AgentCaseSummary[];
+}
+
+export interface AgentCaseDetail {
+  case: AgentCaseSummary;
+  handoff: Handoff | null;
+  events: WorkflowEvent[];
+}

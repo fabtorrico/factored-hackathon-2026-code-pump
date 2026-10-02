@@ -13,6 +13,7 @@ ERROR_STATUS: Mapping[Reason, int] = {
     Reason.CUSTOMER_NOT_FOUND: 404,
     Reason.TRANSACTION_NOT_FOUND: 404,
     Reason.INCIDENT_NOT_FOUND: 404,
+    Reason.CASE_NOT_FOUND: 404,
     Reason.INVALID_REQUEST: 400,
     Reason.DATA_UNAVAILABLE: 503,
     Reason.TOOL_FAILURE: 500,

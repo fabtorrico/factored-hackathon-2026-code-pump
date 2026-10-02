@@ -329,6 +329,25 @@ class IncidentWorkflow:
             WorkflowAction.POLICY_EVALUATED,
             WorkflowAction.SUPPORT_CASE_CREATED,
         )
+        handoff = build_handoff(
+            incident_id=incident_id,
+            case_id=case.case_id,
+            request=summary,
+            decision=decision,
+            session_valid=True,
+            record=identification.record,
+            actions=(*actions, WorkflowAction.SUPPORT_CASE_VERIFIED),
+        )
+        # The handoff is the escalation's payload, so it is written and read back before the
+        # escalation is claimed. A completed escalation therefore always carries a persisted
+        # handoff a human agent can read, exactly like the support case itself.
+        try:
+            self._store.save_handoff(handoff, created_at)
+            persisted_handoff = self._store.get_handoff(case.case_id)
+        except OperationalStoreError:
+            return self._case_unverified(incident_id, created_at, case, identification, decision)
+        if persisted_handoff != handoff:
+            return self._case_unverified(incident_id, created_at, case, identification, decision)
         self._record(incident_id, WorkflowEventType.SUPPORT_CASE_CREATED, {"case_id": case.case_id})
         self._record(
             incident_id,
@@ -339,15 +358,6 @@ class IncidentWorkflow:
             incident_id,
             WorkflowEventType.WORKFLOW_ESCALATED,
             {"case_id": case.case_id, "recommended_route": case.recommended_route.value},
-        )
-        handoff = build_handoff(
-            incident_id=incident_id,
-            case_id=case.case_id,
-            request=summary,
-            decision=decision,
-            session_valid=True,
-            record=identification.record,
-            actions=(*actions, WorkflowAction.SUPPORT_CASE_VERIFIED),
         )
         return WorkflowResult(
             incident_id=incident_id,

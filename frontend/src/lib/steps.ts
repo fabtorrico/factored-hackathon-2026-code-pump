@@ -37,7 +37,7 @@ export function buildSteps(events: readonly WorkflowEvent[], result: WorkflowRes
       "decided",
       "We applied the resolution policy",
       recorded.has("policy_evaluated"),
-      `Rule ${result.policy_decision.policy_rule} produced ${result.policy_decision.outcome}.`,
+      "We checked your request against the rules for this kind of issue.",
     ),
   );
 
@@ -46,9 +46,11 @@ export function buildSteps(events: readonly WorkflowEvent[], result: WorkflowRes
       "case",
       "We opened a support case",
       recorded.has("support_case_verified"),
-      result.support_case === null && result.failure !== null
-        ? "We tried, but we could not confirm a case was created."
-        : (result.support_case?.case_id ?? null),
+      result.support_case !== null
+        ? "A support case was confirmed."
+        : result.failure !== null
+          ? "We tried, but we could not confirm a case was created."
+          : null,
     ),
   );
 

@@ -51,6 +51,13 @@ class MismatchedCaseStore(OperationalStore):
         return None if case is None else case.model_copy(update={"incident_id": "INC-OTHER"})
 
 
+class SilentHandoffStore(OperationalStore):
+    """Accepts the handoff write and persists nothing, so the readback cannot confirm it."""
+
+    def save_handoff(self, handoff, created_at) -> None:
+        return None
+
+
 def _events(store: OperationalStore, incident_id: str) -> list[str]:
     return [event.event_type.value for event in store.events_for(incident_id)]
 
@@ -460,6 +467,13 @@ def mismatched_store(tmp_path) -> OperationalStore:
     return store
 
 
+@pytest.fixture
+def silent_handoff_store(tmp_path) -> OperationalStore:
+    store = SilentHandoffStore(tmp_path / "operational" / "app.db")
+    store.initialize()
+    return store
+
+
 @pytest.mark.parametrize("store_fixture", ["silent_store", "mismatched_store"])
 def test_unverifiable_case_never_reports_an_escalation(
     request, incident_service, clock, store_fixture, incident_session
@@ -475,6 +489,25 @@ def test_unverifiable_case_never_reports_an_escalation(
     assert result.failure.reason is WorkflowFailureReason.SUPPORT_CASE_UNVERIFIED
     assert result.support_case is None
     assert result.handoff is None
+
+
+def test_unverifiable_handoff_never_reports_a_completed_escalation(
+    silent_handoff_store, incident_service, clock, incident_session
+) -> None:
+    # The case is written and verified, but the handoff that a human agent reads cannot be. The
+    # escalation is not claimed, so the persisted handoff invariant holds.
+    workflow = IncidentWorkflow(service=incident_service, store=silent_handoff_store, clock=clock)
+
+    result = workflow.handle(incident_session, IncidentInput(transaction_id=PENDING))
+
+    assert result.status is WorkflowStatus.FAILED
+    assert result.failure.reason is WorkflowFailureReason.SUPPORT_CASE_UNVERIFIED
+    assert result.support_case is None
+    assert result.handoff is None
+    events = _events(silent_handoff_store, result.incident_id)
+    assert WorkflowEventType.SUPPORT_CASE_VERIFICATION_FAILED.value in events
+    assert WorkflowEventType.WORKFLOW_FAILED.value in events
+    assert WorkflowEventType.WORKFLOW_ESCALATED.value not in events
 
 
 def test_unverifiable_case_is_recorded_as_a_failure(silent_store, incident_service, clock):

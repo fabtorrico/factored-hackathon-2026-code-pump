@@ -10,6 +10,7 @@ class Reason(StrEnum):
     CUSTOMER_NOT_FOUND = "customer_not_found"
     TRANSACTION_NOT_FOUND = "transaction_not_found"
     INCIDENT_NOT_FOUND = "incident_not_found"
+    CASE_NOT_FOUND = "case_not_found"
     INVALID_REQUEST = "invalid_request"
     DATA_UNAVAILABLE = "data_unavailable"
     TOOL_FAILURE = "tool_failure"
@@ -80,6 +81,12 @@ class IncidentNotFoundError(BankingError):
     # An incident owned by another customer is reported with this exact message, so reading a
     # timeline cannot be used to probe which incident ids exist.
     message = "Incident not found."
+
+
+class CaseNotFoundError(BankingError):
+    reason = Reason.CASE_NOT_FOUND
+    outcome = Outcome.NOT_FOUND
+    message = "Case not found."
 
 
 class InvalidRequestError(BankingError):

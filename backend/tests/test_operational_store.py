@@ -11,12 +11,17 @@ from datetime import UTC, datetime, timedelta, timezone
 import pytest
 from conftest import OWNER
 
-from app.policy import PolicyOutcome, PolicyReasonCode, PolicyRule
+from app.policy import PolicyDecision, PolicyOutcome, PolicyReasonCode, PolicyRule
+from app.workflow.handoff import build_handoff
 from app.workflow.models import (
     CaseStatus,
+    Handoff,
+    IdentificationMode,
     Incident,
+    IncidentSummary,
     SupportCase,
     SupportRoute,
+    WorkflowAction,
     WorkflowEvent,
     WorkflowEventType,
     WorkflowStatus,
@@ -55,7 +60,7 @@ def test_initialization_is_idempotent(operational_store, incident_id, clock) -> 
             row[0]
             for row in connection.execute("SELECT name FROM sqlite_master WHERE type = 'table'")
         }
-    assert {"incidents", "support_cases", "workflow_events"} <= tables
+    assert {"incidents", "support_cases", "workflow_events", "handoffs"} <= tables
 
 
 def test_initialization_creates_the_missing_directory(tmp_path) -> None:
@@ -141,6 +146,74 @@ def test_support_case_requires_an_existing_incident(operational_store) -> None:
         operational_store.create_support_case(case)
 
     assert operational_store.get_support_case(case.case_id) is None
+
+
+def _case(incident_id: str, created_at: datetime, case_id: str | None = None) -> SupportCase:
+    return SupportCase(
+        case_id=case_id or new_case_id(),
+        incident_id=incident_id,
+        status=CaseStatus.OPEN,
+        recommended_route=SupportRoute.PAYMENTS_OPERATIONS,
+        created_at=created_at,
+    )
+
+
+def _handoff(case: SupportCase) -> Handoff:
+    return build_handoff(
+        incident_id=case.incident_id,
+        case_id=case.case_id,
+        request=IncidentSummary(
+            identification_mode=IdentificationMode.EXACT,
+            transaction_reference="TXN-003",
+            in_scope=True,
+            approved_with_unresolved_issue=False,
+        ),
+        decision=PolicyDecision(
+            outcome=PolicyOutcome.ESCALATE,
+            reason_code=PolicyReasonCode.PENDING_STATUS,
+            policy_rule=PolicyRule.G_PENDING,
+        ),
+        session_valid=True,
+        record=None,
+        actions=(WorkflowAction.SESSION_VALIDATED, WorkflowAction.POLICY_EVALUATED),
+    )
+
+
+def test_support_cases_are_listed_newest_first(operational_store, incident_id, clock) -> None:
+    operational_store.save_incident(_incident(incident_id, clock.now))
+    older = _case(incident_id, clock.now - timedelta(minutes=5))
+    newer = _case(incident_id, clock.now)
+    operational_store.create_support_case(older)
+    operational_store.create_support_case(newer)
+
+    listed = operational_store.list_support_cases()
+
+    assert [case.case_id for case in listed] == [newer.case_id, older.case_id]
+
+
+def test_handoff_round_trips_through_json(operational_store, incident_id, clock) -> None:
+    operational_store.save_incident(_incident(incident_id, clock.now))
+    case = _case(incident_id, clock.now)
+    operational_store.create_support_case(case)
+    handoff = _handoff(case)
+
+    operational_store.save_handoff(handoff, clock.now)
+
+    assert operational_store.get_handoff(case.case_id) == handoff
+
+
+def test_unknown_handoff_is_not_an_error(operational_store) -> None:
+    assert operational_store.get_handoff(new_case_id()) is None
+
+
+def test_handoff_requires_an_existing_case(operational_store, incident_id, clock) -> None:
+    operational_store.save_incident(_incident(incident_id, clock.now))
+    orphan = _handoff(_case(incident_id, clock.now))
+
+    with pytest.raises(OperationalStoreError):
+        operational_store.save_handoff(orphan, clock.now)
+
+    assert operational_store.get_handoff(orphan.case_id) is None
 
 
 def test_duplicate_incident_identifier_is_refused(operational_store, incident_id, clock) -> None:

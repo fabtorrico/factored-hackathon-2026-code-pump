@@ -2,6 +2,7 @@ from datetime import timedelta
 from functools import lru_cache
 from pathlib import Path
 
+from app.agent import AgentSessionStore, AgentWorkspace
 from app.banking.audit import InMemoryAuditSink
 from app.banking.repository import CuratedBankingRepository
 from app.banking.service import BankingService
@@ -37,12 +38,34 @@ def get_demo_database_path() -> Path:
 
 
 @lru_cache
+def get_operational_store() -> OperationalStore:
+    """The one local operational store both the workflow and the agent workspace read.
+
+    Initialization is idempotent, so every caller can safely ensure the schema exists.
+    """
+    store = OperationalStore(get_settings().operational_database_path)
+    store.initialize()
+    return store
+
+
+@lru_cache
 def get_incident_workflow() -> IncidentWorkflow:
     """Single in-process incident workflow.
 
     It coordinates the one banking service above, so both share the same session registry, and
     holds no state of its own beyond the local operational store.
     """
-    store = OperationalStore(get_settings().operational_database_path)
-    store.initialize()
-    return IncidentWorkflow(service=get_banking_service(), store=store)
+    return IncidentWorkflow(service=get_banking_service(), store=get_operational_store())
+
+
+@lru_cache
+def get_agent_workspace() -> AgentWorkspace:
+    """Single in-process agent workspace.
+
+    Read-only and demo-only: it reads the same operational store the workflow writes, and gates
+    access with its own agent session store that no customer session can satisfy.
+    """
+    return AgentWorkspace(
+        store=get_operational_store(),
+        sessions=AgentSessionStore(ttl=timedelta(seconds=get_settings().session_ttl_seconds)),
+    )

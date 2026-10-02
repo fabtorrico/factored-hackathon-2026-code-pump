@@ -337,11 +337,6 @@ function ResolutionBody({
             </ul>
           </details>
         )}
-
-        <p className="muted footnote">
-          Decided by rule {result.policy_decision.policy_rule} of policy{" "}
-          {result.policy_decision.policy_version}.
-        </p>
       </Card>
 
       <div className="button-row">

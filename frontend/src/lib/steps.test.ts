@@ -111,14 +111,19 @@ describe("every step reflects what was actually recorded", () => {
     expect(steps.find((step) => step.key === "identified")?.detail).toBe("Checked the movements you described.");
   });
 
-  it("names the policy rule that decided the outcome", () => {
+  it("describes the policy step without exposing the internal rule id", () => {
     const steps = buildSteps(ESCALATION_EVENTS, escalated());
-    expect(steps.find((step) => step.key === "decided")?.detail).toContain("G_PENDING");
+    const detail = steps.find((step) => step.key === "decided")?.detail ?? "";
+    expect(detail).not.toContain("G_PENDING");
+    expect(detail).not.toContain("1.0.0");
+    expect(detail.length).toBeGreaterThan(0);
   });
 
-  it("shows the confirmed case reference once there is one", () => {
+  it("confirms the case without repeating its long identifier", () => {
     const steps = buildSteps(ESCALATION_EVENTS, escalated());
-    expect(steps.find((step) => step.key === "case")?.detail).toBe("CASE-1");
+    const detail = steps.find((step) => step.key === "case")?.detail ?? "";
+    expect(detail).toBe("A support case was confirmed.");
+    expect(detail).not.toContain("CASE-1");
   });
 });
 

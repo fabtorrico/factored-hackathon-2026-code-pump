@@ -16,9 +16,9 @@ interface Resource<T> {
  * session that has gone away is not retryable, so the caller ends the session and the app returns
  * to the profile chooser rather than showing an error the visitor cannot act on.
  */
-export function useResource<T>(
-  api: ApiClient,
-  load: (api: ApiClient) => Promise<T>,
+export function useResource<T, C = ApiClient>(
+  api: C,
+  load: (api: C) => Promise<T>,
   onSessionGone: () => void,
 ): Resource<T> {
   const [data, setData] = useState<T | null>(null);

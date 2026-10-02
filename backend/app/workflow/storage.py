@@ -17,6 +17,7 @@ from pathlib import Path
 from app.policy import PolicyOutcome, PolicyReasonCode, PolicyRule
 from app.workflow.models import (
     CaseStatus,
+    Handoff,
     Incident,
     SupportCase,
     SupportRoute,
@@ -54,7 +55,19 @@ CREATE TABLE IF NOT EXISTS workflow_events (
     detail      TEXT NOT NULL
 );
 
+-- The structured handoff a human agent reads. Added as its own table rather than a column on
+-- support_cases, so an already-initialized database gains it without an ALTER and keeps every row
+-- it had. The payload is the serialized Handoff and carries no customer identity.
+CREATE TABLE IF NOT EXISTS handoffs (
+    case_id     TEXT PRIMARY KEY REFERENCES support_cases (case_id),
+    incident_id TEXT NOT NULL,
+    created_at  TEXT NOT NULL,
+    payload     TEXT NOT NULL
+);
+
 CREATE INDEX IF NOT EXISTS workflow_events_incident ON workflow_events (incident_id, sequence);
+
+CREATE INDEX IF NOT EXISTS handoffs_incident ON handoffs (incident_id);
 """
 
 
@@ -172,6 +185,56 @@ class OperationalStore:
             recommended_route=SupportRoute(row[3]),
             created_at=_moment(row[4]),
         )
+
+    def list_support_cases(self) -> list[SupportCase]:
+        """Every persisted escalation, newest first. Used by the read-only agent queue."""
+        with self._connection() as connection:
+            rows = connection.execute(
+                "SELECT case_id, incident_id, status, recommended_route, created_at "
+                "FROM support_cases ORDER BY created_at DESC, case_id"
+            ).fetchall()
+        return [
+            SupportCase(
+                case_id=row[0],
+                incident_id=row[1],
+                status=CaseStatus(row[2]),
+                recommended_route=SupportRoute(row[3]),
+                created_at=_moment(row[4]),
+            )
+            for row in rows
+        ]
+
+    def save_handoff(self, handoff: Handoff, created_at: datetime) -> None:
+        try:
+            with self._connection() as connection:
+                connection.execute(
+                    "INSERT INTO handoffs (case_id, incident_id, created_at, payload) "
+                    "VALUES (?, ?, ?, ?)",
+                    (
+                        handoff.case_id,
+                        handoff.incident_id,
+                        _stamp(created_at),
+                        handoff.model_dump_json(),
+                    ),
+                )
+        except sqlite3.Error as error:
+            raise OperationalStoreError(
+                f"handoff for case {handoff.case_id} was not written"
+            ) from error
+
+    def get_handoff(self, case_id: str) -> Handoff | None:
+        try:
+            with self._connection() as connection:
+                row = connection.execute(
+                    "SELECT payload FROM handoffs WHERE case_id = ?", (case_id,)
+                ).fetchone()
+        except sqlite3.Error as error:
+            raise OperationalStoreError(
+                f"handoff for case {case_id} could not be read back"
+            ) from error
+        if row is None:
+            return None
+        return Handoff.model_validate_json(row[0])
 
     def record_event(self, event: WorkflowEvent) -> None:
         with self._connection() as connection:

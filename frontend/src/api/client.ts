@@ -41,7 +41,7 @@ export class ApiError extends Error {
 }
 
 /** A transport failure, before the service could say anything about why. */
-const TRANSPORT: Reason = "tool_failure";
+export const TRANSPORT: Reason = "tool_failure";
 
 function toReason(value: unknown): Reason | null {
   if (typeof value !== "string") {
@@ -54,6 +54,7 @@ function toReason(value: unknown): Reason | null {
     "customer_not_found",
     "transaction_not_found",
     "incident_not_found",
+    "case_not_found",
     "invalid_request",
     "data_unavailable",
     "tool_failure",
@@ -128,7 +129,7 @@ export class ApiClient {
   }
 }
 
-async function toApiError(response: Response): Promise<ApiError> {
+export async function toApiError(response: Response): Promise<ApiError> {
   let reason: Reason | null = null;
   let message = "The request could not be completed.";
   try {
