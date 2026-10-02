@@ -1,0 +1,22 @@
+{
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "challenger_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+  "classifier": "sklearn.linear_model.LogisticRegression",
+  "classifier_params": {
+    "max_iter": 1000,
+    "random_state": 42
+  },
+  "random_seed": 42,
+  "split_seed": 42,
+  "selected_confidence_threshold": 0.7,
+  "label_set": [
+    "PENDING_OR_DELAYED",
+    "FAILED_OR_DECLINED",
+    "REVERSED",
+    "APPROVED_BUT_UNRESOLVED",
+    "AMBIGUOUS_TRANSACTION",
+    "OUT_OF_SCOPE"
+  ],
+  "baseline": "app.ml.baseline.RuleBaseline (frozen regex rules, v1)",
+  "frozen_at": "after DEV comparison and threshold selection, before TEST"
+}

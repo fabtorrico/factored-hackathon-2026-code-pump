@@ -1,0 +1,92 @@
+[
+  {
+    "id": "ex_fam_054_pt_03_79a49c04",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6837,
+    "semantic_family": "fam_054",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "ex_fam_054_es_02_908d9d93",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6246,
+    "semantic_family": "fam_054",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "ex_fam_036_es_00_14003826",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3898,
+    "semantic_family": "fam_036",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "ex_fam_032_es_02_adc7d08c",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3548,
+    "semantic_family": "fam_032",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "ex_fam_032_es_00_37a221f9",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3898,
+    "semantic_family": "fam_032",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "ex_fam_054_pt_01_590c0e3c",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6248,
+    "semantic_family": "fam_054",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "ex_fam_032_pt_01_0b6bfa8c",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4002,
+    "semantic_family": "fam_032",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "ex_fam_054_es_00_28c8eafe",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.559,
+    "semantic_family": "fam_054",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "ex_fam_036_pt_01_93b3308a",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4002,
+    "semantic_family": "fam_036",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "ex_fam_036_es_02_70d99a7b",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3548,
+    "semantic_family": "fam_036",
+    "error_category": "low_confidence_abstention"
+  }
+]

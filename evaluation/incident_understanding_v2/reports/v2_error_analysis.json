@@ -1,0 +1,4070 @@
+[
+  {
+    "id": "v2amb_es_01__v01__687b0e03",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3884,
+    "semantic_family": "v2amb_es_01",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_01__v02__f2fdbff2",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6172,
+    "semantic_family": "v2amb_es_01",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_01__v03__e72a41d9",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3034,
+    "semantic_family": "v2amb_es_01",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_01__v04__c9cdb01e",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6998,
+    "semantic_family": "v2amb_es_01",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_02__v01__836f3713",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4373,
+    "semantic_family": "v2amb_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_02__v02__91c8e909",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2724,
+    "semantic_family": "v2amb_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_02__v03__a5475e3f",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3408,
+    "semantic_family": "v2amb_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_02__v04__f51789fa",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6285,
+    "semantic_family": "v2amb_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_03__v01__4272d4e1",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5474,
+    "semantic_family": "v2amb_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_03__v02__1cea3218",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3639,
+    "semantic_family": "v2amb_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_03__v03__d264b0f3",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6901,
+    "semantic_family": "v2amb_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_03__v04__49d7be50",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6049,
+    "semantic_family": "v2amb_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_04__v01__feade6f4",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.514,
+    "semantic_family": "v2amb_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_04__v02__4bdc2c67",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3956,
+    "semantic_family": "v2amb_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_04__v03__ac5c9d50",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2614,
+    "semantic_family": "v2amb_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_04__v04__00e2e4c1",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4616,
+    "semantic_family": "v2amb_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_05__v01__ee9582d3",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3975,
+    "semantic_family": "v2amb_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_05__v02__fd0a096f",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4798,
+    "semantic_family": "v2amb_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_05__v03__d33a527b",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3253,
+    "semantic_family": "v2amb_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_05__v04__82979143",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3855,
+    "semantic_family": "v2amb_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_06__v01__7fa7de75",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4506,
+    "semantic_family": "v2amb_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_06__v02__30e865dc",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3204,
+    "semantic_family": "v2amb_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_06__v03__c4916f71",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4678,
+    "semantic_family": "v2amb_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_06__v04__fb676d63",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3684,
+    "semantic_family": "v2amb_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_07__v01__d166933d",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.7094,
+    "semantic_family": "v2amb_es_07",
+    "error_category": "failed_vs_ambiguous_boundary"
+  },
+  {
+    "id": "v2amb_es_07__v02__930aba76",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.9207,
+    "semantic_family": "v2amb_es_07",
+    "error_category": "failed_vs_ambiguous_boundary"
+  },
+  {
+    "id": "v2amb_es_07__v03__ad1a63af",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5239,
+    "semantic_family": "v2amb_es_07",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_07__v04__5a601427",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.9169,
+    "semantic_family": "v2amb_es_07",
+    "error_category": "failed_vs_ambiguous_boundary"
+  },
+  {
+    "id": "v2amb_es_08__v01__7ee1a50a",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3248,
+    "semantic_family": "v2amb_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_08__v02__87dc055f",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5742,
+    "semantic_family": "v2amb_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_08__v04__36a8f065",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2829,
+    "semantic_family": "v2amb_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_09__v01__5c2b7f6f",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3928,
+    "semantic_family": "v2amb_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_09__v02__52d5add8",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3933,
+    "semantic_family": "v2amb_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_09__v03__f8f9e639",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3237,
+    "semantic_family": "v2amb_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_09__v04__eb7f5ace",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3021,
+    "semantic_family": "v2amb_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_10__v01__ffd396a2",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.394,
+    "semantic_family": "v2amb_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_10__v02__832d892a",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6703,
+    "semantic_family": "v2amb_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_10__v03__20647a5f",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6013,
+    "semantic_family": "v2amb_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_10__v04__81aab0b4",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3953,
+    "semantic_family": "v2amb_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_11__v01__48715b6d",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4025,
+    "semantic_family": "v2amb_es_11",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_11__v03__8b2510b3",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3433,
+    "semantic_family": "v2amb_es_11",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_12__v01__ddfada22",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4364,
+    "semantic_family": "v2amb_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_12__v02__edef3ab3",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2834,
+    "semantic_family": "v2amb_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_12__v03__0cf15ff4",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4425,
+    "semantic_family": "v2amb_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_12__v04__56f2e58f",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5298,
+    "semantic_family": "v2amb_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_13__v01__83ac65b9",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2474,
+    "semantic_family": "v2amb_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_13__v02__26263aec",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3261,
+    "semantic_family": "v2amb_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_13__v03__53c48eda",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5047,
+    "semantic_family": "v2amb_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_es_13__v04__0108b246",
+    "language": "es",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3369,
+    "semantic_family": "v2amb_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_14__v01__d0af7df7",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3137,
+    "semantic_family": "v2amb_pt_14",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_14__v02__3d7d20b0",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.472,
+    "semantic_family": "v2amb_pt_14",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_14__v04__24dd6d62",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4149,
+    "semantic_family": "v2amb_pt_14",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_15__v01__acf4c337",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4661,
+    "semantic_family": "v2amb_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_15__v02__9cbd0970",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6423,
+    "semantic_family": "v2amb_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_15__v04__0da45666",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6069,
+    "semantic_family": "v2amb_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_16__v01__630a5528",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6973,
+    "semantic_family": "v2amb_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_16__v02__5d69fbaf",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5243,
+    "semantic_family": "v2amb_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_16__v03__5240717f",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5305,
+    "semantic_family": "v2amb_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_17__v01__7a8cfe32",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4351,
+    "semantic_family": "v2amb_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_17__v02__fc56bd1e",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6463,
+    "semantic_family": "v2amb_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_17__v03__9f59d5fd",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2986,
+    "semantic_family": "v2amb_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_17__v04__4a217814",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4236,
+    "semantic_family": "v2amb_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_18__v01__7e02b064",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3083,
+    "semantic_family": "v2amb_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_18__v02__d7e24161",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3443,
+    "semantic_family": "v2amb_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_18__v03__9adf039a",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3732,
+    "semantic_family": "v2amb_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_19__v01__01228e3d",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3924,
+    "semantic_family": "v2amb_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_19__v02__23bd755f",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.638,
+    "semantic_family": "v2amb_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_19__v03__313c3fd5",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5507,
+    "semantic_family": "v2amb_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_19__v04__919f3fcf",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4017,
+    "semantic_family": "v2amb_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_20__v01__ede2c991",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3738,
+    "semantic_family": "v2amb_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_20__v02__d6e4deae",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.8967,
+    "semantic_family": "v2amb_pt_20",
+    "error_category": "failed_vs_ambiguous_boundary"
+  },
+  {
+    "id": "v2amb_pt_20__v03__55838fca",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5835,
+    "semantic_family": "v2amb_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_20__v04__517877f4",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.7993,
+    "semantic_family": "v2amb_pt_20",
+    "error_category": "failed_vs_ambiguous_boundary"
+  },
+  {
+    "id": "v2amb_pt_21__v01__ea75008d",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2742,
+    "semantic_family": "v2amb_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_21__v02__18d91a35",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3743,
+    "semantic_family": "v2amb_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_21__v03__213aa4e6",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6659,
+    "semantic_family": "v2amb_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_21__v04__6efb9732",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5957,
+    "semantic_family": "v2amb_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_22__v01__6ff12def",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.409,
+    "semantic_family": "v2amb_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_22__v02__171643d8",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3228,
+    "semantic_family": "v2amb_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_22__v03__cb49c10f",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2992,
+    "semantic_family": "v2amb_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_22__v04__b3881647",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2734,
+    "semantic_family": "v2amb_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_23__v01__4e03e162",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3348,
+    "semantic_family": "v2amb_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_23__v02__6aae187d",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.457,
+    "semantic_family": "v2amb_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_23__v04__61f53566",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5663,
+    "semantic_family": "v2amb_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_24__v01__44b523e3",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3975,
+    "semantic_family": "v2amb_pt_24",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_24__v03__b50665c1",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6349,
+    "semantic_family": "v2amb_pt_24",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_25__v02__ebd0afdb",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5376,
+    "semantic_family": "v2amb_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_25__v03__5f96f12b",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2962,
+    "semantic_family": "v2amb_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2amb_pt_25__v04__24cec181",
+    "language": "pt",
+    "expected_label": "AMBIGUOUS_TRANSACTION",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4963,
+    "semantic_family": "v2amb_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_01__v01__0d6ea964",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.323,
+    "semantic_family": "v2appr_es_01",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_01__v02__ec1366ba",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.566,
+    "semantic_family": "v2appr_es_01",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_01__v03__634cb445",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5869,
+    "semantic_family": "v2appr_es_01",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_01__v04__10fd23f4",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3809,
+    "semantic_family": "v2appr_es_01",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_02__v01__793bdad5",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3819,
+    "semantic_family": "v2appr_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_02__v02__020b3de6",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3265,
+    "semantic_family": "v2appr_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_02__v03__b85e8106",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5375,
+    "semantic_family": "v2appr_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_02__v04__dbfb6228",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3937,
+    "semantic_family": "v2appr_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_03__v01__e254e723",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3957,
+    "semantic_family": "v2appr_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_03__v02__0550a0df",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4209,
+    "semantic_family": "v2appr_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_03__v03__58eb7f08",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4358,
+    "semantic_family": "v2appr_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_03__v04__f5a5e637",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4725,
+    "semantic_family": "v2appr_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_04__v01__6dc7a2ad",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4497,
+    "semantic_family": "v2appr_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_04__v02__e097142f",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3437,
+    "semantic_family": "v2appr_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_04__v03__630d4147",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4775,
+    "semantic_family": "v2appr_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_04__v04__b96b3a5b",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3531,
+    "semantic_family": "v2appr_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_05__v01__73cc66f8",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5784,
+    "semantic_family": "v2appr_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_05__v02__84fb23ca",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5247,
+    "semantic_family": "v2appr_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_05__v03__eb031cf7",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6097,
+    "semantic_family": "v2appr_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_05__v04__a3b721a6",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3427,
+    "semantic_family": "v2appr_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_06__v01__674a2944",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4502,
+    "semantic_family": "v2appr_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_06__v04__23121a57",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6516,
+    "semantic_family": "v2appr_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_07__v01__d724612b",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5433,
+    "semantic_family": "v2appr_es_07",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_07__v02__9267cf2c",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3799,
+    "semantic_family": "v2appr_es_07",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_07__v03__1cad954e",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3565,
+    "semantic_family": "v2appr_es_07",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_07__v04__fa2eec92",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4898,
+    "semantic_family": "v2appr_es_07",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_08__v01__131825de",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4255,
+    "semantic_family": "v2appr_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_08__v02__1d4dee2c",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.302,
+    "semantic_family": "v2appr_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_08__v03__7d0d3e12",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2751,
+    "semantic_family": "v2appr_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_08__v04__1f36638c",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2814,
+    "semantic_family": "v2appr_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_09__v01__13d0e022",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5486,
+    "semantic_family": "v2appr_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_09__v02__dcf613d2",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4476,
+    "semantic_family": "v2appr_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_09__v03__e6bfdab6",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4304,
+    "semantic_family": "v2appr_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_09__v04__ac7c4784",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6681,
+    "semantic_family": "v2appr_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_10__v01__c6831d71",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5235,
+    "semantic_family": "v2appr_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_10__v02__456125c9",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2842,
+    "semantic_family": "v2appr_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_10__v03__94cbe41d",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5955,
+    "semantic_family": "v2appr_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_10__v04__7ce8a2ff",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4198,
+    "semantic_family": "v2appr_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_11__v01__a074b7b4",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2958,
+    "semantic_family": "v2appr_es_11",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_11__v02__1e68bab3",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4715,
+    "semantic_family": "v2appr_es_11",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_11__v03__e09317a5",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5535,
+    "semantic_family": "v2appr_es_11",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_11__v04__55ed9f2f",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4845,
+    "semantic_family": "v2appr_es_11",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_12__v01__54c1f618",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3815,
+    "semantic_family": "v2appr_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_12__v02__8e61547a",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4804,
+    "semantic_family": "v2appr_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_12__v03__84672d5f",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3686,
+    "semantic_family": "v2appr_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_12__v04__d40d3d9a",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4295,
+    "semantic_family": "v2appr_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_13__v01__545a568c",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3755,
+    "semantic_family": "v2appr_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_13__v02__f9a7f061",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.286,
+    "semantic_family": "v2appr_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_13__v03__c1c7529d",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3649,
+    "semantic_family": "v2appr_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_es_13__v04__e4a613d1",
+    "language": "es",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5369,
+    "semantic_family": "v2appr_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_14__v01__0530c261",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2953,
+    "semantic_family": "v2appr_pt_14",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_14__v03__1f1ef71e",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6606,
+    "semantic_family": "v2appr_pt_14",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_14__v04__4e7ac104",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5148,
+    "semantic_family": "v2appr_pt_14",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_15__v01__94e81e91",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6321,
+    "semantic_family": "v2appr_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_15__v02__60bd91a5",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2981,
+    "semantic_family": "v2appr_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_15__v03__9c8f8bf0",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6209,
+    "semantic_family": "v2appr_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_15__v04__a48b5477",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2626,
+    "semantic_family": "v2appr_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_16__v01__86c7636a",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4319,
+    "semantic_family": "v2appr_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_16__v02__46bdfd6d",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3959,
+    "semantic_family": "v2appr_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_16__v03__940a4308",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5461,
+    "semantic_family": "v2appr_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_16__v04__d5dde6ea",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3682,
+    "semantic_family": "v2appr_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_17__v01__94fafd9b",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3729,
+    "semantic_family": "v2appr_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_17__v02__b8e6a4d5",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4585,
+    "semantic_family": "v2appr_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_17__v03__37540fa6",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5283,
+    "semantic_family": "v2appr_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_17__v04__de8b2af3",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3865,
+    "semantic_family": "v2appr_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_18__v01__041a2f89",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5425,
+    "semantic_family": "v2appr_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_18__v03__a16e821d",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6573,
+    "semantic_family": "v2appr_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_18__v04__e29061ed",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6363,
+    "semantic_family": "v2appr_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_19__v02__908acbca",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6866,
+    "semantic_family": "v2appr_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_20__v01__5ec114b0",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5807,
+    "semantic_family": "v2appr_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_20__v03__60858a17",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4539,
+    "semantic_family": "v2appr_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_20__v04__0dc66790",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6736,
+    "semantic_family": "v2appr_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_21__v01__e38bdc43",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3268,
+    "semantic_family": "v2appr_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_21__v02__86d4e8ca",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3747,
+    "semantic_family": "v2appr_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_21__v03__43a608e1",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3219,
+    "semantic_family": "v2appr_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_21__v04__0e22706c",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4274,
+    "semantic_family": "v2appr_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_22__v01__c6e77afb",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3849,
+    "semantic_family": "v2appr_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_22__v02__ad03e653",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4894,
+    "semantic_family": "v2appr_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_22__v03__9a8c81fe",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3205,
+    "semantic_family": "v2appr_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_23__v01__c35d59ce",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5169,
+    "semantic_family": "v2appr_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_23__v02__39dbe32f",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5547,
+    "semantic_family": "v2appr_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_23__v03__a4e92864",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.442,
+    "semantic_family": "v2appr_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_23__v04__fee8c3bb",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3787,
+    "semantic_family": "v2appr_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_24__v01__71b4d8f8",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3973,
+    "semantic_family": "v2appr_pt_24",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_24__v02__46b26400",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3647,
+    "semantic_family": "v2appr_pt_24",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_24__v03__508543ed",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4371,
+    "semantic_family": "v2appr_pt_24",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_24__v04__0aa51cf9",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3765,
+    "semantic_family": "v2appr_pt_24",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_25__v01__f387e673",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4992,
+    "semantic_family": "v2appr_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_25__v02__f53b6edb",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6696,
+    "semantic_family": "v2appr_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_25__v03__ebf8c7fe",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3101,
+    "semantic_family": "v2appr_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2appr_pt_25__v04__1718c667",
+    "language": "pt",
+    "expected_label": "APPROVED_BUT_UNRESOLVED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2828,
+    "semantic_family": "v2appr_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_02__v02__868a12cb",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5295,
+    "semantic_family": "v2fail_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_02__v03__a66e0f75",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5598,
+    "semantic_family": "v2fail_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_03__v01__220eb1bd",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4608,
+    "semantic_family": "v2fail_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_03__v02__f00b222d",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3671,
+    "semantic_family": "v2fail_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_03__v03__4e95ff24",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5361,
+    "semantic_family": "v2fail_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_03__v04__ce310fec",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3995,
+    "semantic_family": "v2fail_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_04__v01__ceb7ec3a",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4916,
+    "semantic_family": "v2fail_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_04__v02__9dc9bd54",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4283,
+    "semantic_family": "v2fail_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_04__v03__2530ba4f",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4022,
+    "semantic_family": "v2fail_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_05__v01__c4dd5e55",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.446,
+    "semantic_family": "v2fail_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_05__v02__56a993ac",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4432,
+    "semantic_family": "v2fail_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_06__v01__a11fe71d",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4738,
+    "semantic_family": "v2fail_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_06__v03__bbbe8fca",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4673,
+    "semantic_family": "v2fail_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_06__v04__9b81b01e",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "APPROVED_BUT_UNRESOLVED",
+    "confidence": 0.7516,
+    "semantic_family": "v2fail_es_06",
+    "error_category": "lexical_overlap_or_indirect"
+  },
+  {
+    "id": "v2fail_es_07__v01__f156e594",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4336,
+    "semantic_family": "v2fail_es_07",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_07__v02__0531d6aa",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3674,
+    "semantic_family": "v2fail_es_07",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_07__v04__f5cccce4",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4395,
+    "semantic_family": "v2fail_es_07",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_08__v01__f0ec77fd",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6626,
+    "semantic_family": "v2fail_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_08__v02__94ad359e",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "APPROVED_BUT_UNRESOLVED",
+    "confidence": 0.7254,
+    "semantic_family": "v2fail_es_08",
+    "error_category": "lexical_overlap_or_indirect"
+  },
+  {
+    "id": "v2fail_es_09__v01__10ffbe70",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5859,
+    "semantic_family": "v2fail_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_09__v02__4dfb913f",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.697,
+    "semantic_family": "v2fail_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_09__v03__2a751fbf",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3239,
+    "semantic_family": "v2fail_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_09__v04__305a9d49",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4069,
+    "semantic_family": "v2fail_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_10__v01__044c0fed",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3774,
+    "semantic_family": "v2fail_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_10__v02__74c59b6a",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3275,
+    "semantic_family": "v2fail_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_10__v03__d6957f28",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.511,
+    "semantic_family": "v2fail_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_10__v04__05bbd030",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6518,
+    "semantic_family": "v2fail_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_11__v01__68664b7a",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5985,
+    "semantic_family": "v2fail_es_11",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_11__v04__ec02e476",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5134,
+    "semantic_family": "v2fail_es_11",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_12__v03__d9eac0cc",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2877,
+    "semantic_family": "v2fail_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_12__v04__14895d23",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3495,
+    "semantic_family": "v2fail_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_13__v01__09700360",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.371,
+    "semantic_family": "v2fail_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_13__v02__052056c4",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4806,
+    "semantic_family": "v2fail_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_es_13__v03__ed5d2ab9",
+    "language": "es",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5049,
+    "semantic_family": "v2fail_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_15__v02__528202ac",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4113,
+    "semantic_family": "v2fail_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_15__v03__70d7b457",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.605,
+    "semantic_family": "v2fail_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_16__v01__74e00ae7",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4617,
+    "semantic_family": "v2fail_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_16__v02__856d9af0",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5837,
+    "semantic_family": "v2fail_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_16__v03__03c865df",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5833,
+    "semantic_family": "v2fail_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_16__v04__ccde22e8",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5676,
+    "semantic_family": "v2fail_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_17__v01__643eb9c7",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5195,
+    "semantic_family": "v2fail_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_17__v02__c4d17792",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4841,
+    "semantic_family": "v2fail_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_17__v03__704467e5",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5834,
+    "semantic_family": "v2fail_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_18__v01__b59ec9f8",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4954,
+    "semantic_family": "v2fail_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_18__v02__82aceaee",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4056,
+    "semantic_family": "v2fail_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_18__v03__377dfa09",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5808,
+    "semantic_family": "v2fail_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_18__v04__51448ad6",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.511,
+    "semantic_family": "v2fail_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_19__v01__f342327e",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6667,
+    "semantic_family": "v2fail_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_19__v03__abe6e5cd",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5372,
+    "semantic_family": "v2fail_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_19__v04__b8a7efd0",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "APPROVED_BUT_UNRESOLVED",
+    "confidence": 0.8567,
+    "semantic_family": "v2fail_pt_19",
+    "error_category": "lexical_overlap_or_indirect"
+  },
+  {
+    "id": "v2fail_pt_20__v01__f6f74bff",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.654,
+    "semantic_family": "v2fail_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_20__v02__a9ee68a9",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4647,
+    "semantic_family": "v2fail_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_20__v04__3d66e334",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5593,
+    "semantic_family": "v2fail_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_21__v01__1857382c",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6925,
+    "semantic_family": "v2fail_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_21__v02__a2d52e66",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "APPROVED_BUT_UNRESOLVED",
+    "confidence": 0.827,
+    "semantic_family": "v2fail_pt_21",
+    "error_category": "lexical_overlap_or_indirect"
+  },
+  {
+    "id": "v2fail_pt_21__v04__cd216340",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6741,
+    "semantic_family": "v2fail_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_22__v01__f47c2c44",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3595,
+    "semantic_family": "v2fail_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_22__v03__af5058a4",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3098,
+    "semantic_family": "v2fail_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_22__v04__a9a022cb",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5135,
+    "semantic_family": "v2fail_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_23__v01__20a70a9b",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3271,
+    "semantic_family": "v2fail_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_23__v02__7a5eb4f8",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4613,
+    "semantic_family": "v2fail_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_23__v03__541513d0",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5106,
+    "semantic_family": "v2fail_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_23__v04__7abcd108",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3909,
+    "semantic_family": "v2fail_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_24__v01__b11c6e48",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6492,
+    "semantic_family": "v2fail_pt_24",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_24__v04__e3da840e",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3084,
+    "semantic_family": "v2fail_pt_24",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_25__v03__625c89ea",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6608,
+    "semantic_family": "v2fail_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2fail_pt_25__v04__0f13259f",
+    "language": "pt",
+    "expected_label": "FAILED_OR_DECLINED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3792,
+    "semantic_family": "v2fail_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_02__v01__524aaf83",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4425,
+    "semantic_family": "v2oos_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_02__v02__6c73b696",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6771,
+    "semantic_family": "v2oos_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_02__v03__6642c60b",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4024,
+    "semantic_family": "v2oos_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_02__v04__afb58d25",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5108,
+    "semantic_family": "v2oos_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_04__v01__8e7b7d8e",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6032,
+    "semantic_family": "v2oos_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_04__v02__fdff4040",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.8555,
+    "semantic_family": "v2oos_es_04",
+    "error_category": "negation"
+  },
+  {
+    "id": "v2oos_es_04__v03__841b0433",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3414,
+    "semantic_family": "v2oos_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_04__v04__4fb89af2",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2752,
+    "semantic_family": "v2oos_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_05__v01__b27b0fac",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3697,
+    "semantic_family": "v2oos_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_05__v02__f8881a94",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3735,
+    "semantic_family": "v2oos_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_05__v03__b0d856b2",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6916,
+    "semantic_family": "v2oos_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_05__v04__fd24ed1a",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4555,
+    "semantic_family": "v2oos_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_06__v01__130a2f10",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4383,
+    "semantic_family": "v2oos_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_06__v02__1f888e92",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5581,
+    "semantic_family": "v2oos_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_06__v03__e6e7bc1f",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6307,
+    "semantic_family": "v2oos_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_06__v04__0a96c7e8",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.649,
+    "semantic_family": "v2oos_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_08__v01__dfc8cb61",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4696,
+    "semantic_family": "v2oos_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_08__v02__f58b49ee",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6141,
+    "semantic_family": "v2oos_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_08__v03__e8990ee9",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4197,
+    "semantic_family": "v2oos_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_08__v04__af94fe02",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3418,
+    "semantic_family": "v2oos_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_09__v03__ebf1b85a",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.55,
+    "semantic_family": "v2oos_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_10__v01__be764389",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4678,
+    "semantic_family": "v2oos_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_10__v02__8591e468",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.824,
+    "semantic_family": "v2oos_es_10",
+    "error_category": "negation"
+  },
+  {
+    "id": "v2oos_es_11__v01__d3bcfe03",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6705,
+    "semantic_family": "v2oos_es_11",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_11__v02__228024d9",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6879,
+    "semantic_family": "v2oos_es_11",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_11__v03__7f4c5bac",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.517,
+    "semantic_family": "v2oos_es_11",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_12__v02__5dcdbc35",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5075,
+    "semantic_family": "v2oos_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_13__v01__2f1618da",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6479,
+    "semantic_family": "v2oos_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_13__v03__32c47a2e",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3568,
+    "semantic_family": "v2oos_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_es_13__v04__d08d09ba",
+    "language": "es",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6698,
+    "semantic_family": "v2oos_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_15__v01__47c0e21b",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4248,
+    "semantic_family": "v2oos_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_15__v02__12dede17",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.8062,
+    "semantic_family": "v2oos_pt_15",
+    "error_category": "negation"
+  },
+  {
+    "id": "v2oos_pt_15__v03__bdc54e84",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3845,
+    "semantic_family": "v2oos_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_15__v04__7cbdeef5",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4538,
+    "semantic_family": "v2oos_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_17__v01__43ad0860",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3923,
+    "semantic_family": "v2oos_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_17__v02__d0a6aa6f",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.9337,
+    "semantic_family": "v2oos_pt_17",
+    "error_category": "negation"
+  },
+  {
+    "id": "v2oos_pt_17__v03__7107b834",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3736,
+    "semantic_family": "v2oos_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_17__v04__cb4c03e0",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2935,
+    "semantic_family": "v2oos_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_18__v01__2df56581",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4136,
+    "semantic_family": "v2oos_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_18__v02__14982399",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.485,
+    "semantic_family": "v2oos_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_18__v03__c0c1f5ea",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5688,
+    "semantic_family": "v2oos_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_18__v04__09b1f6ff",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4552,
+    "semantic_family": "v2oos_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_19__v01__5a1e59a5",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3755,
+    "semantic_family": "v2oos_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_19__v02__355a0daa",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.615,
+    "semantic_family": "v2oos_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_19__v03__bdca78c5",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4951,
+    "semantic_family": "v2oos_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_19__v04__66289e03",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3783,
+    "semantic_family": "v2oos_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_21__v01__63a8d633",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4883,
+    "semantic_family": "v2oos_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_21__v02__46cf943e",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6237,
+    "semantic_family": "v2oos_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_21__v03__c0f1e163",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4041,
+    "semantic_family": "v2oos_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_21__v04__b1faa148",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3315,
+    "semantic_family": "v2oos_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_22__v03__c10ab419",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6103,
+    "semantic_family": "v2oos_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_23__v01__7bf47a84",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4859,
+    "semantic_family": "v2oos_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_23__v02__29f241fe",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.7891,
+    "semantic_family": "v2oos_pt_23",
+    "error_category": "negation"
+  },
+  {
+    "id": "v2oos_pt_24__v01__bf3ac468",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5222,
+    "semantic_family": "v2oos_pt_24",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_25__v01__7cbe74f6",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6112,
+    "semantic_family": "v2oos_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2oos_pt_25__v04__2023db88",
+    "language": "pt",
+    "expected_label": "OUT_OF_SCOPE",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.565,
+    "semantic_family": "v2oos_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_01__v01__bfb4df98",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.29,
+    "semantic_family": "v2pend_es_01",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_01__v02__fee08788",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3282,
+    "semantic_family": "v2pend_es_01",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_01__v03__d1816398",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6758,
+    "semantic_family": "v2pend_es_01",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_01__v04__7d5888a2",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3538,
+    "semantic_family": "v2pend_es_01",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_02__v01__631b21eb",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "OUT_OF_SCOPE",
+    "confidence": 0.7388,
+    "semantic_family": "v2pend_es_02",
+    "error_category": "lexical_overlap_or_indirect"
+  },
+  {
+    "id": "v2pend_es_02__v03__97147ae6",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5998,
+    "semantic_family": "v2pend_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_02__v04__7f8b82e1",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3812,
+    "semantic_family": "v2pend_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_03__v01__6e3a1cbd",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.311,
+    "semantic_family": "v2pend_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_03__v02__21592f0c",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3591,
+    "semantic_family": "v2pend_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_03__v03__e0517048",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3869,
+    "semantic_family": "v2pend_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_03__v04__6b56cdba",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2366,
+    "semantic_family": "v2pend_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_04__v01__b94554d5",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3679,
+    "semantic_family": "v2pend_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_04__v02__f62ba136",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2662,
+    "semantic_family": "v2pend_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_04__v03__d915fc52",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4429,
+    "semantic_family": "v2pend_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_04__v04__ebb41cd4",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.282,
+    "semantic_family": "v2pend_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_05__v02__59bd3e08",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3255,
+    "semantic_family": "v2pend_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_05__v03__13e9d007",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2896,
+    "semantic_family": "v2pend_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_05__v04__d63324ca",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4484,
+    "semantic_family": "v2pend_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_06__v01__6b8f8eaf",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4914,
+    "semantic_family": "v2pend_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_06__v02__46eab624",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4621,
+    "semantic_family": "v2pend_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_06__v03__8c5983fd",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4113,
+    "semantic_family": "v2pend_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_06__v04__1b15ee95",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2866,
+    "semantic_family": "v2pend_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_07__v01__35eba340",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5386,
+    "semantic_family": "v2pend_es_07",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_07__v02__81f6c056",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5663,
+    "semantic_family": "v2pend_es_07",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_07__v03__cad37a28",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2773,
+    "semantic_family": "v2pend_es_07",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_07__v04__4cadd7be",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2924,
+    "semantic_family": "v2pend_es_07",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_08__v02__66407da1",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3308,
+    "semantic_family": "v2pend_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_08__v03__e5822dd0",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5191,
+    "semantic_family": "v2pend_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_08__v04__b446a30c",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4597,
+    "semantic_family": "v2pend_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_09__v01__c677620d",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6453,
+    "semantic_family": "v2pend_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_09__v02__cd5aad91",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3909,
+    "semantic_family": "v2pend_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_09__v03__5776cf23",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3521,
+    "semantic_family": "v2pend_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_09__v04__05099055",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3073,
+    "semantic_family": "v2pend_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_10__v01__bd814ce8",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3187,
+    "semantic_family": "v2pend_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_10__v02__3c80a28d",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4483,
+    "semantic_family": "v2pend_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_10__v04__a2ee76a0",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4298,
+    "semantic_family": "v2pend_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_11__v01__793e4d32",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4559,
+    "semantic_family": "v2pend_es_11",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_11__v02__c0954fe7",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4408,
+    "semantic_family": "v2pend_es_11",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_11__v04__84f81fd4",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3661,
+    "semantic_family": "v2pend_es_11",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_12__v01__90c242c9",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3308,
+    "semantic_family": "v2pend_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_12__v02__682b62c2",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5684,
+    "semantic_family": "v2pend_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_12__v03__e09ce36a",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4562,
+    "semantic_family": "v2pend_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_12__v04__70dc3077",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6564,
+    "semantic_family": "v2pend_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_13__v01__a4a6aae0",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5295,
+    "semantic_family": "v2pend_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_13__v02__94db7edf",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5878,
+    "semantic_family": "v2pend_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_es_13__v03__01bbafbc",
+    "language": "es",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6604,
+    "semantic_family": "v2pend_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_14__v01__eed09a1a",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2689,
+    "semantic_family": "v2pend_pt_14",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_14__v02__b47e5014",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3158,
+    "semantic_family": "v2pend_pt_14",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_14__v03__49c47a11",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5588,
+    "semantic_family": "v2pend_pt_14",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_15__v01__67060f70",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3338,
+    "semantic_family": "v2pend_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_15__v02__952b1801",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4656,
+    "semantic_family": "v2pend_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_15__v03__70e228e1",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3006,
+    "semantic_family": "v2pend_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_15__v04__69fd0359",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.577,
+    "semantic_family": "v2pend_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_16__v01__4bd7f091",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2249,
+    "semantic_family": "v2pend_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_16__v02__87a46935",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3585,
+    "semantic_family": "v2pend_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_16__v03__f4fcf235",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3391,
+    "semantic_family": "v2pend_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_16__v04__4197c073",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3732,
+    "semantic_family": "v2pend_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_17__v01__3df96a96",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3971,
+    "semantic_family": "v2pend_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_17__v02__e09a0ee0",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3118,
+    "semantic_family": "v2pend_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_17__v03__5234079d",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.257,
+    "semantic_family": "v2pend_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_17__v04__cc267bda",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3179,
+    "semantic_family": "v2pend_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_18__v02__d144fbd3",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3486,
+    "semantic_family": "v2pend_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_18__v03__6d8f5bb5",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3521,
+    "semantic_family": "v2pend_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_18__v04__a540977a",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4919,
+    "semantic_family": "v2pend_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_19__v01__4d9b2071",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.675,
+    "semantic_family": "v2pend_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_19__v02__a226d61d",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5236,
+    "semantic_family": "v2pend_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_19__v03__e894d07e",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5892,
+    "semantic_family": "v2pend_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_19__v04__15f8e512",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4961,
+    "semantic_family": "v2pend_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_20__v01__ca70b53e",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3916,
+    "semantic_family": "v2pend_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_20__v02__15798dff",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.416,
+    "semantic_family": "v2pend_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_20__v03__468c6192",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3427,
+    "semantic_family": "v2pend_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_20__v04__2e41bbdc",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4037,
+    "semantic_family": "v2pend_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_21__v02__ed78b9ff",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3903,
+    "semantic_family": "v2pend_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_21__v03__ef5bd448",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5817,
+    "semantic_family": "v2pend_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_21__v04__f732d5c8",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6127,
+    "semantic_family": "v2pend_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_22__v02__25099335",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4869,
+    "semantic_family": "v2pend_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_22__v03__17ad27f6",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3699,
+    "semantic_family": "v2pend_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_22__v04__20e93833",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3822,
+    "semantic_family": "v2pend_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_23__v01__755ea2fc",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3472,
+    "semantic_family": "v2pend_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_23__v03__982fbb9c",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3403,
+    "semantic_family": "v2pend_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_23__v04__d0cb2bb4",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4117,
+    "semantic_family": "v2pend_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_24__v01__76f3dd42",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5333,
+    "semantic_family": "v2pend_pt_24",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_24__v02__95c11c97",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5426,
+    "semantic_family": "v2pend_pt_24",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_24__v03__94539448",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4773,
+    "semantic_family": "v2pend_pt_24",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_24__v04__5a547d0c",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4961,
+    "semantic_family": "v2pend_pt_24",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_25__v01__2ddbe473",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4445,
+    "semantic_family": "v2pend_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_25__v02__e8351b1e",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3733,
+    "semantic_family": "v2pend_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_25__v03__f8e38df2",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4785,
+    "semantic_family": "v2pend_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2pend_pt_25__v04__a30f9037",
+    "language": "pt",
+    "expected_label": "PENDING_OR_DELAYED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3802,
+    "semantic_family": "v2pend_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_01__v03__6aebb768",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.627,
+    "semantic_family": "v2rev_es_01",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_02__v02__5318bd4c",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4583,
+    "semantic_family": "v2rev_es_02",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_02__v03__df1f0439",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.7272,
+    "semantic_family": "v2rev_es_02",
+    "error_category": "lexical_overlap_or_indirect"
+  },
+  {
+    "id": "v2rev_es_03__v02__dae8c5a4",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6437,
+    "semantic_family": "v2rev_es_03",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_04__v02__3750bc23",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3256,
+    "semantic_family": "v2rev_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_04__v03__5ec99906",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5725,
+    "semantic_family": "v2rev_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_04__v04__6a4724b2",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.2349,
+    "semantic_family": "v2rev_es_04",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_05__v01__c0ad8278",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4194,
+    "semantic_family": "v2rev_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_05__v02__1b3ac757",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6959,
+    "semantic_family": "v2rev_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_05__v03__8d43ff9a",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3891,
+    "semantic_family": "v2rev_es_05",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_05__v04__ab1ed142",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.8067,
+    "semantic_family": "v2rev_es_05",
+    "error_category": "lexical_overlap_or_indirect"
+  },
+  {
+    "id": "v2rev_es_06__v01__6d8e003e",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.8604,
+    "semantic_family": "v2rev_es_06",
+    "error_category": "lexical_overlap_or_indirect"
+  },
+  {
+    "id": "v2rev_es_06__v03__b5341eca",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5524,
+    "semantic_family": "v2rev_es_06",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_06__v04__12f5dafc",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.7015,
+    "semantic_family": "v2rev_es_06",
+    "error_category": "lexical_overlap_or_indirect"
+  },
+  {
+    "id": "v2rev_es_07__v02__a07beaa7",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.594,
+    "semantic_family": "v2rev_es_07",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_07__v03__5f113b89",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3031,
+    "semantic_family": "v2rev_es_07",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_08__v02__09cadb2a",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6903,
+    "semantic_family": "v2rev_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_08__v03__fbee4552",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6437,
+    "semantic_family": "v2rev_es_08",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_09__v01__04788cf7",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6442,
+    "semantic_family": "v2rev_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_09__v02__d87b2996",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4532,
+    "semantic_family": "v2rev_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_09__v03__8230dc68",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5354,
+    "semantic_family": "v2rev_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_09__v04__98b90d78",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3315,
+    "semantic_family": "v2rev_es_09",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_10__v02__abf7bc8d",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6771,
+    "semantic_family": "v2rev_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_10__v03__a66f0b4e",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4409,
+    "semantic_family": "v2rev_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_10__v04__a3461a4e",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3526,
+    "semantic_family": "v2rev_es_10",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_12__v01__1253ae23",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.817,
+    "semantic_family": "v2rev_es_12",
+    "error_category": "lexical_overlap_or_indirect"
+  },
+  {
+    "id": "v2rev_es_12__v03__3f259181",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.571,
+    "semantic_family": "v2rev_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_12__v04__659179d3",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6046,
+    "semantic_family": "v2rev_es_12",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_13__v01__f4a91899",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6274,
+    "semantic_family": "v2rev_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_13__v03__fa79baa0",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3722,
+    "semantic_family": "v2rev_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_es_13__v04__efc371be",
+    "language": "es",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3996,
+    "semantic_family": "v2rev_es_13",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_14__v03__135c5f5e",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5353,
+    "semantic_family": "v2rev_pt_14",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_15__v02__9d15b074",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4746,
+    "semantic_family": "v2rev_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_15__v03__70ac8f5d",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5133,
+    "semantic_family": "v2rev_pt_15",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_16__v02__30e487ba",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5402,
+    "semantic_family": "v2rev_pt_16",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_17__v02__3054a753",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5207,
+    "semantic_family": "v2rev_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_17__v03__fd9ddf41",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4202,
+    "semantic_family": "v2rev_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_17__v04__010e366c",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3539,
+    "semantic_family": "v2rev_pt_17",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_18__v01__22ab6981",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.321,
+    "semantic_family": "v2rev_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_18__v02__89bed766",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4557,
+    "semantic_family": "v2rev_pt_18",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_18__v04__0c5d8a89",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.7943,
+    "semantic_family": "v2rev_pt_18",
+    "error_category": "lexical_overlap_or_indirect"
+  },
+  {
+    "id": "v2rev_pt_19__v01__ef7d5dfc",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.8634,
+    "semantic_family": "v2rev_pt_19",
+    "error_category": "lexical_overlap_or_indirect"
+  },
+  {
+    "id": "v2rev_pt_19__v02__c6c0e8a1",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4862,
+    "semantic_family": "v2rev_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_19__v03__500e55d3",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5049,
+    "semantic_family": "v2rev_pt_19",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_19__v04__02204c55",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.8585,
+    "semantic_family": "v2rev_pt_19",
+    "error_category": "lexical_overlap_or_indirect"
+  },
+  {
+    "id": "v2rev_pt_20__v01__755f4c99",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6063,
+    "semantic_family": "v2rev_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_20__v02__00dbbb52",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4246,
+    "semantic_family": "v2rev_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_20__v03__887704b0",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4829,
+    "semantic_family": "v2rev_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_20__v04__e5a6d48f",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6898,
+    "semantic_family": "v2rev_pt_20",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_21__v03__de793b88",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3435,
+    "semantic_family": "v2rev_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_21__v04__90eb2d18",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.5881,
+    "semantic_family": "v2rev_pt_21",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_22__v03__7986b0a8",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3632,
+    "semantic_family": "v2rev_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_22__v04__0638f7c0",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3521,
+    "semantic_family": "v2rev_pt_22",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_23__v02__851f443b",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.69,
+    "semantic_family": "v2rev_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_23__v03__20c3af1d",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3491,
+    "semantic_family": "v2rev_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_23__v04__a38925cb",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.3266,
+    "semantic_family": "v2rev_pt_23",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_24__v03__0ce3d716",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6778,
+    "semantic_family": "v2rev_pt_24",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_25__v01__aa9830b4",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "FAILED_OR_DECLINED",
+    "confidence": 0.7763,
+    "semantic_family": "v2rev_pt_25",
+    "error_category": "lexical_overlap_or_indirect"
+  },
+  {
+    "id": "v2rev_pt_25__v03__3b825b3d",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.6398,
+    "semantic_family": "v2rev_pt_25",
+    "error_category": "low_confidence_abstention"
+  },
+  {
+    "id": "v2rev_pt_25__v04__9969a2d9",
+    "language": "pt",
+    "expected_label": "REVERSED",
+    "predicted_label": "__ABSTAIN__",
+    "confidence": 0.4934,
+    "semantic_family": "v2rev_pt_25",
+    "error_category": "low_confidence_abstention"
+  }
+]

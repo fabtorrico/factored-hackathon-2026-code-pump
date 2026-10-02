@@ -1,0 +1,43 @@
+{
+  "challenge_version": "2.0.0",
+  "challenge_sha256": "f571726ad934e87e7d0663776071cdacfc2b922a882b9960143708362bdedc26",
+  "total_examples": 600,
+  "frozen_systems": {
+    "baseline_module": "app.ml.baseline.RuleBaseline",
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "classifier": "sklearn.linear_model.LogisticRegression",
+    "classifier_params": {
+      "max_iter": 1000,
+      "random_state": 42
+    },
+    "threshold": 0.7,
+    "fits_only_on_v1_train": true
+  },
+  "comparison": {
+    "baseline": {
+      "accuracy": 0.24833333333333332,
+      "macro_f1": 0.3084636874148236,
+      "coverage": 0.3283333333333333,
+      "accepted_accuracy": 0.7563451776649747,
+      "abstention_rate": 0.6716666666666666
+    },
+    "learned_raw_th0": {
+      "accuracy": 0.5816666666666667,
+      "macro_f1": 0.5914926408627067,
+      "coverage": 1.0,
+      "accepted_accuracy": 0.5816666666666667,
+      "abstention_rate": 0.0
+    },
+    "learned_th0_7": {
+      "accuracy": 0.24666666666666667,
+      "macro_f1": 0.36137068021052093,
+      "coverage": 0.2866666666666667,
+      "accepted_accuracy": 0.8604651162790697,
+      "abstention_rate": 0.7133333333333334
+    }
+  },
+  "baseline_errors": 451,
+  "learned_raw_errors": 251,
+  "learned_threshold_errors": 452,
+  "learned_threshold_abstentions": 428
+}

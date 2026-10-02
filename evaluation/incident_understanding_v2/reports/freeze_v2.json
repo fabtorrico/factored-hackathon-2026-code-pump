@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "artifact": "challenge.json",
+  "sha256": "f571726ad934e87e7d0663776071cdacfc2b922a882b9960143708362bdedc26",
+  "bytes": 308323,
+  "seed": 42,
+  "total": 600,
+  "num_families": 150,
+  "labels": {
+    "AMBIGUOUS_TRANSACTION": 100,
+    "APPROVED_BUT_UNRESOLVED": 100,
+    "FAILED_OR_DECLINED": 100,
+    "OUT_OF_SCOPE": 100,
+    "PENDING_OR_DELAYED": 100,
+    "REVERSED": 100
+  },
+  "languages": {
+    "es": 312,
+    "pt": 288
+  },
+  "tiers": {
+    "COLLOQUIAL_OR_NOISY": 96,
+    "DIRECT": 128,
+    "HARD_NEGATIVE": 104,
+    "INDIRECT": 112,
+    "LEXICAL_OVERLAP": 64,
+    "LOW_CONTEXT": 96
+  },
+  "v1_test_compared": 40,
+  "frozen_before_any_model_run": true
+}

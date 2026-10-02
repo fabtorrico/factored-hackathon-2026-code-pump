@@ -1,0 +1,3605 @@
+{
+  "metadata": {
+    "seed": 42,
+    "description": "Team-generated synthetic task-specific evaluation dataset (no organizer records, no PII).",
+    "split": "group-aware by semantic_family",
+    "version": "1.0.0",
+    "total": 224,
+    "train": 145,
+    "dev": 39,
+    "test": 40,
+    "num_families": 62
+  },
+  "train": [
+    {
+      "id": "ex_fam_009_es_02_759917df",
+      "text": "La transaccion esta tardando mucho.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_009",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_027_es_02_c0c915c3",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_027",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_037_es_02_d9194f2e",
+      "text": "El pago fue aprobado pero no recibí el importe.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_037",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_037_es_00_957f0c8f",
+      "text": "El pago fue aprobado pero no recibí el dinero.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_037",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_042_es_00_4fc93ae8",
+      "text": "No sé si la transferencia se hizo.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_042",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_023_pt_01_c541c6f0",
+      "text": "A minha compra foi recusada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_023",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_028_pt_03_cf1f14d6",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_028",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_047_es_02_ab67efc5",
+      "text": "No sé si la operacion se hizo.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_047",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_025_pt_03_7bce4446",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_025",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_051_es_02_210ccee7",
+      "text": "Estoy confundido sobre el estado de la operacion.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_051",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_003_pt_01_f909a2fc",
+      "text": "O meu pagamento ainda nao apareceu como realizado.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_003",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_004_pt_01_8ef1e2ae",
+      "text": "Ha horas que espero pela transferencia.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_004",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_022_es_00_d3190de0",
+      "text": "La operacion fue rechazada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_022",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_025_es_02_af6e969f",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_025",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_007_pt_03_a7ae2b17",
+      "text": "A transferência esta demorando muito.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_007",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_005_pt_03_07f67b89",
+      "text": "A transferência ainda nao chegou.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_005",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_047_pt_01_5f20f453",
+      "text": "Nao sei se a transferencia foi feita.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_047",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_051_es_00_876b3942",
+      "text": "Estoy confundido sobre el estado de la transferencia.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_051",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_008_es_00_de1336e6",
+      "text": "Todavia estoy esperando que llegue la transferencia.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_008",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_049_es_02_191c1ddd",
+      "text": "No me queda claro qué pasó con la operacion.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_049",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_001_es_00_0c7855a0",
+      "text": "La transferencia lleva horas sin llegar.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_001",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_011_es_02_c6fa1172",
+      "text": "Llevo esperando la transaccion desde hace horas.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_011",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_001_pt_01_8da3211f",
+      "text": "A transferencia esta demorando muito.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_001",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_020_pt_01_59976c48",
+      "text": "A transacao foi declinada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_020",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_004_es_00_3787245e",
+      "text": "Mi pago todavia no aparece como realizado.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_004",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_057_es_02_3ee34753",
+      "text": "Necesito informacion sobre prestamos. Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_057",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_021_pt_01_b9db05ca",
+      "text": "Tentei fazer uma transferencia e foi negada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_021",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_052_pt_01_2aec0a7e",
+      "text": "Gostaria de saber a taxa de cambio de hoje.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_052",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_026_es_00_8a6664de",
+      "text": "Me reembolsaron el pago.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_026",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_035_pt_01_c3debc35",
+      "text": "Diz aprovado mas o destinatario nao recebeu.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_035",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_017_es_02_0337161a",
+      "text": "Mi compra fue rechazada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_017",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_026_pt_03_b37955ef",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_026",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_019_pt_01_3b7146ef",
+      "text": "O pagamento foi rejeitado.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_019",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_052_es_02_ad28142d",
+      "text": "Quisiera saber el tipo de cambio de hoy. Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_052",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_003_es_00_584d3679",
+      "text": "La transferencia esta tardando mucho.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_003",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_039_es_00_cb5e117c",
+      "text": "Dice aprobado pero el beneficiario no lo recibió.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_039",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_039_pt_01_e9b6a075",
+      "text": "Diz aprovado mas o destinatario nao recebeu.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_039",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_030_pt_03_00152b37",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_030",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_020_pt_03_4cbc22d7",
+      "text": "A transacao foi declinada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_020",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_020_es_02_3d78b3b6",
+      "text": "Me aparece que la transaccion fue declinada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_020",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_058_es_02_f755e4c0",
+      "text": "Quisiera saber el tipo de cambio de hoy. Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_058",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_017_es_00_140ef770",
+      "text": "Mi compra fue rechazada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_017",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_027_es_00_e3f6d2da",
+      "text": "La operacion fue anulada y me devolvieron el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_027",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_049_es_00_7bea4fd8",
+      "text": "No me queda claro qué pasó con la transferencia.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_049",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_051_pt_01_06dfdb02",
+      "text": "Estou confuso sobre o estado da transferencia.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_051",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_009_es_00_460dfdef",
+      "text": "La transferencia esta tardando mucho.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_009",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_027_pt_01_20fc639f",
+      "text": "A operacao foi anulada e devolveram-me o dinheiro.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_027",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_059_pt_03_4a16d655",
+      "text": "Preciso abrir uma nova conta. Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_059",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_008_es_02_2ff7816a",
+      "text": "Todavia estoy esperando que llegue la transaccion.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_008",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_048_es_00_c11d7da5",
+      "text": "No estoy seguro si el pago fue enviado.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_048",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_042_pt_01_c6b4721e",
+      "text": "Nao sei se a transferencia foi feita.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_042",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_022_pt_01_68a549f0",
+      "text": "A operacao foi rejeitada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_022",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_020_es_00_9a1b724d",
+      "text": "Me aparece que la transaccion fue declinada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_020",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_026_pt_01_5deedba7",
+      "text": "Fui reembolsado pelo pagamento.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_026",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_052_es_00_f4793daf",
+      "text": "Quisiera saber el tipo de cambio de hoy.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_052",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_059_pt_01_af3d9bac",
+      "text": "Preciso abrir uma nova conta.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_059",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_005_pt_01_2b101c0e",
+      "text": "A transferencia ainda nao chegou.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_005",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_034_es_02_6832c47d",
+      "text": "Aparece aprobado pero todavía no tengo el importe.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_034",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_017_pt_01_27a61b24",
+      "text": "A minha compra foi recusada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_017",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_028_pt_01_f2949b8c",
+      "text": "Devolveram-me o dinheiro da transferencia.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_028",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_061_es_02_92fd7074",
+      "text": "Cual es el horario de la sucursal? Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_061",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_033_pt_01_673563b1",
+      "text": "O pagamento foi aprovado mas nao recebi o dinheiro.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_033",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_042_pt_03_adcff377",
+      "text": "Nao sei se a operacao foi feita.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_042",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_028_es_02_26ceef66",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_028",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_033_es_00_f729f04b",
+      "text": "El pago fue aprobado pero no recibí el dinero.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_033",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_024_pt_03_c78ee9c7",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_024",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_047_es_00_306beff6",
+      "text": "No sé si la transferencia se hizo.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_047",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_045_es_00_cb71c8c4",
+      "text": "No sé si se envió o no el dinero.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_045",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_008_pt_03_e96a2fd6",
+      "text": "Ainda estou a espera que a transferência chegue.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_008",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_034_pt_01_28554dc5",
+      "text": "Aparece aprovado mas ainda nao tenho o dinheiro.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_034",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_021_es_02_adceb03b",
+      "text": "Intente hacer una transferencia y fue denegada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_021",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_055_es_02_69c66ee6",
+      "text": "Cual es el horario de la sucursal? Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_055",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_035_es_00_4c738556",
+      "text": "Dice aprobado pero el beneficiario no lo recibió.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_035",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_052_pt_03_2442ecfd",
+      "text": "Gostaria de saber a taxa de cambio de hoje. Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_052",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_049_pt_01_656efb95",
+      "text": "Nao esta claro o que aconteceu com a transferencia.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_049",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_019_es_00_ff809a9f",
+      "text": "El pago me salio rechazado.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_019",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_041_es_00_ed7f3fc7",
+      "text": "El pago fue aprobado pero no recibí el dinero.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_041",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_007_pt_01_cefc0766",
+      "text": "A transferencia esta demorando muito.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_007",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_034_es_00_20e762d2",
+      "text": "Aparece aprobado pero todavía no tengo el dinero.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_034",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_055_pt_03_868ccd69",
+      "text": "Qual e o horario da agencia? Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_055",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_026_es_02_714bcd12",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_026",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_021_es_00_7df145f3",
+      "text": "Intente hacer una transferencia y fue denegada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_021",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_057_pt_03_0f627417",
+      "text": "Preciso de informacao sobre emprestimos. Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_057",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_003_es_02_9fbdd5e6",
+      "text": "La transaccion esta tardando mucho.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_003",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_021_pt_03_1a7d11b3",
+      "text": "Tentei fazer uma transferencia e foi negada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_021",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_018_pt_01_08ac33e8",
+      "text": "A minha transferencia foi recusada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_018",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_058_pt_01_78485953",
+      "text": "Gostaria de saber a taxa de cambio de hoje.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_058",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_030_es_02_b9651eab",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_030",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_061_pt_03_81005561",
+      "text": "Qual e o horario da agencia? Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_061",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_011_pt_03_97cc808b",
+      "text": "A transferência ainda nao chegou.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_011",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_005_es_00_a71734b0",
+      "text": "Llevo esperando la transferencia desde hace horas.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_005",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_018_es_00_d77997a0",
+      "text": "Mi transferencia fue rechazada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_018",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_023_es_02_77573458",
+      "text": "Mi compra fue rechazada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_023",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_024_es_02_acbb12eb",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_024",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_011_pt_01_1282786b",
+      "text": "A transferencia ainda nao chegou.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_011",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_024_pt_01_e578e8b5",
+      "text": "Devolveram-me o dinheiro da transferencia.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_024",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_030_es_00_d34a1b0b",
+      "text": "Me reembolsaron el pago.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_030",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_055_pt_01_054c5e67",
+      "text": "Qual e o horario da agencia?",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_055",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_049_pt_03_ac8429c2",
+      "text": "Nao esta claro o que aconteceu com a operacao.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_049",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_055_es_00_f5474bd7",
+      "text": "Cual es el horario de la sucursal?",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_055",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_019_es_02_1c32ebd1",
+      "text": "El pago me salio rechazado. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_019",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_015_es_02_487df9e0",
+      "text": "Intente hacer una transferencia y fue denegada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_015",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_047_pt_03_e717bcc6",
+      "text": "Nao sei se a operacao foi feita.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_047",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_004_pt_02_f12bd268",
+      "text": "Ha horas que espero pela transferência.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_004",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_024_es_00_012a2e2b",
+      "text": "Me devolvieron el dinero de la transferencia.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_024",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_019_pt_03_b8eb4a72",
+      "text": "O pagamento foi rejeitado. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_019",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_005_es_02_3a710230",
+      "text": "Llevo esperando la transaccion desde hace horas.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_005",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_025_es_00_722cd598",
+      "text": "La transferencia fue revertida.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_025",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_008_pt_01_bd84b6ca",
+      "text": "Ainda estou a espera que a transferencia chegue.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_008",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_030_pt_01_bbe6a6c9",
+      "text": "Fui reembolsado pelo pagamento.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_030",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_017_pt_03_d94c299b",
+      "text": "A minha compra foi recusada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_017",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_023_es_00_88acb3b9",
+      "text": "Mi compra fue rechazada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_023",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_023_pt_03_d33b8a1b",
+      "text": "A minha compra foi recusada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_023",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_025_pt_01_72079ae1",
+      "text": "A transferencia foi revertida.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_025",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_057_pt_01_81a0602b",
+      "text": "Preciso de informacao sobre emprestimos.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_057",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_059_es_02_fb404aca",
+      "text": "Necesito abrir una nueva cuenta. Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_059",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_022_es_02_21fbdb89",
+      "text": "La operacion fue rechazada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_022",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_057_es_00_37f60602",
+      "text": "Necesito informacion sobre prestamos.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_057",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_059_es_00_a9a4fc51",
+      "text": "Necesito abrir una nueva cuenta.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_059",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_022_pt_03_56ab3891",
+      "text": "A operacao foi rejeitada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_022",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_058_es_00_8e9e22a2",
+      "text": "Quisiera saber el tipo de cambio de hoy.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_058",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_011_es_00_efe540e2",
+      "text": "Llevo esperando la transferencia desde hace horas.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_011",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_018_pt_03_c1a2b5c4",
+      "text": "A minha transferencia foi recusada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_018",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_041_pt_01_721851cd",
+      "text": "O pagamento foi aprovado mas nao recebi o dinheiro.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_041",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_015_es_00_a86cb134",
+      "text": "Intente hacer una transferencia y fue denegada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_015",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_027_pt_03_b8cc1d0a",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_027",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_058_pt_03_39d6bf34",
+      "text": "Gostaria de saber a taxa de cambio de hoje. Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_058",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_051_pt_03_34478b21",
+      "text": "Estou confuso sobre o estado da operacao.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_051",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_061_pt_01_5671ba52",
+      "text": "Qual e o horario da agencia?",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_061",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_042_es_02_d3494032",
+      "text": "No sé si la operacion se hizo.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_042",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_033_es_02_3b6d0293",
+      "text": "El pago fue aprobado pero no recibí el importe.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_033",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_015_pt_03_13c34020",
+      "text": "Tentei fazer uma transferencia e foi negada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_015",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_001_pt_03_290ad0c7",
+      "text": "A transferência esta demorando muito.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_001",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_028_es_00_a68b7624",
+      "text": "Me devolvieron el dinero de la transferencia.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_028",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_041_es_02_e836a047",
+      "text": "El pago fue aprobado pero no recibí el importe.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_041",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_037_pt_01_6a26bf29",
+      "text": "O pagamento foi aprovado mas nao recebi o dinheiro.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_037",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_061_es_00_d8d372f1",
+      "text": "Cual es el horario de la sucursal?",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_061",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_048_pt_01_2c062155",
+      "text": "Nao estou seguro se o pagamento foi enviado.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_048",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_007_es_00_a342e885",
+      "text": "La transferencia lleva horas sin llegar.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_007",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_009_pt_01_4cdcffe3",
+      "text": "O meu pagamento ainda nao apareceu como realizado.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_009",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_015_pt_01_0378df2d",
+      "text": "Tentei fazer uma transferencia e foi negada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_015",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_018_es_02_678881f9",
+      "text": "Mi transferencia fue rechazada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_018",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_001_es_02_29c4488c",
+      "text": "La transaccion lleva horas sin llegar.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_001",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_007_es_02_126ee762",
+      "text": "La transaccion lleva horas sin llegar.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_007",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_045_pt_01_3d4526d1",
+      "text": "Nao sei se o dinheiro foi enviado ou nao.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_045",
+      "difficulty": "medium"
+    }
+  ],
+  "dev": [
+    {
+      "id": "ex_fam_040_es_02_ba1ef736",
+      "text": "La transferencia aparece aprobada pero el importe no llega.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_040",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_012_pt_01_a03f0529",
+      "text": "A minha transferencia foi recusada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_012",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_040_es_00_49cd7c73",
+      "text": "La transferencia aparece aprobada pero el dinero no llega.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_040",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_031_es_02_f8b6ba40",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_031",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_012_es_00_467a4b7a",
+      "text": "Mi transferencia fue rechazada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_012",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_060_es_00_b0a895fb",
+      "text": "Como puedo solicitar una tarjeta de credito?",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_060",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_046_pt_03_70e72895",
+      "text": "Estou confuso sobre o estado da operacao.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_046",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_012_pt_03_41abd661",
+      "text": "A minha transferencia foi recusada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_012",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_060_pt_01_c4376b7a",
+      "text": "Como posso solicitar um cartao de credito?",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_060",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_010_pt_01_a94f6335",
+      "text": "Ha horas que espero pela transferencia.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_010",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_031_pt_01_6d2e9170",
+      "text": "A operacao foi anulada e devolveram-me o dinheiro.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_031",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_010_es_00_ca89eff8",
+      "text": "Mi pago todavia no aparece como realizado.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_010",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_046_es_00_62bbff85",
+      "text": "Estoy confundido sobre el estado de la transferencia.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_046",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_046_pt_01_9c09541e",
+      "text": "Estou confuso sobre o estado da transferencia.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_046",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_031_pt_03_a6e66b4b",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_031",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_060_pt_03_9b7843a6",
+      "text": "Como posso solicitar um cartao de credito? Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_060",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_013_es_00_07ab86b9",
+      "text": "El pago me salio rechazado.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_013",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_056_es_02_c69c27d1",
+      "text": "Quisiera cambiar mi clave de acceso. Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_056",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_056_es_00_f442f5ef",
+      "text": "Quisiera cambiar mi clave de acceso.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_056",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_043_pt_01_685bbfb8",
+      "text": "Nao estou seguro se o pagamento foi enviado.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_043",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_012_es_02_0e41aa9e",
+      "text": "Mi transferencia fue rechazada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_012",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_013_pt_03_2dcf7806",
+      "text": "O pagamento foi rejeitado. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_013",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_038_pt_01_0346bf60",
+      "text": "Aparece aprovado mas ainda nao tenho o dinheiro.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_038",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_031_es_00_2b6b97c8",
+      "text": "La operacion fue anulada y me devolvieron el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_031",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_043_es_00_b4e66fc3",
+      "text": "No estoy seguro si el pago fue enviado.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_043",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_060_es_02_eb0083ca",
+      "text": "Como puedo solicitar una tarjeta de credito? Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_060",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_006_pt_03_26036728",
+      "text": "A minha transferência ainda nao chegou ao destino.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_006",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_056_pt_03_b15c45b7",
+      "text": "Gostaria de alterar a minha senha. Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_056",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_013_pt_01_a199862f",
+      "text": "O pagamento foi rejeitado.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_013",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_040_pt_01_56de39b8",
+      "text": "A transferencia aparece aprovada mas o dinheiro nao chegou.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_040",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_038_es_00_7634ea58",
+      "text": "Aparece aprobado pero todavía no tengo el dinero.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_038",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_056_pt_01_ec4dd075",
+      "text": "Gostaria de alterar a minha senha.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_056",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_006_es_02_0fe82f98",
+      "text": "Mi transaccion todavia no llega a destino.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_006",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_010_pt_02_9b1a51bf",
+      "text": "Ha horas que espero pela transferência.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_010",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_046_es_02_0eadd3e0",
+      "text": "Estoy confundido sobre el estado de la operacion.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_046",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_013_es_02_f9680c9f",
+      "text": "El pago me salio rechazado. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_013",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_038_es_02_3961cf62",
+      "text": "Aparece aprobado pero todavía no tengo el importe.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_038",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_006_pt_01_a95f1689",
+      "text": "A minha transferencia ainda nao chegou ao destino.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_006",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_006_es_00_889d182f",
+      "text": "Mi transferencia todavia no llega a destino.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_006",
+      "difficulty": "easy"
+    }
+  ],
+  "test": [
+    {
+      "id": "ex_fam_054_pt_03_79a49c04",
+      "text": "Como posso solicitar um cartao de credito? Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_054",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_000_es_02_02f79b47",
+      "text": "Mi transaccion todavia no llega a destino.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_000",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_014_es_00_0504ce65",
+      "text": "Me aparece que la transaccion fue declinada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_014",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_016_es_00_1dd24171",
+      "text": "La operacion fue rechazada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_016",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_000_pt_03_deb17511",
+      "text": "A minha transferência ainda nao chegou ao destino.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_000",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_029_pt_03_111da3e0",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_029",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_002_es_02_7e9c4649",
+      "text": "Todavia estoy esperando que llegue la transaccion.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_002",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_053_pt_03_cd7e419b",
+      "text": "Preciso abrir uma nova conta. Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_053",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_002_pt_01_e87569ad",
+      "text": "Ainda estou a espera que a transferencia chegue.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_002",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_054_es_02_908d9d93",
+      "text": "Como puedo solicitar una tarjeta de credito? Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_054",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_016_pt_01_d438b01c",
+      "text": "A operacao foi rejeitada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_016",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_036_es_00_14003826",
+      "text": "La transferencia aparece aprobada pero el dinero no llega.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_036",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_044_pt_03_ba19b394",
+      "text": "Nao esta claro o que aconteceu com a operacao.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_044",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_000_es_00_10ba9ce9",
+      "text": "Mi transferencia todavia no llega a destino.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_000",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_044_pt_01_9a157fdd",
+      "text": "Nao esta claro o que aconteceu com a transferencia.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_044",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_032_es_02_adc7d08c",
+      "text": "La transferencia aparece aprobada pero el importe no llega.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_032",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_032_es_00_37a221f9",
+      "text": "La transferencia aparece aprobada pero el dinero no llega.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_032",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_014_es_02_ab12e2c3",
+      "text": "Me aparece que la transaccion fue declinada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_014",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_054_pt_01_590c0e3c",
+      "text": "Como posso solicitar um cartao de credito?",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_054",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_053_es_02_f46549aa",
+      "text": "Necesito abrir una nueva cuenta. Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_053",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_029_pt_01_4280b58d",
+      "text": "A transferencia foi revertida.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_029",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_016_pt_03_65beeb0e",
+      "text": "A operacao foi rejeitada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_016",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_032_pt_01_0b6bfa8c",
+      "text": "A transferencia aparece aprovada mas o dinheiro nao chegou.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_032",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_029_es_00_18019c67",
+      "text": "La transferencia fue revertida.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_029",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_054_es_00_28c8eafe",
+      "text": "Como puedo solicitar una tarjeta de credito?",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_054",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_036_pt_01_93b3308a",
+      "text": "A transferencia aparece aprovada mas o dinheiro nao chegou.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_036",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_014_pt_01_0024a6d5",
+      "text": "A transacao foi declinada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_014",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_044_es_00_25decde7",
+      "text": "No me queda claro qué pasó con la transferencia.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_044",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_044_es_02_340e7354",
+      "text": "No me queda claro qué pasó con la operacion.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_044",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_036_es_02_70d99a7b",
+      "text": "La transferencia aparece aprobada pero el importe no llega.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_036",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_002_pt_03_2ff54efc",
+      "text": "Ainda estou a espera que a transferência chegue.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_002",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_050_es_00_d5dd42a1",
+      "text": "No sé si se envió o no el dinero.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_050",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_000_pt_01_d6da960d",
+      "text": "A minha transferencia ainda nao chegou ao destino.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_000",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_029_es_02_95552170",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_029",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_050_pt_01_cb4ee941",
+      "text": "Nao sei se o dinheiro foi enviado ou nao.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_050",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_014_pt_03_bc4e136b",
+      "text": "A transacao foi declinada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_014",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_002_es_00_1b0a209f",
+      "text": "Todavia estoy esperando que llegue la transferencia.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_002",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_053_es_00_991688cc",
+      "text": "Necesito abrir una nueva cuenta.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_053",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_016_es_02_f34c20a5",
+      "text": "La operacion fue rechazada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_016",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_053_pt_01_cea97a5c",
+      "text": "Preciso abrir uma nova conta.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_053",
+      "difficulty": "easy"
+    }
+  ],
+  "examples": [
+    {
+      "id": "ex_fam_040_es_02_ba1ef736",
+      "text": "La transferencia aparece aprobada pero el importe no llega.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_040",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_009_es_02_759917df",
+      "text": "La transaccion esta tardando mucho.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_009",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_054_pt_03_79a49c04",
+      "text": "Como posso solicitar um cartao de credito? Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_054",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_000_es_02_02f79b47",
+      "text": "Mi transaccion todavia no llega a destino.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_000",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_012_pt_01_a03f0529",
+      "text": "A minha transferencia foi recusada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_012",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_027_es_02_c0c915c3",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_027",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_037_es_02_d9194f2e",
+      "text": "El pago fue aprobado pero no recibí el importe.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_037",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_037_es_00_957f0c8f",
+      "text": "El pago fue aprobado pero no recibí el dinero.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_037",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_014_es_00_0504ce65",
+      "text": "Me aparece que la transaccion fue declinada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_014",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_042_es_00_4fc93ae8",
+      "text": "No sé si la transferencia se hizo.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_042",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_023_pt_01_c541c6f0",
+      "text": "A minha compra foi recusada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_023",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_040_es_00_49cd7c73",
+      "text": "La transferencia aparece aprobada pero el dinero no llega.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_040",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_028_pt_03_cf1f14d6",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_028",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_047_es_02_ab67efc5",
+      "text": "No sé si la operacion se hizo.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_047",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_031_es_02_f8b6ba40",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_031",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_025_pt_03_7bce4446",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_025",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_051_es_02_210ccee7",
+      "text": "Estoy confundido sobre el estado de la operacion.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_051",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_016_es_00_1dd24171",
+      "text": "La operacion fue rechazada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_016",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_003_pt_01_f909a2fc",
+      "text": "O meu pagamento ainda nao apareceu como realizado.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_003",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_012_es_00_467a4b7a",
+      "text": "Mi transferencia fue rechazada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_012",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_004_pt_01_8ef1e2ae",
+      "text": "Ha horas que espero pela transferencia.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_004",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_022_es_00_d3190de0",
+      "text": "La operacion fue rechazada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_022",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_025_es_02_af6e969f",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_025",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_007_pt_03_a7ae2b17",
+      "text": "A transferência esta demorando muito.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_007",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_060_es_00_b0a895fb",
+      "text": "Como puedo solicitar una tarjeta de credito?",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_060",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_005_pt_03_07f67b89",
+      "text": "A transferência ainda nao chegou.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_005",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_047_pt_01_5f20f453",
+      "text": "Nao sei se a transferencia foi feita.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_047",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_051_es_00_876b3942",
+      "text": "Estoy confundido sobre el estado de la transferencia.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_051",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_008_es_00_de1336e6",
+      "text": "Todavia estoy esperando que llegue la transferencia.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_008",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_046_pt_03_70e72895",
+      "text": "Estou confuso sobre o estado da operacao.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_046",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_049_es_02_191c1ddd",
+      "text": "No me queda claro qué pasó con la operacion.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_049",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_001_es_00_0c7855a0",
+      "text": "La transferencia lleva horas sin llegar.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_001",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_011_es_02_c6fa1172",
+      "text": "Llevo esperando la transaccion desde hace horas.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_011",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_012_pt_03_41abd661",
+      "text": "A minha transferencia foi recusada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_012",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_001_pt_01_8da3211f",
+      "text": "A transferencia esta demorando muito.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_001",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_020_pt_01_59976c48",
+      "text": "A transacao foi declinada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_020",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_000_pt_03_deb17511",
+      "text": "A minha transferência ainda nao chegou ao destino.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_000",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_004_es_00_3787245e",
+      "text": "Mi pago todavia no aparece como realizado.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_004",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_060_pt_01_c4376b7a",
+      "text": "Como posso solicitar um cartao de credito?",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_060",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_029_pt_03_111da3e0",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_029",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_057_es_02_3ee34753",
+      "text": "Necesito informacion sobre prestamos. Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_057",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_021_pt_01_b9db05ca",
+      "text": "Tentei fazer uma transferencia e foi negada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_021",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_052_pt_01_2aec0a7e",
+      "text": "Gostaria de saber a taxa de cambio de hoje.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_052",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_026_es_00_8a6664de",
+      "text": "Me reembolsaron el pago.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_026",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_035_pt_01_c3debc35",
+      "text": "Diz aprovado mas o destinatario nao recebeu.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_035",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_017_es_02_0337161a",
+      "text": "Mi compra fue rechazada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_017",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_026_pt_03_b37955ef",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_026",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_019_pt_01_3b7146ef",
+      "text": "O pagamento foi rejeitado.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_019",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_002_es_02_7e9c4649",
+      "text": "Todavia estoy esperando que llegue la transaccion.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_002",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_053_pt_03_cd7e419b",
+      "text": "Preciso abrir uma nova conta. Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_053",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_052_es_02_ad28142d",
+      "text": "Quisiera saber el tipo de cambio de hoy. Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_052",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_002_pt_01_e87569ad",
+      "text": "Ainda estou a espera que a transferencia chegue.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_002",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_003_es_00_584d3679",
+      "text": "La transferencia esta tardando mucho.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_003",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_010_pt_01_a94f6335",
+      "text": "Ha horas que espero pela transferencia.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_010",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_054_es_02_908d9d93",
+      "text": "Como puedo solicitar una tarjeta de credito? Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_054",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_016_pt_01_d438b01c",
+      "text": "A operacao foi rejeitada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_016",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_039_es_00_cb5e117c",
+      "text": "Dice aprobado pero el beneficiario no lo recibió.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_039",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_039_pt_01_e9b6a075",
+      "text": "Diz aprovado mas o destinatario nao recebeu.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_039",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_030_pt_03_00152b37",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_030",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_036_es_00_14003826",
+      "text": "La transferencia aparece aprobada pero el dinero no llega.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_036",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_044_pt_03_ba19b394",
+      "text": "Nao esta claro o que aconteceu com a operacao.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_044",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_020_pt_03_4cbc22d7",
+      "text": "A transacao foi declinada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_020",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_020_es_02_3d78b3b6",
+      "text": "Me aparece que la transaccion fue declinada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_020",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_058_es_02_f755e4c0",
+      "text": "Quisiera saber el tipo de cambio de hoy. Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_058",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_017_es_00_140ef770",
+      "text": "Mi compra fue rechazada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_017",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_027_es_00_e3f6d2da",
+      "text": "La operacion fue anulada y me devolvieron el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_027",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_000_es_00_10ba9ce9",
+      "text": "Mi transferencia todavia no llega a destino.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_000",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_031_pt_01_6d2e9170",
+      "text": "A operacao foi anulada e devolveram-me o dinheiro.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_031",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_049_es_00_7bea4fd8",
+      "text": "No me queda claro qué pasó con la transferencia.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_049",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_051_pt_01_06dfdb02",
+      "text": "Estou confuso sobre o estado da transferencia.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_051",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_010_es_00_ca89eff8",
+      "text": "Mi pago todavia no aparece como realizado.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_010",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_046_es_00_62bbff85",
+      "text": "Estoy confundido sobre el estado de la transferencia.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_046",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_046_pt_01_9c09541e",
+      "text": "Estou confuso sobre o estado da transferencia.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_046",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_009_es_00_460dfdef",
+      "text": "La transferencia esta tardando mucho.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_009",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_027_pt_01_20fc639f",
+      "text": "A operacao foi anulada e devolveram-me o dinheiro.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_027",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_031_pt_03_a6e66b4b",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_031",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_059_pt_03_4a16d655",
+      "text": "Preciso abrir uma nova conta. Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_059",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_060_pt_03_9b7843a6",
+      "text": "Como posso solicitar um cartao de credito? Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_060",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_008_es_02_2ff7816a",
+      "text": "Todavia estoy esperando que llegue la transaccion.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_008",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_048_es_00_c11d7da5",
+      "text": "No estoy seguro si el pago fue enviado.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_048",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_042_pt_01_c6b4721e",
+      "text": "Nao sei se a transferencia foi feita.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_042",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_022_pt_01_68a549f0",
+      "text": "A operacao foi rejeitada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_022",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_013_es_00_07ab86b9",
+      "text": "El pago me salio rechazado.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_013",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_044_pt_01_9a157fdd",
+      "text": "Nao esta claro o que aconteceu com a transferencia.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_044",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_032_es_02_adc7d08c",
+      "text": "La transferencia aparece aprobada pero el importe no llega.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_032",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_020_es_00_9a1b724d",
+      "text": "Me aparece que la transaccion fue declinada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_020",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_026_pt_01_5deedba7",
+      "text": "Fui reembolsado pelo pagamento.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_026",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_052_es_00_f4793daf",
+      "text": "Quisiera saber el tipo de cambio de hoy.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_052",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_059_pt_01_af3d9bac",
+      "text": "Preciso abrir uma nova conta.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_059",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_056_es_02_c69c27d1",
+      "text": "Quisiera cambiar mi clave de acceso. Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_056",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_005_pt_01_2b101c0e",
+      "text": "A transferencia ainda nao chegou.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_005",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_034_es_02_6832c47d",
+      "text": "Aparece aprobado pero todavía no tengo el importe.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_034",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_056_es_00_f442f5ef",
+      "text": "Quisiera cambiar mi clave de acceso.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_056",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_043_pt_01_685bbfb8",
+      "text": "Nao estou seguro se o pagamento foi enviado.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_043",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_032_es_00_37a221f9",
+      "text": "La transferencia aparece aprobada pero el dinero no llega.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_032",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_017_pt_01_27a61b24",
+      "text": "A minha compra foi recusada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_017",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_028_pt_01_f2949b8c",
+      "text": "Devolveram-me o dinheiro da transferencia.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_028",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_061_es_02_92fd7074",
+      "text": "Cual es el horario de la sucursal? Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_061",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_012_es_02_0e41aa9e",
+      "text": "Mi transferencia fue rechazada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_012",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_013_pt_03_2dcf7806",
+      "text": "O pagamento foi rejeitado. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_013",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_033_pt_01_673563b1",
+      "text": "O pagamento foi aprovado mas nao recebi o dinheiro.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_033",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_014_es_02_ab12e2c3",
+      "text": "Me aparece que la transaccion fue declinada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_014",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_042_pt_03_adcff377",
+      "text": "Nao sei se a operacao foi feita.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_042",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_054_pt_01_590c0e3c",
+      "text": "Como posso solicitar um cartao de credito?",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_054",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_028_es_02_26ceef66",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_028",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_033_es_00_f729f04b",
+      "text": "El pago fue aprobado pero no recibí el dinero.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_033",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_053_es_02_f46549aa",
+      "text": "Necesito abrir una nueva cuenta. Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_053",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_024_pt_03_c78ee9c7",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_024",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_047_es_00_306beff6",
+      "text": "No sé si la transferencia se hizo.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_047",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_045_es_00_cb71c8c4",
+      "text": "No sé si se envió o no el dinero.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_045",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_008_pt_03_e96a2fd6",
+      "text": "Ainda estou a espera que a transferência chegue.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_008",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_038_pt_01_0346bf60",
+      "text": "Aparece aprovado mas ainda nao tenho o dinheiro.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_038",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_034_pt_01_28554dc5",
+      "text": "Aparece aprovado mas ainda nao tenho o dinheiro.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_034",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_021_es_02_adceb03b",
+      "text": "Intente hacer una transferencia y fue denegada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_021",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_029_pt_01_4280b58d",
+      "text": "A transferencia foi revertida.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_029",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_055_es_02_69c66ee6",
+      "text": "Cual es el horario de la sucursal? Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_055",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_016_pt_03_65beeb0e",
+      "text": "A operacao foi rejeitada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_016",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_035_es_00_4c738556",
+      "text": "Dice aprobado pero el beneficiario no lo recibió.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_035",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_032_pt_01_0b6bfa8c",
+      "text": "A transferencia aparece aprovada mas o dinheiro nao chegou.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_032",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_052_pt_03_2442ecfd",
+      "text": "Gostaria de saber a taxa de cambio de hoje. Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_052",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_049_pt_01_656efb95",
+      "text": "Nao esta claro o que aconteceu com a transferencia.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_049",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_029_es_00_18019c67",
+      "text": "La transferencia fue revertida.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_029",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_019_es_00_ff809a9f",
+      "text": "El pago me salio rechazado.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_019",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_031_es_00_2b6b97c8",
+      "text": "La operacion fue anulada y me devolvieron el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_031",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_041_es_00_ed7f3fc7",
+      "text": "El pago fue aprobado pero no recibí el dinero.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_041",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_007_pt_01_cefc0766",
+      "text": "A transferencia esta demorando muito.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_007",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_034_es_00_20e762d2",
+      "text": "Aparece aprobado pero todavía no tengo el dinero.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_034",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_055_pt_03_868ccd69",
+      "text": "Qual e o horario da agencia? Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_055",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_026_es_02_714bcd12",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_026",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_021_es_00_7df145f3",
+      "text": "Intente hacer una transferencia y fue denegada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_021",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_057_pt_03_0f627417",
+      "text": "Preciso de informacao sobre emprestimos. Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_057",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_043_es_00_b4e66fc3",
+      "text": "No estoy seguro si el pago fue enviado.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_043",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_003_es_02_9fbdd5e6",
+      "text": "La transaccion esta tardando mucho.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_003",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_021_pt_03_1a7d11b3",
+      "text": "Tentei fazer uma transferencia e foi negada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_021",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_054_es_00_28c8eafe",
+      "text": "Como puedo solicitar una tarjeta de credito?",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_054",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_018_pt_01_08ac33e8",
+      "text": "A minha transferencia foi recusada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_018",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_058_pt_01_78485953",
+      "text": "Gostaria de saber a taxa de cambio de hoje.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_058",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_030_es_02_b9651eab",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_030",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_061_pt_03_81005561",
+      "text": "Qual e o horario da agencia? Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_061",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_060_es_02_eb0083ca",
+      "text": "Como puedo solicitar una tarjeta de credito? Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_060",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_036_pt_01_93b3308a",
+      "text": "A transferencia aparece aprovada mas o dinheiro nao chegou.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_036",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_011_pt_03_97cc808b",
+      "text": "A transferência ainda nao chegou.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_011",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_005_es_00_a71734b0",
+      "text": "Llevo esperando la transferencia desde hace horas.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_005",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_018_es_00_d77997a0",
+      "text": "Mi transferencia fue rechazada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_018",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_014_pt_01_0024a6d5",
+      "text": "A transacao foi declinada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_014",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_023_es_02_77573458",
+      "text": "Mi compra fue rechazada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_023",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_024_es_02_acbb12eb",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_024",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_011_pt_01_1282786b",
+      "text": "A transferencia ainda nao chegou.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_011",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_024_pt_01_e578e8b5",
+      "text": "Devolveram-me o dinheiro da transferencia.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_024",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_030_es_00_d34a1b0b",
+      "text": "Me reembolsaron el pago.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_030",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_055_pt_01_054c5e67",
+      "text": "Qual e o horario da agencia?",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_055",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_049_pt_03_ac8429c2",
+      "text": "Nao esta claro o que aconteceu com a operacao.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_049",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_006_pt_03_26036728",
+      "text": "A minha transferência ainda nao chegou ao destino.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_006",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_056_pt_03_b15c45b7",
+      "text": "Gostaria de alterar a minha senha. Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_056",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_055_es_00_f5474bd7",
+      "text": "Cual es el horario de la sucursal?",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_055",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_019_es_02_1c32ebd1",
+      "text": "El pago me salio rechazado. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_019",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_015_es_02_487df9e0",
+      "text": "Intente hacer una transferencia y fue denegada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_015",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_047_pt_03_e717bcc6",
+      "text": "Nao sei se a operacao foi feita.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_047",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_004_pt_02_f12bd268",
+      "text": "Ha horas que espero pela transferência.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_004",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_013_pt_01_a199862f",
+      "text": "O pagamento foi rejeitado.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_013",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_040_pt_01_56de39b8",
+      "text": "A transferencia aparece aprovada mas o dinheiro nao chegou.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_040",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_024_es_00_012a2e2b",
+      "text": "Me devolvieron el dinero de la transferencia.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_024",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_044_es_00_25decde7",
+      "text": "No me queda claro qué pasó con la transferencia.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_044",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_044_es_02_340e7354",
+      "text": "No me queda claro qué pasó con la operacion.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_044",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_019_pt_03_b8eb4a72",
+      "text": "O pagamento foi rejeitado. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_019",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_038_es_00_7634ea58",
+      "text": "Aparece aprobado pero todavía no tengo el dinero.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_038",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_005_es_02_3a710230",
+      "text": "Llevo esperando la transaccion desde hace horas.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_005",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_025_es_00_722cd598",
+      "text": "La transferencia fue revertida.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_025",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_008_pt_01_bd84b6ca",
+      "text": "Ainda estou a espera que a transferencia chegue.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_008",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_036_es_02_70d99a7b",
+      "text": "La transferencia aparece aprobada pero el importe no llega.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_036",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_030_pt_01_bbe6a6c9",
+      "text": "Fui reembolsado pelo pagamento.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_030",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_002_pt_03_2ff54efc",
+      "text": "Ainda estou a espera que a transferência chegue.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_002",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_017_pt_03_d94c299b",
+      "text": "A minha compra foi recusada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_017",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_056_pt_01_ec4dd075",
+      "text": "Gostaria de alterar a minha senha.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_056",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_023_es_00_88acb3b9",
+      "text": "Mi compra fue rechazada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_023",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_023_pt_03_d33b8a1b",
+      "text": "A minha compra foi recusada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_023",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_006_es_02_0fe82f98",
+      "text": "Mi transaccion todavia no llega a destino.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_006",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_025_pt_01_72079ae1",
+      "text": "A transferencia foi revertida.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_025",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_057_pt_01_81a0602b",
+      "text": "Preciso de informacao sobre emprestimos.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_057",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_059_es_02_fb404aca",
+      "text": "Necesito abrir una nueva cuenta. Gracias.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_059",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_022_es_02_21fbdb89",
+      "text": "La operacion fue rechazada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_022",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_057_es_00_37f60602",
+      "text": "Necesito informacion sobre prestamos.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_057",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_010_pt_02_9b1a51bf",
+      "text": "Ha horas que espero pela transferência.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_010",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_059_es_00_a9a4fc51",
+      "text": "Necesito abrir una nueva cuenta.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_059",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_022_pt_03_56ab3891",
+      "text": "A operacao foi rejeitada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_022",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_058_es_00_8e9e22a2",
+      "text": "Quisiera saber el tipo de cambio de hoy.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_058",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_050_es_00_d5dd42a1",
+      "text": "No sé si se envió o no el dinero.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_050",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_011_es_00_efe540e2",
+      "text": "Llevo esperando la transferencia desde hace horas.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_011",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_000_pt_01_d6da960d",
+      "text": "A minha transferencia ainda nao chegou ao destino.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_000",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_018_pt_03_c1a2b5c4",
+      "text": "A minha transferencia foi recusada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_018",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_041_pt_01_721851cd",
+      "text": "O pagamento foi aprovado mas nao recebi o dinheiro.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_041",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_029_es_02_95552170",
+      "text": "Me han devuelto el dinero.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_029",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_015_es_00_a86cb134",
+      "text": "Intente hacer una transferencia y fue denegada.",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_015",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_027_pt_03_b8cc1d0a",
+      "text": "Deram-me o dinheiro de volta.",
+      "language": "pt",
+      "label": "REVERSED",
+      "semantic_family": "fam_027",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_058_pt_03_39d6bf34",
+      "text": "Gostaria de saber a taxa de cambio de hoje. Obrigado.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_058",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_050_pt_01_cb4ee941",
+      "text": "Nao sei se o dinheiro foi enviado ou nao.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_050",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_046_es_02_0eadd3e0",
+      "text": "Estoy confundido sobre el estado de la operacion.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_046",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_051_pt_03_34478b21",
+      "text": "Estou confuso sobre o estado da operacao.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_051",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_013_es_02_f9680c9f",
+      "text": "El pago me salio rechazado. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_013",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_038_es_02_3961cf62",
+      "text": "Aparece aprobado pero todavía no tengo el importe.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_038",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_061_pt_01_5671ba52",
+      "text": "Qual e o horario da agencia?",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_061",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_042_es_02_d3494032",
+      "text": "No sé si la operacion se hizo.",
+      "language": "es",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_042",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_033_es_02_3b6d0293",
+      "text": "El pago fue aprobado pero no recibí el importe.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_033",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_015_pt_03_13c34020",
+      "text": "Tentei fazer uma transferencia e foi negada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_015",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_014_pt_03_bc4e136b",
+      "text": "A transacao foi declinada. Porque?",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_014",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_006_pt_01_a95f1689",
+      "text": "A minha transferencia ainda nao chegou ao destino.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_006",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_001_pt_03_290ad0c7",
+      "text": "A transferência esta demorando muito.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_001",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_002_es_00_1b0a209f",
+      "text": "Todavia estoy esperando que llegue la transferencia.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_002",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_028_es_00_a68b7624",
+      "text": "Me devolvieron el dinero de la transferencia.",
+      "language": "es",
+      "label": "REVERSED",
+      "semantic_family": "fam_028",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_041_es_02_e836a047",
+      "text": "El pago fue aprobado pero no recibí el importe.",
+      "language": "es",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_041",
+      "difficulty": "hard"
+    },
+    {
+      "id": "ex_fam_006_es_00_889d182f",
+      "text": "Mi transferencia todavia no llega a destino.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_006",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_037_pt_01_6a26bf29",
+      "text": "O pagamento foi aprovado mas nao recebi o dinheiro.",
+      "language": "pt",
+      "label": "APPROVED_BUT_UNRESOLVED",
+      "semantic_family": "fam_037",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_061_es_00_d8d372f1",
+      "text": "Cual es el horario de la sucursal?",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_061",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_048_pt_01_2c062155",
+      "text": "Nao estou seguro se o pagamento foi enviado.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_048",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_007_es_00_a342e885",
+      "text": "La transferencia lleva horas sin llegar.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_007",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_053_es_00_991688cc",
+      "text": "Necesito abrir una nueva cuenta.",
+      "language": "es",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_053",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_009_pt_01_4cdcffe3",
+      "text": "O meu pagamento ainda nao apareceu como realizado.",
+      "language": "pt",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_009",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_015_pt_01_0378df2d",
+      "text": "Tentei fazer uma transferencia e foi negada.",
+      "language": "pt",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_015",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_016_es_02_f34c20a5",
+      "text": "La operacion fue rechazada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_016",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_018_es_02_678881f9",
+      "text": "Mi transferencia fue rechazada. Por que?",
+      "language": "es",
+      "label": "FAILED_OR_DECLINED",
+      "semantic_family": "fam_018",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_053_pt_01_cea97a5c",
+      "text": "Preciso abrir uma nova conta.",
+      "language": "pt",
+      "label": "OUT_OF_SCOPE",
+      "semantic_family": "fam_053",
+      "difficulty": "easy"
+    },
+    {
+      "id": "ex_fam_001_es_02_29c4488c",
+      "text": "La transaccion lleva horas sin llegar.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_001",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_007_es_02_126ee762",
+      "text": "La transaccion lleva horas sin llegar.",
+      "language": "es",
+      "label": "PENDING_OR_DELAYED",
+      "semantic_family": "fam_007",
+      "difficulty": "medium"
+    },
+    {
+      "id": "ex_fam_045_pt_01_3d4526d1",
+      "text": "Nao sei se o dinheiro foi enviado ou nao.",
+      "language": "pt",
+      "label": "AMBIGUOUS_TRANSACTION",
+      "semantic_family": "fam_045",
+      "difficulty": "medium"
+    }
+  ]
+}

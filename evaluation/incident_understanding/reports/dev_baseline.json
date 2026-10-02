@@ -1,0 +1,123 @@
+{
+  "overall": {
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "per_class": {
+      "AMBIGUOUS_TRANSACTION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "APPROVED_BUT_UNRESOLVED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "FAILED_OR_DECLINED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 8
+      },
+      "OUT_OF_SCOPE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 8
+      },
+      "PENDING_OR_DELAYED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 7
+      },
+      "REVERSED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      }
+    },
+    "confusion_matrix": {
+      "PENDING_OR_DELAYED": {
+        "PENDING_OR_DELAYED": 7,
+        "FAILED_OR_DECLINED": 0,
+        "REVERSED": 0,
+        "APPROVED_BUT_UNRESOLVED": 0,
+        "AMBIGUOUS_TRANSACTION": 0,
+        "OUT_OF_SCOPE": 0,
+        "__ABSTAIN__": 0
+      },
+      "FAILED_OR_DECLINED": {
+        "PENDING_OR_DELAYED": 0,
+        "FAILED_OR_DECLINED": 8,
+        "REVERSED": 0,
+        "APPROVED_BUT_UNRESOLVED": 0,
+        "AMBIGUOUS_TRANSACTION": 0,
+        "OUT_OF_SCOPE": 0,
+        "__ABSTAIN__": 0
+      },
+      "REVERSED": {
+        "PENDING_OR_DELAYED": 0,
+        "FAILED_OR_DECLINED": 0,
+        "REVERSED": 4,
+        "APPROVED_BUT_UNRESOLVED": 0,
+        "AMBIGUOUS_TRANSACTION": 0,
+        "OUT_OF_SCOPE": 0,
+        "__ABSTAIN__": 0
+      },
+      "APPROVED_BUT_UNRESOLVED": {
+        "PENDING_OR_DELAYED": 0,
+        "FAILED_OR_DECLINED": 0,
+        "REVERSED": 0,
+        "APPROVED_BUT_UNRESOLVED": 6,
+        "AMBIGUOUS_TRANSACTION": 0,
+        "OUT_OF_SCOPE": 0,
+        "__ABSTAIN__": 0
+      },
+      "AMBIGUOUS_TRANSACTION": {
+        "PENDING_OR_DELAYED": 0,
+        "FAILED_OR_DECLINED": 0,
+        "REVERSED": 0,
+        "APPROVED_BUT_UNRESOLVED": 0,
+        "AMBIGUOUS_TRANSACTION": 6,
+        "OUT_OF_SCOPE": 0,
+        "__ABSTAIN__": 0
+      },
+      "OUT_OF_SCOPE": {
+        "PENDING_OR_DELAYED": 0,
+        "FAILED_OR_DECLINED": 0,
+        "REVERSED": 0,
+        "APPROVED_BUT_UNRESOLVED": 0,
+        "AMBIGUOUS_TRANSACTION": 0,
+        "OUT_OF_SCOPE": 8,
+        "__ABSTAIN__": 0
+      }
+    }
+  },
+  "accepted": {
+    "coverage": 1.0,
+    "abstention_rate": 0.0,
+    "abstained": 0,
+    "accepted": 39,
+    "total": 39,
+    "accepted_accuracy": 1.0,
+    "accepted_macro_f1": 1.0
+  },
+  "per_language": {
+    "es": {
+      "n": 20,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    "pt": {
+      "n": 19,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    }
+  }
+}

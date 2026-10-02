@@ -1,0 +1,92 @@
+[
+  {
+    "threshold": 0.5,
+    "coverage": 0.9230769230769231,
+    "abstention_rate": 0.07692307692307693,
+    "abstained": 3,
+    "accepted": 36,
+    "total": 39,
+    "accepted_accuracy": 1.0,
+    "accepted_macro_f1": 1.0
+  },
+  {
+    "threshold": 0.55,
+    "coverage": 0.9230769230769231,
+    "abstention_rate": 0.07692307692307693,
+    "abstained": 3,
+    "accepted": 36,
+    "total": 39,
+    "accepted_accuracy": 1.0,
+    "accepted_macro_f1": 1.0
+  },
+  {
+    "threshold": 0.6,
+    "coverage": 0.8974358974358975,
+    "abstention_rate": 0.10256410256410256,
+    "abstained": 4,
+    "accepted": 35,
+    "total": 39,
+    "accepted_accuracy": 1.0,
+    "accepted_macro_f1": 1.0
+  },
+  {
+    "threshold": 0.65,
+    "coverage": 0.8461538461538461,
+    "abstention_rate": 0.15384615384615385,
+    "abstained": 6,
+    "accepted": 33,
+    "total": 39,
+    "accepted_accuracy": 1.0,
+    "accepted_macro_f1": 1.0
+  },
+  {
+    "threshold": 0.7,
+    "coverage": 0.7948717948717948,
+    "abstention_rate": 0.20512820512820512,
+    "abstained": 8,
+    "accepted": 31,
+    "total": 39,
+    "accepted_accuracy": 1.0,
+    "accepted_macro_f1": 1.0
+  },
+  {
+    "threshold": 0.75,
+    "coverage": 0.7948717948717948,
+    "abstention_rate": 0.20512820512820512,
+    "abstained": 8,
+    "accepted": 31,
+    "total": 39,
+    "accepted_accuracy": 1.0,
+    "accepted_macro_f1": 1.0
+  },
+  {
+    "threshold": 0.8,
+    "coverage": 0.6666666666666666,
+    "abstention_rate": 0.3333333333333333,
+    "abstained": 13,
+    "accepted": 26,
+    "total": 39,
+    "accepted_accuracy": 1.0,
+    "accepted_macro_f1": 1.0
+  },
+  {
+    "threshold": 0.85,
+    "coverage": 0.5897435897435898,
+    "abstention_rate": 0.41025641025641024,
+    "abstained": 16,
+    "accepted": 23,
+    "total": 39,
+    "accepted_accuracy": 1.0,
+    "accepted_macro_f1": 1.0
+  },
+  {
+    "threshold": 0.9,
+    "coverage": 0.5128205128205128,
+    "abstention_rate": 0.48717948717948717,
+    "abstained": 19,
+    "accepted": 20,
+    "total": 39,
+    "accepted_accuracy": 1.0,
+    "accepted_macro_f1": 1.0
+  }
+]

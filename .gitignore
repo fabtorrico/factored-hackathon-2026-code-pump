@@ -29,6 +29,18 @@ venv/
 node_modules/
 dist/
 
+# Pretrained model caches / weights - never commit
+.cache/
+huggingface/
+*.safetensors
+*.bin
+*.onnx
+*.h5
+*.ckpt
+*.pt
+*.pth
+*.msgpack
+
 # OS / IDE
 .DS_Store
 Thumbs.db

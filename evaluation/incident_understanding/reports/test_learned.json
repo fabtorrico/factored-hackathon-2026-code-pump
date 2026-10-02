@@ -1,0 +1,132 @@
+{
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "threshold": 0.7,
+  "overall": {
+    "accuracy": 0.75,
+    "macro_precision": 0.8333333333333334,
+    "macro_recall": 0.75,
+    "macro_f1": 0.7777777777777778,
+    "per_class": {
+      "AMBIGUOUS_TRANSACTION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 6
+      },
+      "APPROVED_BUT_UNRESOLVED": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      "FAILED_OR_DECLINED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 8
+      },
+      "OUT_OF_SCOPE": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "support": 8
+      },
+      "PENDING_OR_DELAYED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 8
+      },
+      "REVERSED": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 4
+      }
+    },
+    "confusion_matrix": {
+      "PENDING_OR_DELAYED": {
+        "PENDING_OR_DELAYED": 8,
+        "FAILED_OR_DECLINED": 0,
+        "REVERSED": 0,
+        "APPROVED_BUT_UNRESOLVED": 0,
+        "AMBIGUOUS_TRANSACTION": 0,
+        "OUT_OF_SCOPE": 0,
+        "__ABSTAIN__": 0
+      },
+      "FAILED_OR_DECLINED": {
+        "PENDING_OR_DELAYED": 0,
+        "FAILED_OR_DECLINED": 8,
+        "REVERSED": 0,
+        "APPROVED_BUT_UNRESOLVED": 0,
+        "AMBIGUOUS_TRANSACTION": 0,
+        "OUT_OF_SCOPE": 0,
+        "__ABSTAIN__": 0
+      },
+      "REVERSED": {
+        "PENDING_OR_DELAYED": 0,
+        "FAILED_OR_DECLINED": 0,
+        "REVERSED": 4,
+        "APPROVED_BUT_UNRESOLVED": 0,
+        "AMBIGUOUS_TRANSACTION": 0,
+        "OUT_OF_SCOPE": 0,
+        "__ABSTAIN__": 0
+      },
+      "APPROVED_BUT_UNRESOLVED": {
+        "PENDING_OR_DELAYED": 0,
+        "FAILED_OR_DECLINED": 0,
+        "REVERSED": 0,
+        "APPROVED_BUT_UNRESOLVED": 0,
+        "AMBIGUOUS_TRANSACTION": 0,
+        "OUT_OF_SCOPE": 0,
+        "__ABSTAIN__": 6
+      },
+      "AMBIGUOUS_TRANSACTION": {
+        "PENDING_OR_DELAYED": 0,
+        "FAILED_OR_DECLINED": 0,
+        "REVERSED": 0,
+        "APPROVED_BUT_UNRESOLVED": 0,
+        "AMBIGUOUS_TRANSACTION": 6,
+        "OUT_OF_SCOPE": 0,
+        "__ABSTAIN__": 0
+      },
+      "OUT_OF_SCOPE": {
+        "PENDING_OR_DELAYED": 0,
+        "FAILED_OR_DECLINED": 0,
+        "REVERSED": 0,
+        "APPROVED_BUT_UNRESOLVED": 0,
+        "AMBIGUOUS_TRANSACTION": 0,
+        "OUT_OF_SCOPE": 4,
+        "__ABSTAIN__": 4
+      }
+    }
+  },
+  "accepted": {
+    "coverage": 0.75,
+    "abstention_rate": 0.25,
+    "abstained": 10,
+    "accepted": 30,
+    "total": 40,
+    "accepted_accuracy": 1.0,
+    "accepted_macro_f1": 1.0
+  },
+  "per_language": {
+    "es": {
+      "n": 21,
+      "accuracy": 0.7142857142857143,
+      "macro_f1": 0.7777777777777778
+    },
+    "pt": {
+      "n": 19,
+      "accuracy": 0.7894736842105263,
+      "macro_f1": 0.7777777777777778
+    }
+  },
+  "model_load_seconds": 3.118159400000877,
+  "classifier_fit_seconds": 0.2527023000002373,
+  "embedding_dimension": 384,
+  "latency_ms": {
+    "p50": 12.076099999831058,
+    "p95": 13.743499999691267
+  }
+}
