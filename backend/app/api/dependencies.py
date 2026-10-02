@@ -1,5 +1,6 @@
 from datetime import timedelta
 from functools import lru_cache
+from pathlib import Path
 
 from app.banking.audit import InMemoryAuditSink
 from app.banking.repository import CuratedBankingRepository
@@ -23,6 +24,16 @@ def get_banking_service() -> BankingService:
         sessions=SessionStore(ttl=timedelta(seconds=settings.session_ttl_seconds)),
         audit=InMemoryAuditSink(capacity=settings.audit_capacity),
     )
+
+
+@lru_cache
+def get_demo_database_path() -> Path:
+    """The curated database the demo profile catalogue is derived from.
+
+    A dependency rather than a direct `get_settings()` call in the routes so the demo endpoints can
+    be pointed at a fixture database in tests without touching global settings.
+    """
+    return get_settings().curated_database_path
 
 
 @lru_cache

@@ -90,6 +90,23 @@ def open_session(payload: SessionRequest, service: BankingServiceDep) -> Session
     )
 
 
+@router.get("/api/customer/context", response_model=CustomerContext)
+def own_customer_context(
+    request: Request, service: BankingServiceDep, session_id: SessionHeader = None
+) -> CustomerContext:
+    # The same read as the customer-scoped route, addressed by the session alone. A caller that
+    # already holds a session never has to learn or send a customer identifier to read its own
+    # context, so no resource identifier can be replayed into a URL. Passing no customer_id means
+    # the service authorizes against the authenticated customer itself; the self check still runs
+    # below the transport layer. No query parameter is accepted at all, `customer_id` included, so
+    # this route cannot be narrowed by a caller - the scoped routes tolerate that key on purpose,
+    # but here there is nothing for it to narrow.
+    if request.query_params:
+        unsupported = ", ".join(sorted(request.query_params))
+        raise InvalidRequestError(f"unsupported query parameters: {unsupported}")
+    return service.get_customer_context(session_id, None)
+
+
 @router.get("/api/customers/{customer_id}/context", response_model=CustomerContext)
 def customer_context(
     customer_id: str, service: BankingServiceDep, session_id: SessionHeader = None

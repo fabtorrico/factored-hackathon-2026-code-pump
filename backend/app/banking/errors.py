@@ -9,6 +9,7 @@ class Reason(StrEnum):
     UNAUTHORIZED_RESOURCE = "unauthorized_resource"
     CUSTOMER_NOT_FOUND = "customer_not_found"
     TRANSACTION_NOT_FOUND = "transaction_not_found"
+    INCIDENT_NOT_FOUND = "incident_not_found"
     INVALID_REQUEST = "invalid_request"
     DATA_UNAVAILABLE = "data_unavailable"
     TOOL_FAILURE = "tool_failure"
@@ -71,6 +72,14 @@ class TransactionNotFoundError(BankingError):
     # A transaction owned by another customer is reported with this exact message, so the tool
     # cannot be used to probe which transaction ids exist.
     message = "Transaction not found."
+
+
+class IncidentNotFoundError(BankingError):
+    reason = Reason.INCIDENT_NOT_FOUND
+    outcome = Outcome.NOT_FOUND
+    # An incident owned by another customer is reported with this exact message, so reading a
+    # timeline cannot be used to probe which incident ids exist.
+    message = "Incident not found."
 
 
 class InvalidRequestError(BankingError):

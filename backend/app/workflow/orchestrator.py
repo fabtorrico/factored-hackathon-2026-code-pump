@@ -15,7 +15,7 @@ from __future__ import annotations
 from collections.abc import Callable
 from datetime import UTC, datetime
 
-from app.banking.errors import BankingError, Reason
+from app.banking.errors import BankingError, IncidentNotFoundError, Reason
 from app.banking.models import TransactionRecord
 from app.banking.service import BankingService
 from app.policy import PolicyDecision, PolicyOutcome, evaluate_policy
@@ -157,6 +157,19 @@ class IncidentWorkflow:
         result = self._perform(incident_id, created_at, summary, identification, decision)
         self._store.finalize_incident(incident_id, result.status)
         return result
+
+    def timeline(self, session_id: str | None, incident_id: str) -> tuple[WorkflowEvent, ...]:
+        """The recorded steps of one incident, for the customer who raised it.
+
+        Read-only and owner-scoped: the session is resolved against the same SessionStore the
+        banking tools authenticate against, and an incident that does not exist is reported exactly
+        like one owned by somebody else, so this cannot be used to discover incident ids.
+        """
+        customer_id = self._service.sessions.resolve(session_id).customer_id
+        incident = self._store.get_incident(incident_id)
+        if incident is None or incident.customer_id != customer_id:
+            raise IncidentNotFoundError(f"incident {incident_id} is not owned by {customer_id}")
+        return tuple(self._store.events_for(incident_id))
 
     # --- Banking reads --------------------------------------------------------------------
 
