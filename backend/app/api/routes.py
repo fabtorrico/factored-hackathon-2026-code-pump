@@ -119,9 +119,8 @@ def customer_transactions(
     request: Request, service: BankingServiceDep, session_id: SessionHeader = None
 ) -> CustomerTransactions:
     values = _query_values(request, TRANSACTION_FILTER_KEYS)
-    return service.get_customer_transactions(
-        session_id, TransactionFilters(**values), values.get(RESOURCE_SCOPE_KEY)
-    )
+    scope = values.pop(RESOURCE_SCOPE_KEY, None)
+    return service.get_customer_transactions(session_id, TransactionFilters(**values), scope)
 
 
 @router.get("/api/transactions/candidates", response_model=CandidateSearch)
@@ -129,9 +128,8 @@ def candidate_transactions(
     request: Request, service: BankingServiceDep, session_id: SessionHeader = None
 ) -> CandidateSearch:
     values = _query_values(request, CANDIDATE_FILTER_KEYS)
-    return service.find_candidate_transactions(
-        session_id, CandidateFilters(**values), values.get(RESOURCE_SCOPE_KEY)
-    )
+    scope = values.pop(RESOURCE_SCOPE_KEY, None)
+    return service.find_candidate_transactions(session_id, CandidateFilters(**values), scope)
 
 
 @router.get("/api/transactions/{transaction_id}", response_model=TransactionRecord)

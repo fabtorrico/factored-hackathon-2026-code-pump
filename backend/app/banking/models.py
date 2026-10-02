@@ -167,7 +167,14 @@ class TransactionFilters(BaseModel):
 
 
 class CandidateFilters(TransactionFilters):
-    """Deterministic narrowing for ambiguous customer references. Not semantic search."""
+    """Deterministic narrowing for ambiguous customer references. Not semantic search.
+
+    The incident body accepts this model directly, so it forbids unknown keys: a dropped filter
+    would silently return records the caller did not ask for. The query routes already reject
+    unsupported parameters, and construct this model from validated keys only.
+    """
+
+    model_config = ConfigDict(frozen=True, extra="forbid")
 
     amount_min: float | None = None
     amount_max: float | None = None

@@ -1,0 +1,877 @@
+[
+  {
+    "id": "A01",
+    "category": "A. Authentication",
+    "scenario": "Read customer context with no session",
+    "expected_behavior": "401 invalid_session",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "A02",
+    "category": "A. Authentication",
+    "scenario": "Read with an unknown session id",
+    "expected_behavior": "401 invalid_session",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "A03",
+    "category": "A. Authentication",
+    "scenario": "Read with an expired session",
+    "expected_behavior": "401 expired_session",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "A04",
+    "category": "A. Authentication",
+    "scenario": "Read with a blank session header",
+    "expected_behavior": "401 invalid_session",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "A05",
+    "category": "A. Authentication",
+    "scenario": "Session id echoed in a response",
+    "expected_behavior": "credential never rendered",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "A06",
+    "category": "A. Authentication",
+    "scenario": "Incident submitted with no session",
+    "expected_behavior": "ABSTAIN invalid_session, no case",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "A07",
+    "category": "A. Authentication",
+    "scenario": "Incident submitted with an expired session",
+    "expected_behavior": "ABSTAIN invalid_session",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "A08",
+    "category": "A. Authentication",
+    "scenario": "Customer session used as agent credential",
+    "expected_behavior": "401 refused",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "A09",
+    "category": "A. Authentication",
+    "scenario": "Expired agent session",
+    "expected_behavior": "401 refused",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "B01",
+    "category": "B. Authorization",
+    "scenario": "Customer lists own transactions",
+    "expected_behavior": "only own rows",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "B02",
+    "category": "B. Authorization",
+    "scenario": "Customer widens scope to another customer",
+    "expected_behavior": "403 unauthorized_resource",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "B03",
+    "category": "B. Authorization",
+    "scenario": "Customer reads another customer's transaction",
+    "expected_behavior": "404 transaction_not_found",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "B04",
+    "category": "B. Authorization",
+    "scenario": "Foreign vs absent transaction",
+    "expected_behavior": "indistinguishable answers",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "B05",
+    "category": "B. Authorization",
+    "scenario": "Candidate search with a foreign scope",
+    "expected_behavior": "403 unauthorized_resource",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "B06",
+    "category": "B. Authorization",
+    "scenario": "Incident on another customer's transaction",
+    "expected_behavior": "CLARIFY no_matching_transaction",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "B07",
+    "category": "B. Authorization",
+    "scenario": "Read another customer's incident timeline",
+    "expected_behavior": "404 incident_not_found",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "B08",
+    "category": "B. Authorization",
+    "scenario": "Query parameter on the self-context route",
+    "expected_behavior": "400 invalid_request",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "C01",
+    "category": "C. Agent boundary",
+    "scenario": "Agent queue with no credential",
+    "expected_behavior": "401 invalid_session",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "C02",
+    "category": "C. Agent boundary",
+    "scenario": "Agent credential used as a customer session",
+    "expected_behavior": "401 refused",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "C03",
+    "category": "C. Agent boundary",
+    "scenario": "POST to an agent case",
+    "expected_behavior": "405 method not allowed",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "C04",
+    "category": "C. Agent boundary",
+    "scenario": "PUT to an agent case",
+    "expected_behavior": "405 method not allowed",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "C05",
+    "category": "C. Agent boundary",
+    "scenario": "Agent queue identity exposure",
+    "expected_behavior": "no customer identifier",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "C06",
+    "category": "C. Agent boundary",
+    "scenario": "Agent detail identity exposure",
+    "expected_behavior": "no customer identifier",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "D01",
+    "category": "D. Incident contract",
+    "scenario": "Both identification modes supplied",
+    "expected_behavior": "422",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "D02",
+    "category": "D. Incident contract",
+    "scenario": "Unknown top-level field",
+    "expected_behavior": "422",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "D03",
+    "category": "D. Incident contract",
+    "scenario": "Loosely typed boolean",
+    "expected_behavior": "422",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "D04",
+    "category": "D. Incident contract",
+    "scenario": "Blank transaction reference",
+    "expected_behavior": "422",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "D05",
+    "category": "D. Incident contract",
+    "scenario": "Out-of-domain filter value",
+    "expected_behavior": "400 invalid_request",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "D06",
+    "category": "D. Incident contract",
+    "scenario": "Unknown filter key",
+    "expected_behavior": "422 not silently ignored",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "D07",
+    "category": "D. Incident contract",
+    "scenario": "Non-numeric amount bound",
+    "expected_behavior": "400/422",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "E01",
+    "category": "E. Identification",
+    "scenario": "Exact declined transaction",
+    "expected_behavior": "RESOLVE verified TXN-DECL",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "E02",
+    "category": "E. Identification",
+    "scenario": "Two owning candidates",
+    "expected_behavior": "CLARIFY multiple_candidate_transactions",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "E03",
+    "category": "E. Identification",
+    "scenario": "No owning match",
+    "expected_behavior": "CLARIFY no_matching_transaction",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "E04",
+    "category": "E. Identification",
+    "scenario": "Search never crosses customers",
+    "expected_behavior": "only own candidates",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "E05",
+    "category": "E. Identification",
+    "scenario": "Verified but unsupported status",
+    "expected_behavior": "ESCALATE K_UNKNOWN_STATUS",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "E06",
+    "category": "E. Identification",
+    "scenario": "Candidates carry identity",
+    "expected_behavior": "no customer identifier",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "F01",
+    "category": "F. Policy matrix",
+    "scenario": "Precedence: invalid session over status",
+    "expected_behavior": "ABSTAIN A",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "F02",
+    "category": "F. Policy matrix",
+    "scenario": "Precedence: unauthorized over status",
+    "expected_behavior": "ABSTAIN A",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "F03",
+    "category": "F. Policy matrix",
+    "scenario": "Out of scope over no candidates",
+    "expected_behavior": "ABSTAIN B",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "F04",
+    "category": "F. Policy matrix",
+    "scenario": "Tool failure over identification",
+    "expected_behavior": "ESCALATE C",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "F05",
+    "category": "F. Policy matrix",
+    "scenario": "Evidence missing over identification",
+    "expected_behavior": "ESCALATE E",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "F06",
+    "category": "F. Policy matrix",
+    "scenario": "Zero candidates",
+    "expected_behavior": "CLARIFY D_NO_CANDIDATES",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "F07",
+    "category": "F. Policy matrix",
+    "scenario": "Multiple candidates over status",
+    "expected_behavior": "CLARIFY D_MULTIPLE_CANDIDATES",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "F08",
+    "category": "F. Policy matrix",
+    "scenario": "Declined",
+    "expected_behavior": "RESOLVE F_DECLINED",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "F09",
+    "category": "F. Policy matrix",
+    "scenario": "Pending",
+    "expected_behavior": "ESCALATE G_PENDING",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "F10",
+    "category": "F. Policy matrix",
+    "scenario": "Reversed",
+    "expected_behavior": "ESCALATE H_REVERSED",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "F11",
+    "category": "F. Policy matrix",
+    "scenario": "Approved with unresolved issue",
+    "expected_behavior": "ESCALATE I_APPROVED_UNRESOLVED",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "F12",
+    "category": "F. Policy matrix",
+    "scenario": "Approved without incident",
+    "expected_behavior": "ABSTAIN J_APPROVED_NO_INCIDENT",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "F13",
+    "category": "F. Policy matrix",
+    "scenario": "Unknown status",
+    "expected_behavior": "ESCALATE K_UNKNOWN_STATUS",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "F14",
+    "category": "F. Policy matrix",
+    "scenario": "Blank status",
+    "expected_behavior": "ESCALATE K_UNKNOWN_STATUS",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "F15",
+    "category": "F. Policy matrix",
+    "scenario": "Status whitespace",
+    "expected_behavior": "stripped before matching",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "F16",
+    "category": "F. Policy matrix",
+    "scenario": "Determinism",
+    "expected_behavior": "100 runs, one decision",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "F17",
+    "category": "F. Policy matrix",
+    "scenario": "Version pinning",
+    "expected_behavior": "1.0.0",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "G01",
+    "category": "G. Grounding",
+    "scenario": "Declined resolution wording",
+    "expected_behavior": "no cause or money claim",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "G02",
+    "category": "G. Grounding",
+    "scenario": "RESOLVE action scope",
+    "expected_behavior": "no case, no money claim",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "G03",
+    "category": "G. Grounding",
+    "scenario": "Workflow result schema",
+    "expected_behavior": "no free-text field",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "G04",
+    "category": "G. Grounding",
+    "scenario": "Reversed wording",
+    "expected_behavior": "no returned-funds claim",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "G05",
+    "category": "G. Grounding",
+    "scenario": "Pending wording",
+    "expected_behavior": "no settlement claim",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "G06",
+    "category": "G. Grounding",
+    "scenario": "Handoff evidence",
+    "expected_behavior": "verbatim curated values",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "H01",
+    "category": "H. Missing evidence",
+    "scenario": "Absent curated values",
+    "expected_behavior": "read back as absent",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "H02",
+    "category": "H. Missing evidence",
+    "scenario": "Handoff omits absent evidence",
+    "expected_behavior": "no invented evidence",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "H03",
+    "category": "H. Missing evidence",
+    "scenario": "Agent movement source",
+    "expected_behavior": "from persisted handoff",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "I01",
+    "category": "I. Tool failure",
+    "scenario": "Curated database missing",
+    "expected_behavior": "503 data_unavailable",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "I02",
+    "category": "I. Tool failure",
+    "scenario": "Workflow with unavailable lookup",
+    "expected_behavior": "ESCALATE C, no invented facts",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "J01",
+    "category": "J. Act->Verify",
+    "scenario": "Escalation implies persisted case",
+    "expected_behavior": "case row exists",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "J02",
+    "category": "J. Act->Verify",
+    "scenario": "Escalation implies persisted handoff",
+    "expected_behavior": "handoff exists and matches",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "J03",
+    "category": "J. Act->Verify",
+    "scenario": "Unverified escalation leaves no case",
+    "expected_behavior": "no case row",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "J04",
+    "category": "J. Act->Verify",
+    "scenario": "Recorded action order",
+    "expected_behavior": "attempted->created->verified->escalated",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "J05",
+    "category": "J. Act->Verify",
+    "scenario": "Failed write recorded",
+    "expected_behavior": "verification_failed + workflow_failed",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "K01",
+    "category": "K. Persistence",
+    "scenario": "Reopen the operational store",
+    "expected_behavior": "case and handoff readable",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "K02",
+    "category": "K. Persistence",
+    "scenario": "Incident terminal status survives reopen",
+    "expected_behavior": "COMPLETED",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "K03",
+    "category": "K. Persistence",
+    "scenario": "Events survive reopen",
+    "expected_behavior": "ordered, first is incident_created",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "K04",
+    "category": "K. Persistence",
+    "scenario": "Schema initialization is idempotent",
+    "expected_behavior": "no data loss",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "K05",
+    "category": "K. Persistence",
+    "scenario": "Legacy database gains handoffs",
+    "expected_behavior": "handoffs table added",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "L01",
+    "category": "L. Handoff",
+    "scenario": "Request restated",
+    "expected_behavior": "faithful summary",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "L02",
+    "category": "L. Handoff",
+    "scenario": "Search-based request",
+    "expected_behavior": "filters recorded",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "L03",
+    "category": "L. Handoff",
+    "scenario": "Verified facts present",
+    "expected_behavior": "ownership, status, type",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "L04",
+    "category": "L. Handoff",
+    "scenario": "Actions complete",
+    "expected_behavior": "created and verified",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "L05",
+    "category": "L. Handoff",
+    "scenario": "Route and policy",
+    "expected_behavior": "PAYMENTS_OPERATIONS, pinned decision",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "M01",
+    "category": "M. Audit",
+    "scenario": "One audit event per tool call",
+    "expected_behavior": "exactly one",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "M02",
+    "category": "M. Audit",
+    "scenario": "Denied read audited",
+    "expected_behavior": "outcome and reason recorded",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "M03",
+    "category": "M. Audit",
+    "scenario": "Audit hides the credential",
+    "expected_behavior": "no session id",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "M04",
+    "category": "M. Audit",
+    "scenario": "Audit limit validation",
+    "expected_behavior": "400 outside 1..200",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "M05",
+    "category": "M. Audit",
+    "scenario": "Incident created before policy",
+    "expected_behavior": "ordering",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "N01",
+    "category": "N. PII safety",
+    "scenario": "Curated tables drop PII columns",
+    "expected_behavior": "no PII columns",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "N02",
+    "category": "N. PII safety",
+    "scenario": "Customer responses PII-free",
+    "expected_behavior": "no identity attributes",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "N03",
+    "category": "N. PII safety",
+    "scenario": "Product source has no customer ids",
+    "expected_behavior": "no CLI- ids",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "N04",
+    "category": "N. PII safety",
+    "scenario": "Env and data ignored",
+    "expected_behavior": "gitignored",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "N05",
+    "category": "N. PII safety",
+    "scenario": "Committed env example",
+    "expected_behavior": "no secret",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "O01",
+    "category": "O. API robustness",
+    "scenario": "Unknown path",
+    "expected_behavior": "404",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "O02",
+    "category": "O. API robustness",
+    "scenario": "Wrong method",
+    "expected_behavior": "405",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "O03",
+    "category": "O. API robustness",
+    "scenario": "Malformed JSON",
+    "expected_behavior": "422",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "O04",
+    "category": "O. API robustness",
+    "scenario": "Unsupported query parameter",
+    "expected_behavior": "400",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "O05",
+    "category": "O. API robustness",
+    "scenario": "Health endpoint",
+    "expected_behavior": "200 ok",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "O06",
+    "category": "O. API robustness",
+    "scenario": "Empty incident body",
+    "expected_behavior": "422",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "P01",
+    "category": "P. Frontend contract",
+    "scenario": "Customer copy hides policy internals",
+    "expected_behavior": "no rule id",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "P02",
+    "category": "P. Frontend contract",
+    "scenario": "Agent client is read-only",
+    "expected_behavior": "no writes",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "P03",
+    "category": "P. Frontend contract",
+    "scenario": "Credentials in headers only",
+    "expected_behavior": "distinct headers",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "P04",
+    "category": "P. Frontend contract",
+    "scenario": "No credential persistence",
+    "expected_behavior": "no web storage",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "P05",
+    "category": "P. Frontend contract",
+    "scenario": "Outcome labels safe",
+    "expected_behavior": "no money claim",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "Q01",
+    "category": "Q. AI status",
+    "scenario": "No runtime LLM",
+    "expected_behavior": "no LLM client import",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "Q02",
+    "category": "Q. AI status",
+    "scenario": "LLM benchmark status",
+    "expected_behavior": "documented not executed",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "Q03",
+    "category": "Q. AI status",
+    "scenario": "Baseline documented",
+    "expected_behavior": "Phase 4A README present",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "R01",
+    "category": "R. Adversarial",
+    "scenario": "Instruction-like prose",
+    "expected_behavior": "422, not a field",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "R02",
+    "category": "R. Adversarial",
+    "scenario": "Policy override fields",
+    "expected_behavior": "422 for all",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "R03",
+    "category": "R. Adversarial",
+    "scenario": "SQL-like transaction reference",
+    "expected_behavior": "opaque, no side effect",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "R04",
+    "category": "R. Adversarial",
+    "scenario": "Unicode instruction-like reference",
+    "expected_behavior": "opaque no match",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "S01",
+    "category": "S. Concurrency",
+    "scenario": "Same movement escalated twice",
+    "expected_behavior": "distinct cases",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "S02",
+    "category": "S. Concurrency",
+    "scenario": "Four concurrent escalations",
+    "expected_behavior": "unique ids, consistent store",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "S03",
+    "category": "S. Concurrency",
+    "scenario": "Repeated agent reads",
+    "expected_behavior": "stable output",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "S04",
+    "category": "S. Concurrency",
+    "scenario": "Session id uniqueness",
+    "expected_behavior": "20 distinct ids",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "E2E-1",
+    "category": "E2E. Live curated",
+    "scenario": "Declined demo movement",
+    "expected_behavior": "RESOLVE F_DECLINED",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "E2E-2",
+    "category": "E2E. Live curated",
+    "scenario": "Pending demo movement",
+    "expected_behavior": "ESCALATE G_PENDING",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "E2E-3",
+    "category": "E2E. Live curated",
+    "scenario": "Reversed demo movement",
+    "expected_behavior": "ESCALATE H_REVERSED",
+    "severity_if_failed": "CRITICAL"
+  },
+  {
+    "id": "E2E-4",
+    "category": "E2E. Live curated",
+    "scenario": "Approved with reported issue",
+    "expected_behavior": "ESCALATE I_APPROVED_UNRESOLVED",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "E2E-5",
+    "category": "E2E. Live curated",
+    "scenario": "Ambiguous demo reference",
+    "expected_behavior": "CLARIFY multiple candidates",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "E2E-6",
+    "category": "E2E. Live curated",
+    "scenario": "Search with no match",
+    "expected_behavior": "CLARIFY no_matching_transaction",
+    "severity_if_failed": "MEDIUM"
+  },
+  {
+    "id": "E2E-7",
+    "category": "E2E. Live curated",
+    "scenario": "Out-of-scope live request",
+    "expected_behavior": "ABSTAIN B_OUT_OF_SCOPE",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "E2E-8",
+    "category": "E2E. Live curated",
+    "scenario": "Escalation visible to the agent",
+    "expected_behavior": "case, handoff and timeline",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "PERF-1",
+    "category": "PERF. Latency",
+    "scenario": "Declined resolution latency",
+    "expected_behavior": "recorded p50/p95",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "PERF-2",
+    "category": "PERF. Latency",
+    "scenario": "Pending escalation latency",
+    "expected_behavior": "recorded p50/p95",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "PERF-3",
+    "category": "PERF. Latency",
+    "scenario": "Agent case detail latency",
+    "expected_behavior": "recorded p50/p95",
+    "severity_if_failed": "LOW"
+  },
+  {
+    "id": "I03",
+    "category": "I. Tool failure",
+    "scenario": "Support-case write fails",
+    "expected_behavior": "FAILED support_case_unverified",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "I04",
+    "category": "I. Tool failure",
+    "scenario": "Handoff write fails",
+    "expected_behavior": "FAILED support_case_unverified",
+    "severity_if_failed": "HIGH"
+  },
+  {
+    "id": "I05",
+    "category": "I. Tool failure",
+    "scenario": "Handoff read back fails",
+    "expected_behavior": "FAILED support_case_unverified",
+    "severity_if_failed": "HIGH"
+  }
+]

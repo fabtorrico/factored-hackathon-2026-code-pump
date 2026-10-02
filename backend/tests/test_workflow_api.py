@@ -168,6 +168,18 @@ def test_out_of_domain_filter_value_is_rejected(workflow_client, incident_sessio
     assert response.status_code == 400
 
 
+def test_unknown_filter_key_is_rejected(workflow_client, incident_session) -> None:
+    # A typo like "transaction_staus" must not be silently dropped: that would widen the search
+    # and trace an incident to a transaction the caller never named.
+    response = workflow_client.post(
+        "/api/incidents",
+        json={"filters": {"transaction_staus": "Declined"}},
+        headers={"X-Session-Id": incident_session},
+    )
+
+    assert response.status_code == 422
+
+
 def test_malformed_body_is_rejected(workflow_client, incident_session) -> None:
     response = workflow_client.post(
         "/api/incidents",

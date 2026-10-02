@@ -185,6 +185,20 @@ def test_api_candidates_search(api_client, customer_session: str) -> None:
     assert len(response.json()["candidates"]) == 2
 
 
+def test_api_candidates_enforce_scope(api_client, customer_session: str) -> None:
+    owned = api_client.get(
+        f"/api/transactions/candidates?customer_id={OWNER}",
+        headers={"X-Session-Id": customer_session},
+    )
+    foreign = api_client.get(
+        f"/api/transactions/candidates?customer_id={OTHER}",
+        headers={"X-Session-Id": customer_session},
+    )
+
+    assert owned.status_code == 200
+    assert foreign.status_code == 403
+
+
 def test_api_rejects_unknown_query_parameter(api_client, customer_session: str) -> None:
     response = api_client.get(
         "/api/transactions?merchant_name=foo", headers={"X-Session-Id": customer_session}
