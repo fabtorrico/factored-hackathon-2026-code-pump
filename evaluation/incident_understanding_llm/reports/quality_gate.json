@@ -1,0 +1,38 @@
+{
+  "gate_version": "4b1-gate-v1",
+  "meaning": "Eligible for guarded integration into the hackathon prototype. Explicitly NOT production-ready banking AI.",
+  "overall_macro_f1_min": 0.85,
+  "es_macro_f1_min": 0.82,
+  "pt_macro_f1_min": 0.82,
+  "structured_output_validity_min": 0.99,
+  "structured_output_validity_note": "pre-registered as 'approximately 100%'",
+  "critical_systematic_class_failure_definition": "An in-scope class (any of the five classes other than OUT_OF_SCOPE) is a critical systematic failure if its F1 is below 0.70, OR if it contributes at least 25% of all errors while its own F1 is below 0.80. The gate fails if any in-scope class meets either condition.",
+  "in_scope_labels": [
+    "PENDING_OR_DELAYED",
+    "FAILED_OR_DECLINED",
+    "REVERSED",
+    "APPROVED_BUT_UNRESOLVED",
+    "AMBIGUOUS_TRANSACTION"
+  ],
+  "prompt_version": "4b1-v1",
+  "model_selection_rule": {
+    "rule_version": "4b1-selection-v1",
+    "material_quality_delta_macro_f1": 0.02,
+    "material_quality_delta_definition": "Two models differ materially in quality when their overall macro-F1 differs by at least 0.02. Below that, quality is treated as equivalent.",
+    "steps": [
+      "Evaluate the gate for Luna and for Terra independently.",
+      "If neither passes, recommend no production integration yet.",
+      "If only one passes, recommend that one.",
+      "If both pass, prefer the lower-cost and lower-latency model unless the other model's overall macro-F1 is higher by at least the material quality delta. Luna is 10x cheaper per token than Terra, so cost and latency break the tie when quality is equivalent."
+    ],
+    "scope_note": "A passing recommendation authorizes only guarded integration into the hackathon prototype in a later phase. Phase 4B-1 performs no integration."
+  },
+  "recorded_at": "2026-10-02T15:30:26.833962+00:00",
+  "recorded_before_any_benchmark_result": true,
+  "immutable_after_results": true,
+  "challenge": {
+    "path": "evaluation/incident_understanding_v2/challenge.json",
+    "version": "2.0.0",
+    "sha256": "f571726ad934e87e7d0663776071cdacfc2b922a882b9960143708362bdedc26"
+  }
+}

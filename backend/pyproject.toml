@@ -22,6 +22,12 @@ dev = [
     "scikit-learn>=1.5",
     "ruff>=0.8",
 ]
+# Phase 4B-1 evaluation-only extra. Deliberately NOT a runtime dependency: no LLM is wired into
+# the Incident Workflow in this phase, so the OpenAI SDK is needed only to run the benchmark in
+# evaluation/incident_understanding_llm/. The default test suite must not need it.
+evaluation = [
+    "openai>=2.0",
+]
 
 [tool.setuptools.packages.find]
 include = ["app*"]

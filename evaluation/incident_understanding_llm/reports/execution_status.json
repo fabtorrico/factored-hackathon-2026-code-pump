@@ -1,0 +1,136 @@
+{
+  "phase": "4B-1",
+  "status": "closed_without_results",
+  "statement": "Phase 4B-1 harness complete; external LLM benchmark blocked by unavailable API credits; no LLM model promoted.",
+  "harness_state": "complete_and_validated",
+  "benchmark_state": "not_executed",
+
+  "why_attempted": "Phase 4A showed the deterministic baseline and a MiniLM + Logistic Regression classifier both fall far short of usable Spanish/Portuguese incident understanding on frozen Challenge Set v2, so Phase 4B-1 evaluated whether a stronger pretrained language-understanding component could clear a pre-registered bar.",
+
+  "attempted_models": {
+    "primary": "gpt-5.6-luna",
+    "challenger": "gpt-5.6-terra"
+  },
+
+  "model_identifiers": {
+    "rejected_by_provider": false,
+    "note": "Both identifiers are present in the credential's model catalog. Neither was rejected, renamed or substituted."
+  },
+
+  "blocker": {
+    "stage": "generation",
+    "reason": "external_api_credits_unavailable",
+    "provider": "openai",
+    "http_status": 429,
+    "error_code": "credit_balance_exhausted",
+    "error_type": "insufficient_quota",
+    "authentication_reached_provider": true,
+    "benchmark_requests_accepted": 0,
+    "accepted_model_responses": 0,
+    "credentials_added": false
+  },
+
+  "results": {
+    "models_evaluated": [],
+    "complete_runs": [],
+    "metrics": null,
+    "per_class_metrics": null,
+    "per_language_metrics": null,
+    "per_tier_metrics": null,
+    "structured_output_validity": null,
+    "refusals": null,
+    "api_failures": null,
+    "latency_ms": null,
+    "token_usage": null,
+    "observed_cost_usd": null,
+    "error_analysis": null,
+    "note": "No field above is populated because no benchmark response was accepted. Absence of a result is not a result."
+  },
+
+  "quality_gate": {
+    "gate_version": "4b1-gate-v1",
+    "source": "reports/quality_gate.json",
+    "modified_after_freeze": false,
+    "observed_for": [],
+    "verdict_for_luna": "unobserved",
+    "verdict_for_terra": "unobserved",
+    "note": "The gate is pre-registered and unobserved for both models. Neither Luna nor Terra passed it, and neither failed it."
+  },
+
+  "interpretation_rules": [
+    "A billing or quota failure is an infrastructure condition, not a model-quality failure, and is never counted as one.",
+    "A blocked benchmark never lowers a model's score and never raises it.",
+    "No placeholder, estimated, simulated or illustrative model metric exists in this repository.",
+    "The Phase 4A failure of the other candidates is not evidence about Luna or Terra."
+  ],
+
+  "production_impact": {
+    "llm_integrated_into_production": false,
+    "minilm_integrated_into_production": false,
+    "post_api_incidents_changed": false,
+    "incident_input_changed": false,
+    "banking_core_changed": false,
+    "policy_engine_changed": false,
+    "incident_workflow_changed": false,
+    "application_requires_openai_api_key": false,
+    "approved_for_production_integration": []
+  },
+
+  "authoritative_evidence": {
+    "note": "Phase 4A remains the authoritative recorded evidence. No LLM result supersedes or weakens it.",
+    "source": "evaluation/incident_understanding_v2/reports/v2_summary.json",
+    "challenge_version": "2.0.0",
+    "challenge_sha256": "f571726ad934e87e7d0663776071cdacfc2b922a882b9960143708362bdedc26",
+    "total_examples": 600,
+    "deterministic_baseline": {
+      "accuracy": 0.24833333333333332,
+      "macro_f1": 0.3084636874148236,
+      "coverage": 0.3283333333333333,
+      "abstention_rate": 0.6716666666666666,
+      "approved_for_production": false
+    },
+    "minilm_logistic_regression_raw": {
+      "accuracy": 0.5816666666666667,
+      "macro_f1": 0.5914926408627067,
+      "coverage": 1.0,
+      "abstention_rate": 0.0,
+      "approved_for_production": false
+    },
+    "minilm_logistic_regression_threshold_0_7": {
+      "accuracy": 0.24666666666666667,
+      "macro_f1": 0.36137068021052093,
+      "coverage": 0.2866666666666667,
+      "abstention_rate": 0.7133333333333334,
+      "approved_for_production": false
+    }
+  },
+
+  "frozen_artifacts_unmodified": {
+    "prompt_version": "4b1-v1",
+    "prompt_sha256": "a431bcbdbae3f10e82e9d1cdec9186f00ec63d58d201c9a52db8e83752466077",
+    "schema_sha256": "c2b09b99a23a026a24f10a2c95e0ec39e42cbbba4b081ff26b428a14f9c8d244",
+    "challenge_sha256": "f571726ad934e87e7d0663776071cdacfc2b922a882b9960143708362bdedc26",
+    "retries": 0,
+    "note": "The prompt, schema, quality gate, model identifiers and Challenge Set v2 are unchanged by this closure, so the benchmark remains reproducible exactly as frozen."
+  },
+
+  "reproduction": {
+    "blocked_on": "an OpenAI account with available API credits",
+    "requires_changes_to_the_frozen_protocol": false,
+    "steps": [
+      "backend/.venv/Scripts/python -m pip install -e \"backend[evaluation]\"",
+      "Set OPENAI_API_KEY in the shell environment",
+      "backend/.venv/Scripts/python evaluation/incident_understanding_llm/evaluate_llm.py --model gpt-5.6-luna",
+      "backend/.venv/Scripts/python evaluation/incident_understanding_llm/evaluate_llm.py --model gpt-5.6-terra",
+      "backend/.venv/Scripts/python evaluation/incident_understanding_llm/analyze_errors.py"
+    ],
+    "on_reproduction": "The gate is evaluated on first observation and stays unchanged afterwards, preserving its pre-registration."
+  },
+
+  "secrets": {
+    "api_key_stored_here": false,
+    "credential_values_stored_here": false,
+    "request_identifiers_stored_here": false,
+    "note": "Authentication succeeded, so no credential value or request identifier is recorded in this artifact."
+  }
+}

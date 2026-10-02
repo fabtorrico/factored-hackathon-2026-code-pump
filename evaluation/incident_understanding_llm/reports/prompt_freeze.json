@@ -1,0 +1,176 @@
+{
+  "phase": "4B-1",
+  "purpose": "Offline evaluation of a stronger pretrained language-understanding component. No production integration is performed in this phase.",
+  "prompt_version": "4b1-v1",
+  "prompt_sha256": "a431bcbdbae3f10e82e9d1cdec9186f00ec63d58d201c9a52db8e83752466077",
+  "schema_name": "incident_label",
+  "schema_sha256": "c2b09b99a23a026a24f10a2c95e0ec39e42cbbba4b081ff26b428a14f9c8d244",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "label": {
+        "type": "string",
+        "enum": [
+          "PENDING_OR_DELAYED",
+          "FAILED_OR_DECLINED",
+          "REVERSED",
+          "APPROVED_BUT_UNRESOLVED",
+          "AMBIGUOUS_TRANSACTION",
+          "OUT_OF_SCOPE"
+        ]
+      }
+    },
+    "required": [
+      "label"
+    ],
+    "additionalProperties": false
+  },
+  "labels": [
+    "PENDING_OR_DELAYED",
+    "FAILED_OR_DECLINED",
+    "REVERSED",
+    "APPROVED_BUT_UNRESOLVED",
+    "AMBIGUOUS_TRANSACTION",
+    "OUT_OF_SCOPE"
+  ],
+  "in_scope_labels": [
+    "PENDING_OR_DELAYED",
+    "FAILED_OR_DECLINED",
+    "REVERSED",
+    "APPROVED_BUT_UNRESOLVED",
+    "AMBIGUOUS_TRANSACTION"
+  ],
+  "system_prompt": "You classify one message from a bank customer who is asking about a digital transfer or payment.\n\nClassify what the CUSTOMER REPORTS, not what the bank recorded. Choose exactly one label.\nDo not infer a cause, a banking status, an amount, an account or an identity. Report only the customer's own account of the situation.\n\nPENDING_OR_DELAYED\nThe customer says the transfer or payment is delayed, has not arrived yet, or is still in progress.\n\nFAILED_OR_DECLINED\nThe customer says the transfer or payment was rejected, refused, declined, denied, or did not go through.\n\nREVERSED\nThe customer says the transfer or payment was returned, refunded, reversed, cancelled, credited back, or undone.\n\nAPPROVED_BUT_UNRESOLVED\nThe customer says the transfer or payment was approved, completed or went through, yet something is still missing or still not resolved for them.\n\nAMBIGUOUS_TRANSACTION\nThe customer cannot say which transaction the problem is about, cannot tell which of several movements is affected, or is too vague to attribute the problem to any single transaction.\n\nOUT_OF_SCOPE\nThe request is not about a transfer or payment incident: for example a new account, an exchange rate, a credit card, a branch, a password, or a loan.\n\nTie-breakers, in order:\n1. If the customer says the payment was approved or completed AND something is still missing for them, answer APPROVED_BUT_UNRESOLVED, not PENDING_OR_DELAYED.\n2. If the customer says they do not know which transaction is at fault, answer AMBIGUOUS_TRANSACTION.\n3. A message may mention something unrelated and still be about a transfer or payment incident. If it reports a transfer or payment problem, answer with that incident's label, not OUT_OF_SCOPE.\n4. Answer OUT_OF_SCOPE only when no transfer or payment incident is being reported.\n\nThe message may be in Spanish or Portuguese. Judge its meaning, not its wording.\n\nAnswer with the single label only. Do not explain, do not restate the message, and return no other field.",
+  "models": [
+    "gpt-5.6-luna",
+    "gpt-5.6-terra"
+  ],
+  "model_roles": {
+    "gpt-5.6-luna": "primary",
+    "gpt-5.6-terra": "challenger"
+  },
+  "evaluation_config": {
+    "endpoint": "responses",
+    "structured_outputs": true,
+    "strict": true,
+    "schema_name": "incident_label",
+    "reasoning_effort": "low",
+    "temperature": null,
+    "temperature_omitted_reason": "not among the supported features of the GPT-5.6 models; omitting avoids a request rejection and keeps the run deterministic",
+    "tools_enabled": false,
+    "web_search": false,
+    "file_search": false,
+    "code_interpreter": false,
+    "streaming": false,
+    "store": false,
+    "challenge_path": "evaluation/incident_understanding_v2/challenge.json",
+    "challenge_sha256": "f571726ad934e87e7d0663776071cdacfc2b922a882b9960143708362bdedc26",
+    "challenge_version": "2.0.0",
+    "total_examples": 600,
+    "prompt_version": "4b1-v1",
+    "prompt_sha256": "a431bcbdbae3f10e82e9d1cdec9186f00ec63d58d201c9a52db8e83752466077",
+    "schema_sha256": "c2b09b99a23a026a24f10a2c95e0ec39e42cbbba4b081ff26b428a14f9c8d244",
+    "models": [
+      "gpt-5.6-luna",
+      "gpt-5.6-terra"
+    ],
+    "retries": 0,
+    "retries_reason": "no retry is attempted: an API failure is recorded as-is and counted as an error. Retries would alter cost and latency semantics and are not needed for this classification experiment.",
+    "inter_request_delay_seconds": 0.0,
+    "pricing_usd_per_million_tokens": {
+      "gpt-5.6-luna": {
+        "input": 0.2,
+        "cached_input": 0.02,
+        "output": 1.2
+      },
+      "gpt-5.6-terra": {
+        "input": 2.0,
+        "cached_input": 0.2,
+        "output": 12.0
+      }
+    },
+    "pricing_source": "https://developers.openai.com/api/docs/pricing (GPT-5.6 family, effective 2026-07-30)",
+    "pricing_effective_date": "2026-07-30"
+  },
+  "quality_gate": {
+    "gate_version": "4b1-gate-v1",
+    "meaning": "Eligible for guarded integration into the hackathon prototype. Explicitly NOT production-ready banking AI.",
+    "overall_macro_f1_min": 0.85,
+    "es_macro_f1_min": 0.82,
+    "pt_macro_f1_min": 0.82,
+    "structured_output_validity_min": 0.99,
+    "structured_output_validity_note": "pre-registered as 'approximately 100%'",
+    "critical_systematic_class_failure_definition": "An in-scope class (any of the five classes other than OUT_OF_SCOPE) is a critical systematic failure if its F1 is below 0.70, OR if it contributes at least 25% of all errors while its own F1 is below 0.80. The gate fails if any in-scope class meets either condition.",
+    "in_scope_labels": [
+      "PENDING_OR_DELAYED",
+      "FAILED_OR_DECLINED",
+      "REVERSED",
+      "APPROVED_BUT_UNRESOLVED",
+      "AMBIGUOUS_TRANSACTION"
+    ]
+  },
+  "model_selection_rule": {
+    "rule_version": "4b1-selection-v1",
+    "material_quality_delta_macro_f1": 0.02,
+    "material_quality_delta_definition": "Two models differ materially in quality when their overall macro-F1 differs by at least 0.02. Below that, quality is treated as equivalent.",
+    "steps": [
+      "Evaluate the gate for Luna and for Terra independently.",
+      "If neither passes, recommend no production integration yet.",
+      "If only one passes, recommend that one.",
+      "If both pass, prefer the lower-cost and lower-latency model unless the other model's overall macro-F1 is higher by at least the material quality delta. Luna is 10x cheaper per token than Terra, so cost and latency break the tie when quality is equivalent."
+    ],
+    "scope_note": "A passing recommendation authorizes only guarded integration into the hackathon prototype in a later phase. Phase 4B-1 performs no integration."
+  },
+  "frozen_v2_reference": {
+    "source": "evaluation/incident_understanding_v2/reports/v2_summary.json",
+    "challenge_version": "2.0.0",
+    "baseline": {
+      "accuracy": 0.24833333333333332,
+      "macro_f1": 0.3084636874148236,
+      "coverage": 0.3283333333333333,
+      "accepted_accuracy": 0.7563451776649747,
+      "abstention_rate": 0.6716666666666666
+    },
+    "learned_raw_th0": {
+      "accuracy": 0.5816666666666667,
+      "macro_f1": 0.5914926408627067,
+      "coverage": 1.0,
+      "accepted_accuracy": 0.5816666666666667,
+      "abstention_rate": 0.0
+    },
+    "learned_th0_7": {
+      "accuracy": 0.24666666666666667,
+      "macro_f1": 0.36137068021052093,
+      "coverage": 0.2866666666666667,
+      "accepted_accuracy": 0.8604651162790697,
+      "abstention_rate": 0.7133333333333334
+    }
+  },
+  "frozen_challenge": {
+    "path": "evaluation/incident_understanding_v2/challenge.json",
+    "version": "2.0.0",
+    "sha256": "f571726ad934e87e7d0663776071cdacfc2b922a882b9960143708362bdedc26"
+  },
+  "contamination_controls": [
+    "No Challenge Set v2 example is present in the prompt or the schema.",
+    "Challenge Set v2 is read-only: it is verified by hash and never written.",
+    "Challenge Set v2 is never used for training, tuning or few-shot demonstration.",
+    "Identical prompt text, schema and reasoning effort for Luna and Terra.",
+    "The quality gate was recorded before any benchmark result existed.",
+    "No prompt or model change is permitted after results are observed."
+  ],
+  "frozen_at": "2026-10-02T17:04:11.234424+00:00",
+  "frozen_before_any_benchmark_result": true,
+  "challenge_verified_at_freeze_time": {
+    "verified": true,
+    "version": "2.0.0",
+    "sha256": "f571726ad934e87e7d0663776071cdacfc2b922a882b9960143708362bdedc26",
+    "bytes": 308323,
+    "total": 600,
+    "frozen_before_any_model_run": true
+  },
+  "no_challenge_examples_in_prompt": true,
+  "originally_frozen_at": "2026-10-02T15:30:26.833962+00:00",
+  "config_corrected_before_any_benchmark_result": true,
+  "config_correction": "Removed max_retries and retry_backoff_seconds, which advertised retry behaviour the client never implemented, and replaced them with retries=0. No retry logic was added. Prompt, schema, quality gate, challenge, models and pricing are unchanged."
+}

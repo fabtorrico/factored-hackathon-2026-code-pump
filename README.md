@@ -25,8 +25,11 @@ backend/.venv/Scripts/python -m pip install -e "backend[dev]"
 Set-Location frontend; npm install
 ```
 
-Copy `.env.example` to `.env` at the repository root to override backend settings. No secrets are
-required in this phase; never commit `.env`.
+Copy `.env.example` to `.env` at the repository root to override backend settings. Never commit
+`.env`.
+
+`OPENAI_API_KEY` is optional and only needed to re-run the Phase 4B-1 external LLM evaluation. The
+application does not read it, and no secret is required to run the backend or its tests.
 
 ## Development
 
@@ -169,5 +172,36 @@ transaction identically and cannot be used to probe for another customer's recor
 
 ## Status
 
-Phase 3B — deterministic policy engine plus incident workflow, support-case escalation and operational
-persistence. Still no AI integration and no frontend work.
+Phases 3B through 4B-1 are done. Still no AI component in the production path and no frontend work.
+
+| Phase | Outcome |
+| --- | --- |
+| 3B | Deterministic policy engine, incident workflow, support-case escalation, operational persistence |
+| 4A | Challenge Set v2 frozen (600 examples); baseline and MiniLM evaluated. Neither is production-grade |
+| 4B-1 | LLM evaluation harness complete. Benchmark **not executed**: no API credits |
+
+### What the language-understanding work established
+
+On frozen Challenge Set v2 (600 examples, ES/PT):
+
+| System | Accuracy | Macro-F1 | Coverage | Abstention |
+| --- | --- | --- | --- | --- |
+| Deterministic baseline | 0.248 | 0.308 | 0.328 | 0.672 |
+| MiniLM + Logistic Regression (raw) | 0.582 | 0.591 | 1.000 | 0.000 |
+| MiniLM + Logistic Regression (threshold 0.7) | 0.247 | 0.361 | 0.287 | 0.713 |
+
+Raising the decision threshold buys precision on accepted cases and loses more accuracy than it
+gains. **Neither system is approved for production integration**, and Phase 4A remains the
+authoritative recorded evidence.
+
+Phase 4B-1 then evaluated whether a stronger pretrained language-understanding component could clear a
+pre-registered bar (macro-F1 >= 0.85 overall, >= 0.82 per language, ~100% structured-output validity).
+The harness is complete and the gate is frozen, but the benchmark **did not run**: the API account
+had no credits and returned HTTP 429 `credit_balance_exhausted` / `insufficient_quota`, so no request
+was ever accepted. No LLM metrics exist, the gate is unobserved for both candidates, and no billing
+failure was scored as a model-quality failure. Neither `gpt-5.6-luna` nor `gpt-5.6-terra` was
+promoted, and MiniLM was not promoted in its place. The benchmark stays reproducible unchanged.
+
+`POST /api/incidents` and everything it reaches are unchanged by 4B-1, and the application runs with
+no `OPENAI_API_KEY` and no OpenAI SDK installed. See
+[`evaluation/incident_understanding_llm/README.md`](evaluation/incident_understanding_llm/README.md).
