@@ -2,12 +2,13 @@ import { useCallback, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 import { ApiError } from "../api/client";
-import type { WorkflowEvent, WorkflowResult } from "../api/types";
+import type { WorkflowResult } from "../api/types";
 import { Card, EmptyState, ErrorNotice, Loading, OutcomePill, StatusPill } from "../components/primitives";
 import { useResource } from "../hooks/useResource";
-import { formatAmount, formatDateTime, humanize, NOT_RECORDED, shortReference } from "../lib/format";
+import { formatAmount, formatDateTime, humanize, NOT_RECORDED } from "../lib/format";
+import { caseReference, incidentReference } from "../lib/reference";
 import { presentOutcome } from "../lib/outcome";
-import { buildSteps, describeEvent, markCaseStep } from "../lib/steps";
+import { buildSteps, markCaseStep } from "../lib/steps";
 import { useIncidents } from "../state/IncidentProvider";
 import { useSession } from "../state/SessionProvider";
 
@@ -65,7 +66,7 @@ export function ResolutionView() {
             {result === undefined ? "This request" : "What happened"}
           </h1>
           <p className="muted">
-            Reference <span className="code">{shortReference(incidentId)}</span>
+            Reference <span className="code">{incidentReference(incidentId)}</span>
           </p>
         </div>
         {result !== undefined && <OutcomePill {...presentOutcome(result)} />}
@@ -91,7 +92,7 @@ export function ResolutionView() {
         <ResolutionBody
           result={result}
           steps={steps}
-          timeline={timeline}
+
           loadingTimeline={loading}
           timelineError={error}
           followUpError={followUpError}
@@ -135,7 +136,6 @@ async function submitFollowUp(
 function ResolutionBody({
   result,
   steps,
-  timeline,
   loadingTimeline,
   timelineError,
   followUpError,
@@ -144,7 +144,6 @@ function ResolutionBody({
 }: {
   result: WorkflowResult;
   steps: ReturnType<typeof buildSteps>;
-  timeline: WorkflowEvent[];
   loadingTimeline: boolean;
   timelineError: string | null;
   followUpError: string | null;
@@ -281,7 +280,7 @@ function ResolutionBody({
             <div className="field">
               <dt className="field__label">Reference</dt>
               <dd className="field__value">
-                <code className="code">{shortReference(result.support_case.case_id)}</code>
+                <code className="code">{caseReference(result.support_case.case_id)}</code>
               </dd>
             </div>
             <div className="field">
@@ -322,20 +321,6 @@ function ResolutionBody({
           <ErrorNotice title="The recorded steps could not be read">
             <p>{timelineError}</p>
           </ErrorNotice>
-        )}
-
-        {timeline.length > 0 && (
-          <details className="disclosure">
-            <summary>Every recorded event ({timeline.length})</summary>
-            <ul className="events">
-              {timeline.map((event, index) => (
-                <li key={`${event.occurred_at}-${index}`}>
-                  <span className="events__label">{describeEvent(event)}</span>
-                  <span className="events__time">{formatDateTime(event.occurred_at)}</span>
-                </li>
-              ))}
-            </ul>
-          </details>
         )}
       </Card>
 

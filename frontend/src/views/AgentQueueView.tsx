@@ -12,7 +12,8 @@ import {
 } from "../components/primitives";
 import { useResource } from "../hooks/useResource";
 import { caseReference, movementAmount, outcomeTone } from "../lib/agent";
-import { formatDateTime, humanize, shortReference } from "../lib/format";
+import { formatDateTime, humanize } from "../lib/format";
+import { incidentReference } from "../lib/reference";
 import { useAgentSession } from "../state/AgentSessionProvider";
 
 /**
@@ -88,7 +89,7 @@ function AgentQueueRow({ entry }: { entry: AgentCaseSummary }) {
       <dl className="queue__meta">
         <div>
           <dt>Incident</dt>
-          <dd>{shortReference(entry.incident_id)}</dd>
+          <dd>{incidentReference(entry.incident_id)}</dd>
         </div>
         <div>
           <dt>Opened</dt>

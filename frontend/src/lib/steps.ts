@@ -26,9 +26,20 @@ export function buildSteps(events: readonly WorkflowEvent[], result: WorkflowRes
   steps.push(
     step(
       "identified",
-      "We identified the movement you meant",
+      "We identified the movement",
       recorded.has("transaction_verified") || recorded.has("candidate_search_completed"),
       recorded.has("candidate_search_completed") ? "Checked the movements you described." : null,
+    ),
+  );
+
+  steps.push(
+    step(
+      "checked",
+      "We checked the banking record",
+      recorded.has("transaction_verified"),
+      recorded.has("transaction_verified")
+        ? "We read the recorded details for this movement."
+        : null,
     ),
   );
 
@@ -41,18 +52,22 @@ export function buildSteps(events: readonly WorkflowEvent[], result: WorkflowRes
     ),
   );
 
-  steps.push(
-    step(
-      "case",
-      "We opened a support case",
-      recorded.has("support_case_verified"),
-      result.support_case !== null
-        ? "A support case was confirmed."
-        : result.failure !== null
-          ? "We tried, but we could not confirm a case was created."
-          : null,
-    ),
-  );
+  // The support-case step only belongs on a request that could escalate. Showing it as "not
+  // reached" on a movement the policy resolved outright would read as unfinished work.
+  if (couldEscalate(events, result)) {
+    steps.push(
+      step(
+        "case",
+        "We opened a support case",
+        recorded.has("support_case_verified"),
+        result.support_case !== null
+          ? "A support case was confirmed."
+          : result.failure !== null
+            ? "We tried, but we could not confirm a case was created."
+            : null,
+      ),
+    );
+  }
 
   steps.push(
     step(
@@ -66,19 +81,28 @@ export function buildSteps(events: readonly WorkflowEvent[], result: WorkflowRes
   return steps;
 }
 
+/** True when the recorded workflow reached, or tried to reach, a support case. */
+function couldEscalate(events: readonly WorkflowEvent[], result: WorkflowResult): boolean {
+  return (
+    result.policy_decision.outcome === "ESCALATE" ||
+    result.support_case !== null ||
+    events.some((event) => event.event_type === "support_case_verification_failed")
+  );
+}
+
 function outcomeStepLabel(result: WorkflowResult): string {
   if (result.failure !== null || result.status === "failed") {
     return "We stopped before finishing";
   }
   switch (result.policy_decision.outcome) {
     case "RESOLVE":
-      return "We closed the question with what our records show";
+      return "We answered from our records";
     case "CLARIFY":
       return "We asked you to narrow it down";
     case "ESCALATE":
-      return "We handed it to a specialist";
+      return "We confirmed the handoff to a specialist";
     case "ABSTAIN":
-      return "We left it alone, as it is outside our decisions";
+      return "We left it as outside our decisions";
   }
 }
 

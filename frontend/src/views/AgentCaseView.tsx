@@ -18,11 +18,14 @@ import {
   describeFactSource,
   describeFactValue,
   describePolicyDecision,
+  describePolicyReason,
+  describePolicyRule,
   describeUnresolved,
   movementAmount,
   outcomeTone,
 } from "../lib/agent";
-import { formatDateTime, humanize, NOT_RECORDED, shortReference } from "../lib/format";
+import { formatDateTime, humanize, NOT_RECORDED } from "../lib/format";
+import { incidentReference } from "../lib/reference";
 import { describeEvent } from "../lib/steps";
 import { useAgentSession } from "../state/AgentSessionProvider";
 
@@ -89,7 +92,7 @@ function AgentCaseBody({ detail }: { detail: AgentCaseDetail }) {
           <div className="field">
             <dt className="field__label">Incident</dt>
             <dd className="field__value">
-              <span className="code">{shortReference(entry.incident_id)}</span>
+              <span className="code">{incidentReference(entry.incident_id)}</span>
             </dd>
           </div>
           <div className="field">
@@ -153,16 +156,22 @@ function AgentCaseBody({ detail }: { detail: AgentCaseDetail }) {
         <HandoffSections handoff={handoff} />
       )}
 
-      <Card title="Recorded timeline">
+      <Card title="Workflow timeline">
         {events.length === 0 ? (
           <p className="muted">No workflow events are on record for this incident.</p>
         ) : (
-          <ol className="events events--agent">
+          <ol className="timeline">
             {events.map((event, index) => (
-              <li key={`${event.occurred_at}-${index}`}>
-                <span className="events__label">{describeEvent(event)}</span>
-                <code className="code">{event.event_type}</code>
-                <span className="events__time">{formatDateTime(event.occurred_at)}</span>
+              <li key={`${event.occurred_at}-${index}`} className="timeline__item">
+                <span className="timeline__dot" aria-hidden="true" />
+                <div className="timeline__body">
+                  <p className="timeline__label">{describeEvent(event)}</p>
+                  <p className="timeline__time">{formatDateTime(event.occurred_at)}</p>
+                  <details className="timeline__code">
+                    <summary>Event code</summary>
+                    <code className="code">{event.event_type}</code>
+                  </details>
+                </div>
               </li>
             ))}
           </ol>
@@ -232,18 +241,6 @@ function HandoffSections({ handoff }: { handoff: Handoff }) {
         )}
       </Card>
 
-      <Card title="Actions taken">
-        {handoff.actions_taken.length === 0 ? (
-          <p className="muted">No action was recorded.</p>
-        ) : (
-          <ul className="bullets">
-            {handoff.actions_taken.map((action) => (
-              <li key={action}>{describeAction(action)}</li>
-            ))}
-          </ul>
-        )}
-      </Card>
-
       <Card title="Supporting evidence">
         {handoff.supporting_evidence.length === 0 ? (
           <p className="muted">No supporting evidence was recorded.</p>
@@ -258,6 +255,29 @@ function HandoffSections({ handoff }: { handoff: Handoff }) {
               </div>
             ))}
           </dl>
+        )}
+      </Card>
+
+      <Card title="Actions taken">
+        {handoff.actions_taken.length === 0 ? (
+          <p className="muted">No action was recorded.</p>
+        ) : (
+          <>
+            <p className="muted">
+              The workflow records an action only after it has written it and read it back. A write
+              that could not be confirmed is not listed as taken.
+            </p>
+            <ol className="actions">
+              {handoff.actions_taken.map((action, index) => (
+                <li key={action} className="actions__item">
+                  <span className="actions__step" aria-hidden="true">
+                    {index + 1}
+                  </span>
+                  <span>{describeAction(action)}</span>
+                </li>
+              ))}
+            </ol>
+          </>
         )}
       </Card>
 
@@ -276,9 +296,21 @@ function HandoffSections({ handoff }: { handoff: Handoff }) {
       <Card title="Policy decision">
         <dl className="fields fields--wide">
           <div className="field">
+            <dt className="field__label">Outcome</dt>
+            <dd className="field__value">{humanize(decision.outcome)}</dd>
+          </div>
+          <div className="field">
             <dt className="field__label">Rule</dt>
             <dd className="field__value">
+              {describePolicyRule(decision.policy_rule)}{" "}
               <span className="code">{decision.policy_rule}</span>
+            </dd>
+          </div>
+          <div className="field">
+            <dt className="field__label">Reason</dt>
+            <dd className="field__value">
+              {describePolicyReason(decision.reason_code)}{" "}
+              <span className="code">{decision.reason_code}</span>
             </dd>
           </div>
           <div className="field">
@@ -287,18 +319,12 @@ function HandoffSections({ handoff }: { handoff: Handoff }) {
               <span className="code">{decision.policy_version}</span>
             </dd>
           </div>
-          <div className="field">
-            <dt className="field__label">Outcome</dt>
-            <dd className="field__value">{humanize(decision.outcome)}</dd>
-          </div>
-          <div className="field">
-            <dt className="field__label">Reason</dt>
-            <dd className="field__value">
-              <span className="code">{decision.reason_code}</span>
-            </dd>
-          </div>
         </dl>
         <p className="muted footnote">{describePolicyDecision(decision)}</p>
+        <p className="muted footnote">
+          This is a synthetic prototype policy. It is not a real bank, settlement or regulatory
+          policy.
+        </p>
       </Card>
     </>
   );

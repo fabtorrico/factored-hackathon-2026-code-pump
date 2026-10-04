@@ -1,6 +1,8 @@
 import type { AgentMovementSummary, HandoffFact, PolicyDecision } from "../api/types";
-import { formatAmount, humanize, NOT_RECORDED } from "./format";
+import { formatAmount, humanize } from "./format";
 import type { OutcomeTone } from "./outcome";
+
+export { caseReference } from "./reference";
 
 /**
  * Display vocabulary for the Human Agent Workspace.
@@ -9,15 +11,6 @@ import type { OutcomeTone } from "./outcome";
  * is still total: an unknown code is shown as itself rather than hidden, and a missing value is
  * marked as missing. No fact is inferred and no customer identity exists here to begin with.
  */
-
-/** A short, stable label for a case, so the queue does not lead with a 36-character id. */
-export function caseReference(caseId: string | null | undefined): string {
-  if (typeof caseId !== "string" || caseId === "") {
-    return NOT_RECORDED;
-  }
-  const compact = caseId.replace(/[^a-zA-Z0-9]/g, "");
-  return compact === "" ? NOT_RECORDED : `CASE ${compact.slice(0, 8).toUpperCase()}`;
-}
 
 export function describeFact(fact: HandoffFact): string {
   const labels: Record<string, string> = {
@@ -88,8 +81,60 @@ export function describeUnresolved(code: string): string {
   return labels[code] ?? humanize(code);
 }
 
+/**
+ * The policy rule name as a plain-language category.
+ *
+ * A specialist can read `G_PENDING`, but a screen that only prints codes makes the reader memorise
+ * them. These are fixed labels for the rules this build ships; an unknown rule still shows itself,
+ * so nothing is hidden.
+ */
+export function describePolicyRule(rule: string): string {
+  const labels: Record<string, string> = {
+    A_INVALID_UNAUTHORIZED_WORKFLOW: "Safety and authorization rule",
+    B_OUT_OF_SCOPE: "Scope rule",
+    C_TOOL_FAILURE: "Tool-failure rule",
+    D_NO_CANDIDATES: "No matching movement rule",
+    D_MULTIPLE_CANDIDATES: "Multiple matching movements rule",
+    E_REQUIRED_EVIDENCE_MISSING: "Required-evidence rule",
+    F_DECLINED: "Declined-status rule",
+    G_PENDING: "In-progress-status rule",
+    H_REVERSED: "Reversed-status rule",
+    I_APPROVED_UNRESOLVED: "Approved-with-open-issue rule",
+    J_APPROVED_NO_INCIDENT: "Approved-without-supported-incident rule",
+    K_UNKNOWN_STATUS: "Unsupported-status rule",
+  };
+  return labels[rule] ?? humanize(rule);
+}
+
+/**
+ * The policy reason as the neutral state it describes.
+ *
+ * Every sentence restates what the workflow verified. None of them invents a cause, a settlement, or
+ * a banking meaning the policy does not have.
+ */
+export function describePolicyReason(reason: string): string {
+  const labels: Record<string, string> = {
+    invalid_session: "the session was not valid",
+    unauthorized: "the request was not authorized",
+    out_of_scope: "the request is outside the supported scope",
+    tool_failure_exhausted: "a required read could not be completed",
+    required_evidence_missing: "required evidence was not available",
+    no_matching_transaction: "no movement matched the description",
+    multiple_candidate_transactions: "more than one movement matched the description",
+    declined_status: "the movement was verified as declined",
+    pending_status: "the movement was verified as still in progress",
+    reversed_status: "the movement was verified as reversed",
+    approved_unresolved_issue: "the movement was approved with an issue still open",
+    approved_no_supported_incident: "the movement was approved with no supported incident",
+    unknown_transaction_status: "the status is not supported by this policy version",
+  };
+  return labels[reason] ?? humanize(reason);
+}
+
 export function describePolicyDecision(decision: PolicyDecision): string {
-  return `${decision.policy_rule} produced ${decision.outcome} (reason ${decision.reason_code}).`;
+  return `${describePolicyRule(decision.policy_rule)} decided the ${humanize(
+    decision.outcome,
+  )} outcome: ${describePolicyReason(decision.reason_code)}.`;
 }
 
 export function movementAmount(movement: AgentMovementSummary): string {
