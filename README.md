@@ -1,207 +1,132 @@
-# AI-First Banking Incident Resolution
+# Code Pump
 
-Local prototype for resolving digital transfer and payment incidents using controlled banking tools,
-deterministic policy decisions, and human escalation when required.
+Transaction/payment incident resolution with controlled automation, deterministic policy, and verified handoffs.
 
-## Stack
+## What problem we solve
 
-- **Backend:** Python 3.11+, FastAPI, pytest, ruff
-- **Frontend:** React, TypeScript, Vite
-- **Persistence:** DuckDB for the curated analytical data, SQLite for operational workflow state
+Code Pump focuses on transaction/payment incident resolution (Declined, Pending, Reversed, or ambiguous movement reports). Normal resolution requires verified banking facts, consistent policy application, and safe escalation when a human specialist must act. Ambiguity (no match/multiple matches), incomplete information, or approved-but-unresolved cases are handled explicitly rather than inferred. The solution is designed for controlled, auditable automation with strict read-only boundaries and act-then-verify handoffs.
 
-## Prerequisites
+### OBSERVED DATA EVIDENCE (separate from design judgment)
 
-- Python 3.11 or 3.12
-- Node.js 20.19 or newer
+The repository's curated evidence comes from committed synthetic banking data converted to a curated DuckDB. No organizer-provided contact-center demand/complaint-frequency dataset is present or analyzed in the repo. Data engineering (contracts, allowlist projection, quality checks) is documented. The available subset supports a focused workflow around transaction/payment statuses, but it does not establish quantified contact-center volume. **If contact-center demand frequency cannot be established from the supplied data, that is explicitly stated here.** Curated data enables deterministic E2E tests and Phase 6 system evaluation (125/125 PASS).
 
-## Setup
+**WORKFLOW DESIGN JUDGMENT:** transaction/payment incidents are coherent because they require strict ownership/grounding, identity-scoped reads, deterministic rules, and verified escalation paths.
 
-```powershell
-python -m venv backend/.venv
-backend/.venv/Scripts/python -m pip install -e "backend[dev]"
-```
+## What Code Pump does
 
-```powershell
-Set-Location frontend; npm install
-```
+- **Customer path:** report/select movement → verified banking facts → controlled policy decision → resolve / clarify / escalate / abstain (no prose generation, no chain-of-thought exposed).
+- **Human specialist path:** verified handoff → facts → evidence → actions taken → unresolved questions → audit timeline (read-only agent workspace; no customer identity exposed in the queue).
 
-Copy `.env.example` to `.env` at the repository root to override backend settings. Never commit
-`.env`.
+## Architecture
 
-`OPENAI_API_KEY` is optional and only needed to re-run the Phase 4B-1 external LLM evaluation. The
-application does not read it, and no secret is required to run the backend or its tests.
+Customer Site -> FastAPI -> trusted session -> Banking Core (read-only DuckDB) -> verified facts -> Incident Workflow -> Policy Engine (deterministic) -> RESOLVE/CLARIFY/ESCALATE/ABSTAIN (Act->Verify) -> Operational SQLite (no banking facts copied) -> Agent Workspace (read-only). ML evaluation is offline-only.
 
-## Development
+## Safety model
 
-```powershell
-backend/.venv/Scripts/python -m uvicorn app.main:app --app-dir backend --reload
-```
+- Session-derived identity (X-Session-Id); per-customer auth
+- Ownership collapse (foreign/absent treated same)
+- Strict schemas (extra=forbid, strict); query param allowlists
+- Deterministic policy; unknown statuses escalate; no cause inference from balance/response_code
+- Act -> Verify on escalation
+- Read-only agent workspace (separate X-Agent-Session-Id)
+- PII minimization in curated DB; audit stores session fingerprint only
+- Safe failure behavior; no chain-of-thought exposed
 
-```powershell
-Set-Location frontend; npm run dev
-```
+## Data engineering
 
-The Vite dev server proxies `/api/*` to `http://127.0.0.1:8000` with the prefix stripped.
+- raw -> staging/temp -> curated DuckDB via explicit column allowlist; contracts validated first
+- No silent row dropping/imputation (quality issues reported)
+- PII minimization in curated projection
+- Deterministic reruns; full-refresh pipeline (not incremental)
+- quality_report.json written to data/processed/ on pipeline run (not committed)
 
-## Validation
+## ML / language-understanding evaluation
 
-```powershell
-Set-Location backend
-.venv/Scripts/python -m pytest
-.venv/Scripts/python -m ruff check .
-.venv/Scripts/python -m ruff format --check .
-```
+Phase 4A (ES/PT, 6 labels): baseline vs MiniLM+LogReg. Challenge Set v2 frozen (600 examples; sha256 f571726ad934e87e7d0663776071cdacfc2b922a882b9960143708362bdedc26). Results (v2): baseline acc 0.248, macro-F1 0.308, cov 0.328; learned raw acc 0.582, macro-F1 0.591, cov 1.000; learned (th=0.7) acc 0.247, macro-F1 0.361, cov 0.287. Lexical bias motivated v2; leakage prevention by semantic family/tier. Neither promoted.
 
-```powershell
-Set-Location frontend
-npm run build
-```
+## LLM evaluation status
 
-## Data
+Phase 4B-1: structured-output harness complete; prompt/schema/gate frozen (prompt_sha256 a431bcbdbae3f10e82e9d1cdec9186f00ec63d58d201c9a52db8e83752466077, schema_sha256 c2b09b99a23a026a24f10a2c95e0ec39e42cbbba4b081ff26b428a14f9c8d244). Benchmark NOT executed (execution_status.json: closed_without_results, not_executed; blocker external_api_credits_unavailable, error credit_balance_exhausted, http 429). No LLM promoted.
 
-`data/` holds local hackathon data provided by the organizers. It is gitignored and must never be
-committed or exposed.
+## Performance
 
-The curated DuckDB database is rebuilt from the CSV sources with:
+Local prototype measurements (not SLA): declined resolution p50 37.192ms/p95 46.963ms (n=25), pending escalation p50 56.792ms/p95 111.763ms (n=25), agent case detail p50 3.911ms/p95 4.218ms (n=25).
 
-```powershell
-Set-Location backend
-.venv/Scripts/python -m app.data
-```
+## Cost
 
-This validates the source contracts, loads `customers`, `products` and `transactions` into
-`data/processed/banking.duckdb`, and writes `data/processed/quality_report.json`. The run is
-deterministic and idempotent. A missing required column or unreadable source fails the run; data
-quality problems are reported without modifying the records.
+Production/demo path is local and deterministic; no external model inference per incident. LLM evaluation cost not observed (benchmark requests blocked before execution). Infrastructure/hosting/ops not measured; cost per successful automated resolution not defined from current evidence.
 
-Each curated table is an explicit column allowlist, not a copy of the CSV. The raw files stay
-untouched and keep every column, but only the approved columns are projected. Dropped from
-`customers`: identity, contact, address and demographic attributes (`document_number`,
-`first_name`, `last_name`, `email`, `mobile_phone`, `landline_phone`, `address`, `postal_code`,
-`date_of_birth`, `gender`, `occupation`, ...). Dropped from `products`: the customer-facing
-`product_number` and `credit_limit`. Dropped from `transactions`: `latitude`, `longitude`,
-`is_fraud`, `fraud_score`, `merchant_name`, `merchant_category`, `transaction_category`,
-`branch_id`, `transaction_country`, `transaction_city`. Contracts still validate the source
-schema before projection, and quality checks run against the full source data.
+## Demo scenarios
 
-`products.current_balance` is read-only context. A transaction fails on its recorded
-`transaction_status` / `response_code`, never on a balance that looks low.
+A - Declined -> RESOLVE; B - Pending -> ESCALATE; C - Reversed -> ESCALATE; D - ambiguous -> CLARIFY. Also approved+unresolved path can escalate/abstain per policy (no dedicated demo profile). Use demo CLI: python -m app.demo status and python -m app.demo reset (operational state only).
 
-## Banking core
+## Repository map
 
-The backend exposes a small set of typed banking tools over the curated DuckDB database. There is no
-query language: every filter maps to one equality or range clause, so a caller cannot widen a read.
+backend/app/data, backend/app/banking, backend/app/policy, backend/app/workflow, backend/app/api, backend/app/demo, backend/app/ml, backend/app/agent, frontend, evaluation, scripts, data
 
-| Endpoint | Purpose |
-| --- | --- |
-| `POST /api/sessions` | Open a trusted demo session for a customer |
-| `GET /api/customers/{customer_id}/context` | Customer, products, and transaction counters |
-| `GET /api/transactions` | The authenticated customer's transactions |
-| `GET /api/transactions/candidates` | Deterministic narrowing on a small closed filter set |
-| `GET /api/transactions/{transaction_id}` | One transaction |
-| `GET /api/transactions/{transaction_id}/ownership` | Whether the session owns the transaction |
-| `GET /api/audit/events` | Recent tool outcomes for the local demo |
-| `POST /api/incidents` | Run one structured incident through the policy workflow |
+## Evaluation artifact index
 
-Every protected endpoint requires an `X-Session-Id` header. The session's customer is the only
-identity the backend trusts; a `customer_id` in the query is checked, never trusted. Cross-customer
-reads return `403`. A transaction the session does not own returns `404`, identical to a transaction
-that does not exist, so the endpoint cannot be used to probe for other customers' records. Malformed
-or unsupported filters return `400` instead of being silently ignored.
+evaluation/incident_understanding/ (Phase 4A v1)
+evaluation/incident_understanding_v2/ (frozen Challenge v2, sha256 f571726ad934e87e7d0663776071cdacfc2b922a882b9960143708362bdedc26)
+evaluation/incident_understanding_llm/ (Phase 4B-1 harness/status; not executed)
+evaluation/system/ (125-case system eval)
 
-The curated database is opened read-only. Audit events record the tool, outcome, reason, caller,
-resource and latency, and store only a short fingerprint of the session id, never the bearer
-credential itself or any customer contact data. The demo session store and audit sink are in-memory
-and are not a production authentication or logging design.
+## Frozen artifact confirmation
 
-## Policy engine
+- Challenge v2: evaluation/incident_understanding_v2/challenge.json sha256 f571726ad934e87e7d0663776071cdacfc2b922a882b9960143708362bdedc26 (matches freeze_v2.json)
+- LLM prompt/schema: prompt_sha256 a431bcbdbae3f10e82e9d1cdec9186f00ec63d58d201c9a52db8e83752466077, schema_sha256 c2b09b99a23a026a24f10a2c95e0ec39e42cbbba4b081ff26b428a14f9c8d244
+- Phase 4A frozen artifacts unchanged; Phase 6 report: 125/125 PASS
 
-Synthetic Banking Policy v1 is an ordered, deterministic decision table. There is no model, no
-randomness and no natural-language input: `evaluate_policy(context) -> PolicyDecision` returns one of
-`RESOLVE`, `CLARIFY`, `ESCALATE` or `ABSTAIN` with a stable reason code, the rule that decided it and
-the policy version. Rules are evaluated in order and the first match wins: `A` invalid or unauthorized
-session, `B` out of scope, `C` tool failure, `D` no or multiple candidates, `E` required evidence
-missing, `F` declined, `G` pending, `H` reversed, `I` approved with an unresolved issue, `J` approved
-with no supported incident, `K` unknown status. Unknown statuses escalate rather than fall through to
-a safe-looking default.
+## Route to operation
 
-The policy is a hackathon demonstration model. It is not a real bank, organizer, settlement or
-regulatory policy, and `SupportRoute.PAYMENTS_OPERATIONS` is a synthetic demo route rather than an
-organizer-provided structure.
+**OBSERVABILITY:** Current audit events (InMemoryAuditSink) exist; production would require structured logging, metrics, tracing, and durable audit storage.
 
-## Incident workflow
+**RELIABILITY:** Deterministic failure handling, Act->Verify, and no retry in the frozen LLM harness. Bounded retries/timeouts would be needed for any external service calls in production.
 
-`POST /api/incidents` runs one structured incident through the workflow. The request carries no prose,
-no policy outcome, no transaction status and no customer identity:
+**SECURITY:** Trusted demo sessions with authorization boundaries; production requires identity/RBAC, credential management, secret management, and secure session issuance.
 
-```json
-{
-  "transaction_id": "TXN-003",
-  "filters": { "transaction_type": "Payment", "date_from": "2026-06-17" },
-  "in_scope": true,
-  "approved_with_unresolved_issue": false
-}
-```
+**DATA RETENTION:** Local operational SQLite; no formal production retention policy implemented; retention/deletion/archival must be defined before deployment.
 
-Exactly one of `transaction_id` or `filters` is required, unknown fields are rejected, and the
-authenticated customer comes from the `X-Session-Id` header. The sequence is fixed: validate the
-session, identify one or more candidates through the banking tools, map the observed facts into the
-policy context, let the policy engine decide, then perform only the permitted action and verify it.
+**CAPACITY:** Prototype uses local DuckDB + SQLite; no production load/capacity tests performed. Only local latency evidence is available.
 
-The workflow never reads the curated database itself, never re-derives authorization or ownership, and
-never invents a cause. A status can only appear in the policy context because the Banking Core returned
-a record owned by the session, and a failed read can only produce a tool failure. Any unrecognized
-future status escalates.
+**DATA FRESHNESS:** Full-refresh data pipeline (not incremental); no streaming demonstrated. Production refresh cadence and backpressure must be defined.
 
-| Outcome | Result |
-| --- | --- |
-| `RESOLVE` | Verified facts only. No customer-facing prose is generated. |
-| `CLARIFY` | Zero or several owned candidates are returned for the customer to choose from; nothing is selected automatically. |
-| `ESCALATE` | A support case is written, read back, and only then reported as escalated, with a structured handoff of verified facts and the unresolved questions. |
-| `ABSTAIN` | Invalid or expired session, out-of-scope incident, or no supported action. No case is created. |
+**LANGUAGE:** ES/PT evaluated experimentally (Phase 4A/v2); no production natural-language classifier is integrated into the runtime path.
 
-Escalation follows act then verify: the support case is persisted and read back before the workflow
-claims success. If the write cannot be read back, the incident is recorded as failed and no escalation
-is reported. A support case can never exist without its incident.
+**CURRENT STATE:** Code Pump is a validated local prototype.
 
-Operational state lives in `data/operational/app.db` (gitignored, created on first use,
-initialization idempotent): incidents, support cases and workflow events. Banking facts are never
-copied into it, and events carry identifiers and stable codes only — no prompts, records or customer
-data. Banking endpoints keep their own 401/403/404 behavior; the workflow observes a foreign or absent
-transaction identically and cannot be used to probe for another customer's records.
+**CLOUD:** Not currently deployed to cloud.
 
-## Status
+**CHALLENGE:** Cloud deployment is optional based on organizer clarification.
 
-Phases 3B through 4B-1 are done. Still no AI component in the production path and no frontend work.
+**DEPLOYMENT:** Local prototype only; cloud deployment is optional, not implemented. The proposed production architecture and remaining work are documented below.
 
-| Phase | Outcome |
-| --- | --- |
-| 3B | Deterministic policy engine, incident workflow, support-case escalation, operational persistence |
-| 4A | Challenge Set v2 frozen (600 examples); baseline and MiniLM evaluated. Neither is production-grade |
-| 4B-1 | LLM evaluation harness complete. Benchmark **not executed**: no API credits |
+**REMAINING RISKS:** Synthetic prototype policy (not real bank policy), limited transaction sample for some scenarios, no production workforce authentication, no production monitoring/SLA, external LLM benchmark not executed, and other limitations supported by the evidence above.
 
-### What the language-understanding work established
+## How Code Pump addresses the challenge
 
-On frozen Challenge Set v2 (600 examples, ES/PT):
+- **Data-backed problem:** Focused on transaction/payment incidents using committed curated data; contact-center demand frequency not quantified from supplied data (stated explicitly).
+- **Functioning system:** Deterministic runtime (API, policy, workflow, banking core, agent workspace, demo) with verified handoffs and Act->Verify.
+- **Controlled automation:** Strict authorization/grounding, ownership collapse, extra-forbid schemas, unknown statuses escalate; no LLM in runtime.
+- **Data/ML rigor:** Frozen artifacts, leakage-aware evaluation (semantic families/tier), Challenge Set v2 with recorded SHA256; LLM harness frozen but unexecuted.
+- **Measured failures:** System evaluation 125/125 PASS; one defect fixed with regression; policy defaults to safe escalation.
+- **Route to operation:** Documented operational gaps (observability, retention, capacity, freshness, security, reliability).
 
-| System | Accuracy | Macro-F1 | Coverage | Abstention |
-| --- | --- | --- | --- | --- |
-| Deterministic baseline | 0.248 | 0.308 | 0.328 | 0.672 |
-| MiniLM + Logistic Regression (raw) | 0.582 | 0.591 | 1.000 | 0.000 |
-| MiniLM + Logistic Regression (threshold 0.7) | 0.247 | 0.361 | 0.287 | 0.713 |
+## Reproducibility / frozen checks
 
-Raising the decision threshold buys precision on accepted cases and loses more accuracy than it
-gains. **Neither system is approved for production integration**, and Phase 4A remains the
-authoritative recorded evidence.
+- Frontend tests: 76 passed. Typecheck/build OK.
+- Backend tests: 409 passed, 2 skipped. pytest -W error: OK.
+- Ruff check/format: OK.
+- Phase 6 system eval: 125/125 PASS (re-run).
+- Challenge v2 SHA256 matches freeze_v2.json.
+- LLM prompt/schema SHAs recorded; benchmark not executed (documented).
+- No secrets/PII/raw data staged; operational artifacts gitignored.
 
-Phase 4B-1 then evaluated whether a stronger pretrained language-understanding component could clear a
-pre-registered bar (macro-F1 >= 0.85 overall, >= 0.82 per language, ~100% structured-output validity).
-The harness is complete and the gate is frozen, but the benchmark **did not run**: the API account
-had no credits and returned HTTP 429 `credit_balance_exhausted` / `insufficient_quota`, so no request
-was ever accepted. No LLM metrics exist, the gate is unobserved for both candidates, and no billing
-failure was scored as a model-quality failure. Neither `gpt-5.6-luna` nor `gpt-5.6-terra` was
-promoted, and MiniLM was not promoted in its place. The benchmark stays reproducible unchanged.
+## Dependency/environment notes
 
-`POST /api/incidents` and everything it reaches are unchanged by 4B-1, and the application runs with
-no `OPENAI_API_KEY` and no OpenAI SDK installed. See
-[`evaluation/incident_understanding_llm/README.md`](evaluation/incident_understanding_llm/README.md).
+- Runtime deps (pyproject): duckdb, fastapi, pydantic-settings, uvicorn[standard]. Python >=3.11,<3.13.
+- Dev deps: httpx2, pytest, sentence-transformers, scikit-learn, ruff. httpx2 retained (existing setup; not changed).
+- Evaluation extra: openai (optional; only for external LLM harness; not imported by runtime).
+- Frontend: Vite/React/TypeScript (see package.json).
+
+**Production behavior unchanged.** This is documentation/packaging only; no features, policy, workflow, ML wiring, or data changed.
